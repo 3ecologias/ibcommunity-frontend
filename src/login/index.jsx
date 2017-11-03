@@ -22,7 +22,7 @@ export default class Login extends Component {
       <div>
         <Header/>
         <div className="wrapper">
-        <div className="page-header" style={{backgroundImage: "url('../../public/assets/img/login-image.jpg')"}}>
+        <div className="page-header login-background">
             <div className="filter"></div>
             <div className="container">
                 <div className="row">

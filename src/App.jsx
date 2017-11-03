@@ -4,6 +4,7 @@ import { BrowserRouter , Switch , Route } from 'react-router-dom'
 import  registerServiceWorker  from "./registerServiceWorker";
 import './App.css';
 import Login from "./login";
+import Register from "./register";
 
 class App extends Component {
   constructor(props){
@@ -42,6 +43,7 @@ ReactDOM.render(
         <Route exact path= "/" component={App} />
         <Route path= "/welcome" component={Welcome} />
         <Route exact path= "/login" component={Login} />
+        <Route exact path= "/register" component={Register} />
     </Switch>
   </BrowserRouter>
 , document.getElementById('root'));
