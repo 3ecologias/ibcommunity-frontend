@@ -21,29 +21,35 @@ export default class Login extends Component {
     return (
       <div>
         <Header/>
-        <div className="container mt-200">
-          <div className="row">
-            <div className="col-md-12">
-              <form className="text-center" onSubmit={(event) => {this._login(event,this.state.login,this.state.password)}}>
-                <div className="form-group">
-                  <label>
-                    Login:
-                    <input type="text" className="form-control" onChange={(event) => {this.setState({login: event.target.value})}} id=""/>
-                  </label>
+        <div className="wrapper">
+        <div className="page-header" style={{backgroundImage: "url('../../public/assets/img/login-image.jpg')"}}>
+            <div className="filter"></div>
+            <div className="container">
+                <div className="row">
+                    <div className="col-lg-5 ml-auto mr-auto">
+                        <div className="card card-register">
+                           <h1><i className="fa fa-check fa-3x"></i></h1>
+                           
+                           <form className="register-form">
+                            <div className="input-group mb-2">
+                                <span className="input-group-addon"><i className="mr-1 fa fa-envelope-o"></i></span>
+                                <input type="text" className="form-control pull-right" placeholder="Email"/>
+                            </div>
+                            <div className="input-group mb-2">
+                                <span className="input-group-addon"><i className="mr-1 fa fa-lock"></i></span>
+                                <input type="text" className="form-control pull-right" placeholder="Password"/>
+                            </div>
+                            <button className="btn btn-danger btn-block btn-round">Sign-in</button>
+                        </form>
+                        <div className="forgot"> 
+                            <a href="#" className="btn btn-link btn-neutral">Don´t have an account? Sign up!</a>
+                        </div>
+                    </div>
                 </div>
-                <div className="form-group">
-                  <label>
-                    Password:
-                    <input type="password" className="form-control" onChange={(event) => {this.setState({password: event.target.value})}} />
-                  </label>
-                </div>
-                <div>
-                  <button type="submit" className="btn btn-info">Logar</button>
-                </div>
-              </form>
             </div>
-          </div>
         </div>
+    </div>
+</div>
       </div>
     );
   }
