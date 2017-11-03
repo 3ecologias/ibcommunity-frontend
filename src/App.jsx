@@ -4,7 +4,6 @@ import { BrowserRouter , Switch , Route } from 'react-router-dom'
 import  registerServiceWorker  from "./registerServiceWorker";
 import './App.css';
 import Login from "./login";
-import Header from "./mainComponents/Header"
 
 class App extends Component {
   constructor(props){

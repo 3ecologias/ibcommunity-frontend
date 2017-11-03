@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Header from "../mainComponents/Header.jsx";
 
 export default class Login extends Component {
   constructor(props){
@@ -18,26 +19,29 @@ export default class Login extends Component {
 
   render() {
     return (
-      <div className="container">
-        <div className="row">
-          <div className="col-md-12">
-            <form className="text-center" onSubmit={(event) => {this._login(event,this.state.login,this.state.password)}}>
-              <div className="form-group">
-                <label>
-                  Login:
-                  <input type="text" className="form-control" onChange={(event) => {this.setState({login: event.target.value})}} id=""/>
-                </label>
-              </div>
-              <div className="form-group">
-                <label>
-                  Password:
-                  <input type="password" className="form-control" onChange={(event) => {this.setState({password: event.target.value})}} />
-                </label>
-              </div>
-              <div>
-                <button type="submit" className="btn btn-info">Logar</button>
-              </div>
-            </form>
+      <div>
+        <Header/>
+        <div className="container mt-200">
+          <div className="row">
+            <div className="col-md-12">
+              <form className="text-center" onSubmit={(event) => {this._login(event,this.state.login,this.state.password)}}>
+                <div className="form-group">
+                  <label>
+                    Login:
+                    <input type="text" className="form-control" onChange={(event) => {this.setState({login: event.target.value})}} id=""/>
+                  </label>
+                </div>
+                <div className="form-group">
+                  <label>
+                    Password:
+                    <input type="password" className="form-control" onChange={(event) => {this.setState({password: event.target.value})}} />
+                  </label>
+                </div>
+                <div>
+                  <button type="submit" className="btn btn-info">Logar</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
