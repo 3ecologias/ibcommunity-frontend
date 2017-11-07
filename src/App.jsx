@@ -6,6 +6,7 @@ import './App.css';
 import Login from "./login";
 import Landing from "./landing";
 import Register from "./register";
+import Profile from "./profile";
 
 class App extends Component {
   constructor(props){
@@ -46,6 +47,7 @@ ReactDOM.render(
         <Route exact path= "/login" component={Login} />
         <Route exact path= "/landing" component={Landing} />
         <Route exact path= "/register" component={Register} />
+        <Route exact path= "/profile" component={Profile} />
     </Switch>
   </BrowserRouter>
 , document.getElementById('root'));
