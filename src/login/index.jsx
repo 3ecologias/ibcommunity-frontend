@@ -21,7 +21,7 @@ export default class Login extends Component {
     return (
       <div>
         <Header/>
-        <div className="wrapper">
+        <div className="row">
         <div className="page-header login-background">
             <div className="filter"></div>
             <div className="container">
