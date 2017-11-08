@@ -913,6 +913,8 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   margin-right: 0 !important;
 }
 
+#map { position:absolute; top:0; bottom:0; width:90vw; height:80vh; }
+
 .form-control::-moz-placeholder {
   color: #d2d2d2;
   opacity: 1;
