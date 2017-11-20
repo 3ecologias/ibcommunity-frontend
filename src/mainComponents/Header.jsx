@@ -21,33 +21,24 @@ export default class Header extends Component {
         list =  <div className="collapse navbar-collapse" id="navbarToggler">
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item">
-                            <a href="#" className="nav-link"><i className="nc-icon nc-layout-11"></i>Components</a>
+                            <a href="#" class="nav-link"><i class="nc-icon nc-layout-11"></i>Repartir</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#" target="_blank" className="nav-link"><i className="nc-icon nc-book-bookmark"></i>  Documentation</a>
+                            <a href="#" target="" class="nav-link"><i class="nc-icon nc-ruler-pencil"></i>Projetos</a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="#" target="_blank">
-                                <i className="fa fa-twitter"></i>
-                                <p className="d-lg-none">Twitter</p>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" target=""><i class="nc-icon nc-shop"></i>Comunidades</a>
+					    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" rel="tooltip" title="Perfil" data-placement="bottom" href="#" target="">
+                                <i class="nc-icon nc-badge"></i>
+                                <p class="d-lg-none">Meu Perfil</p>
                             </a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="#" target="_blank">
-                                <i className="fa fa-facebook-square"></i>
-                                <p className="d-lg-none">Facebook</p>
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="#" target="_blank">
-                                <i className="fa fa-instagram"></i>
-                                <p className="d-lg-none">Instagram</p>
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" rel="tooltip" title="Star on GitHub" data-placement="bottom" href="#" target="_blank">
-                                <i className="fa fa-github"></i>
-                                <p className="d-lg-none">GitHub</p>
+                        <li class="nav-item">
+                            <a class="nav-link" rel="tooltip" title="Perfil" data-placement="bottom" href="http://www.institutoberaca.org" target="_blank">
+                                <i class="nc-icon nc-alert-circle-i"></i>
+                                <p class="d-lg-none">Saiba Mais</p>
                             </a>
                         </li>
                     </ul>

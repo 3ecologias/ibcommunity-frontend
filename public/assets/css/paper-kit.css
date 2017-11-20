@@ -877,6 +877,13 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   border-radius: 30px;
 }
 
+.btn-options {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 2;
+}
+
 .btn.btn-link:focus {
   box-shadow: none !important;
   text-decoration: none;
@@ -905,6 +912,8 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 .media .media-body .media-footer .btn-neutral i {
   margin-right: 0 !important;
 }
+
+#map { position:absolute; top:0; bottom:0; width:90vw; height:80vh; }
 
 .form-control::-moz-placeholder {
   color: #d2d2d2;
@@ -2590,6 +2599,38 @@ textarea.form-control {
   text-align: center;
 }
 
+.card-search {
+  background-color: transparent;
+  border-radius: 8px;
+  color: #fff;
+  max-width: 350px;
+  margin: 0 0 auto;
+
+  padding: 30px;
+  z-index: 1;
+    text-align: left;
+}
+.card-search .social-line .btn {
+  margin-top: 0;
+}
+
+.section-image .card-search {
+  margin-top: 0;
+}
+
+.card-search label {
+  margin-top: 15px;
+}
+
+.card-search .title {
+  text-align: left;
+}
+
+.card-search .btn {
+  margin-top: 30px;
+}
+
+
 .footer {
   background-attachment: fixed;
   position: relative;
@@ -3078,7 +3119,7 @@ textarea.form-control {
 }
 
 .dropdown .dropdown-menu {
-  background-color: #FFFFFF;
+  background-color: #FFFFFF !important;
   border: 0 none;
   border-radius: 12px;
   display: block;
@@ -5675,7 +5716,7 @@ textarea.form-control {
 }
 
 .page-header {
-  background-color: #B2AFAB;
+  background-color: #673ab7;
   background-position: center center;
   background-size: cover;
   min-height: 100vh;
@@ -5698,6 +5739,9 @@ textarea.form-control {
   position: absolute;
   width: 100%;
   z-index: 1;
+}
+.page-header .search{
+
 }
 .page-header.page-header-small {
   min-height: 65vh !important;

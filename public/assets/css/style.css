@@ -8,3 +8,9 @@
 .profile-upper-background{
     background-image: url('../img/fabio-mangione.jpg');
 }
+.search-background{
+    background-image: url('../img/search-image.jpg');
+}
+h3, label{
+    color: #fff !important;
+}

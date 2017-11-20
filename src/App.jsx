@@ -7,6 +7,7 @@ import Login from "./login";
 import Landing from "./landing";
 import Register from "./register";
 import Profile from "./profile";
+import Search from "./search";
 
 class App extends Component {
   constructor(props){
@@ -48,6 +49,7 @@ ReactDOM.render(
         <Route exact path= "/landing" component={Landing} />
         <Route exact path= "/register" component={Register} />
         <Route exact path= "/profile" component={Profile} />
+        <Route exact path= "/search" component={Search} />
     </Switch>
   </BrowserRouter>
 , document.getElementById('root'));
