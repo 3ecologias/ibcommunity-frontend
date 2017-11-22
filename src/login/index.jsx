@@ -1,20 +1,23 @@
 import React, { Component } from 'react';
 import Header from "../mainComponents/Header.jsx";
+import requests from "../functions/requests.js";
 
 export default class Login extends Component {
   constructor(props){
     super(props);
     this.state = {
-      login: "",
-      password: ""
+      login: "moabe",
+      password: "moabe124",
+      token:'',
     }
     this._login = this._login.bind(this);
   }
 
-  _login(event,login,password){
-    console.log("teste" , login, password);
-    this.props.history.push({pathname: "/welcome" , state:{name: "logado"}})
-    event.preventDefault();
+  async _login(event, login, password){
+    event.preventDefault();    
+    var token = await requests.login(login, password);
+    console.log(token.data.token);
+    //this.props.history.push({pathname: "/welcome" , state:{name: "logado"}})
   }
 
   render() {
@@ -30,7 +33,7 @@ export default class Login extends Component {
                         <div className="card card-register">
                            <h1><i className="fa fa-check fa-3x"></i></h1>
                            
-                           <form className="register-form">
+                           <form className="register-form" onSubmit={(event) => {this._login(event,this.state.login,this.state.password)}}>
                             <div className="input-group mb-2">
                                 <span className="input-group-addon"><i className="mr-1 fa fa-envelope-o"></i></span>
                                 <input type="text" className="form-control pull-right" placeholder="Email"/>
