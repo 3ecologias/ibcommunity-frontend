@@ -6,8 +6,8 @@ export default class Login extends Component {
   constructor(props){
     super(props);
     this.state = {
-      login: "moabe",
-      password: "moabe124",
+      login: "",
+      password: "",
       token:'',
     }
     this._login = this._login.bind(this);
@@ -17,7 +17,8 @@ export default class Login extends Component {
     event.preventDefault();    
     var token = await requests.login(login, password);
     console.log(token.data.token);
-    //this.props.history.push({pathname: "/welcome" , state:{name: "logado"}})
+    localStorage.setItem('tokenib', token.data.token);
+    this.props.history.push({pathname: "/search" , state:{name: "logado"}})
   }
 
   render() {
@@ -36,13 +37,13 @@ export default class Login extends Component {
                            <form className="register-form" onSubmit={(event) => {this._login(event,this.state.login,this.state.password)}}>
                             <div className="input-group mb-2">
                                 <span className="input-group-addon"><i className="mr-1 fa fa-envelope-o"></i></span>
-                                <input type="text" className="form-control pull-right" placeholder="Email"/>
+                                <input onChange={(event) => {this.setState({login: event.target.value})}} type="text" className="form-control pull-right" placeholder="Email"/>
                             </div>
                             <div className="input-group mb-2">
                                 <span className="input-group-addon"><i className="mr-1 fa fa-lock"></i></span>
-                                <input type="text" className="form-control pull-right" placeholder="Password"/>
+                                <input onChange={(event) => {this.setState({password: event.target.value})}} type="password" className="form-control pull-right" placeholder="Password"/>
                             </div>
-                            <button className="btn btn-danger btn-block btn-round">Sign-in</button>
+                            <button className="btn btn-danger btn-block btn-round">Login</button>
                         </form>
                         <div className="forgot"> 
                             <a href="#" className="btn btn-link btn-neutral">Don´t have an account? Sign up!</a>

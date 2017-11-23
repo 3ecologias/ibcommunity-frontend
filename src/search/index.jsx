@@ -1,14 +1,79 @@
 import React, { Component } from 'react';
 import Header from "../mainComponents/Header";
+import Autosuggest from 'react-autosuggest';
+import requests from "../functions/requests";
+
+var products = [];
+
+// Teach Autosuggest how to calculate suggestions for any given input value.
+const getSuggestions = value => {
+  const inputValue = value.trim().toLowerCase();
+  const inputLength = inputValue.length;
+  
+  return inputLength === 0 ? [] : products.filter(lang =>
+	  lang.common_name.toLowerCase().slice(0, inputLength) === inputValue || lang.scientific_name.toLowerCase().slice(0, inputLength) === inputValue
+	);
+  };
+  
+  // When suggestion is clicked, Autosuggest needs to populate the input
+  // based on the clicked suggestion. Teach Autosuggest how to calculate the
+  // input value for every given suggestion.
+  const getSuggestionValue = suggestion => suggestion.common_name+", "+suggestion.scientific_name;
+  
+  // Use your imagination to render suggestions.
+  const renderSuggestion = suggestion => (
+	<div>
+	  {suggestion.common_name}, {suggestion.scientific_name}
+	</div>
+  );
 
 export default class Search extends Component {
     constructor(props){
         super(props);
-        this.state = { 
+        this.state = {
+			value: '',
+			suggestions: [],
+			id: '',
         }
-    }
+	}
+
+	onChange = (event, { newValue }) => {
+		this.setState({
+			value: newValue
+		});
+	};
+
+	// Autosuggest will call this function every time you need to update suggestions.
+	// You already implemented this logic above, so just use it.
+	onSuggestionsFetchRequested = ({ value }) => {
+		this.setState({
+			suggestions: getSuggestions(value)
+		});
+	};
+
+	// Autosuggest will call this function every time you need to clear suggestions.
+	onSuggestionsClearRequested = () => {
+		this.setState({
+			suggestions: []
+		});
+	};
+
+	async componentWillMount(){
+		var token = localStorage.getItem("tokenib");
+		var res = await requests.searchProduct(token);
+		products = res.data;
+	}
 
     render() {
+		const { value, suggestions } = this.state;
+		
+		// Autosuggest will pass through all these props to the input.
+		const inputProps = {
+			placeholder: 'Digite o produto',
+			value,
+			onChange: this.onChange,
+			'data-product-id': '',
+		};
         return (
             <div>
             <Header logado={true}/>
@@ -23,7 +88,14 @@ export default class Search extends Component {
 								<form class="register-form">
 									<div class="input-group mt-3 mb-2">
 										<span class="input-group-addon"><i class="mr-1 fa fa-search"></i></span>
-										<input type="text" class="form-control pull-right" placeholder="Nome científico ou Index Int."/>
+										<Autosuggest
+											suggestions={suggestions}
+											onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
+											onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+											getSuggestionValue={getSuggestionValue}
+											renderSuggestion={renderSuggestion}
+											inputProps={inputProps}
+										/>
 									</div>
 									<div class="form-check">
 										<label class="form-check-label">

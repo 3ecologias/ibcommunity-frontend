@@ -34,6 +34,23 @@ var requests = {
         }).then(function(res, data) { token = res; return token }).catch((err) => console.log(err));
 
         return token
+    },
+    searchProduct: async function(token){
+        console.log("JWT ", token);
+        var response = await axios({
+            method: "GET",
+            url: ip_server + "/product/list/",
+            params: {
+                qs: "true",
+            },
+            headers: {
+                'Authorization': ' JWT '+ token,
+                'Content-Type': 'application/json',
+            },
+            withCredentials: false
+        }).catch(err => console.log("RENATO" , err));
+
+        return response
     }
 }
 
