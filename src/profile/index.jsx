@@ -23,10 +23,10 @@ export default class Profile extends Component {
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5 ml-auto mr-auto">
-                        <div class="card card-profile pl-4 pb-4 pr-4">
+                        <div class="card card-profile pl-0 pb-4 pr-0">
                             <div class="nav-tabs-navigation">
                                 <div class="nav-tabs-wrapper">
-                                    <ul class="nav nav-tabs" role="tablist">
+                                    <ul class="ft-size-13 nav nav-tabs" role="tablist">
                                         <li class="nav-item">
                                             <a class="nav-link active" data-toggle="tab" href="#account" role="tab">Pessoal</a>
                                         </li>
@@ -39,28 +39,28 @@ export default class Profile extends Component {
                                     </ul>
                                 </div>
                             </div>
-                            <div class="tab-content following">
+                            <div class="tab-content following plr-17">
                                 <div class="tab-pane active" id="account" role="tabpanel">
                                     <div class="row">
                                         <div class="col-md-6 ml-auto mr-auto">
-                                                <div class="input-group mb-2">
-                                                    <i class="mr-1 fa fa-user-o mt-1"></i>
+                                                <div class="input-group mb-4">
+                                                    <i class="icon_profile fa fa-user-o"></i>
                                                     <p>Stuart Hall</p>
                                                 </div>
-                                                <div class="input-group mb-2">
-                                                    <i class="mr-1 mt-1 fa fa-envelope-o"></i>
+                                                <div class="input-group mb-4">
+                                                    <i class="icon_profile fa fa-envelope-o"></i>
                                                     <p>stuarthall@gmail.com</p>
                                                 </div>
-                                                <div class="input-group mb-2">
-                                                    <i class="mr-1 mt-1 fa fa-gift"></i>
+                                                <div class="input-group mb-4">
+                                                    <i class="icon_profile fa fa-gift"></i>
                                                     <p> 05/09/1967 </p>
                                                 </div>
-                                                <div class="input-group mb-2">
-                                                    <i class="mr-1 mt-1 fa fa-map-o"></i>
+                                                <div class="input-group">
+                                                    <i class="icon_profile fa fa-map-o"></i>
                                                     <p>Rua Avelar, 42 </p>
                                                 </div>
-                                                <div class="input-group mb-2">
-                                                    <i class="mr-1 fa mt-1"></i>
+                                                <div class="input-group mb-4">
+                                                    <i class="mr-1 fa mt-1 icon_profile"></i>
                                                     <p>Recife - PE</p>
                                                 </div>
                                                 <button class="btn btn-danger btn-block btn-round mt-5">Editar</button>
@@ -70,58 +70,18 @@ export default class Profile extends Component {
                                 <div class="tab-pane" id="company" role="tabpanel">
                                     <div class="row">
                                         <div class="col-md-6 ml-auto mr-auto">
-                                            <form class="card-form">
-                                                <div class="input-group mb-2">
-                                                    <span class="input-group-addon"><i class="mr-1 fa fa-user-o"></i></span>
-                                                    <input type="text" class="form-control pull-right" placeholder="Nome"/>
-                                                </div>
-                                                <div class="input-group mb-2">
-                                                    <span class="input-group-addon"><i class="mr-1 fa fa-envelope-o"></i></span>
-                                                    <input type="text" class="form-control pull-right" placeholder="Email"/>
-                                                </div>
-                                                <div class="input-group mb-2">
-                                                    <span class="input-group-addon"><i class="mr-1 fa fa-gift"></i></span>
-                                                    <input type="text" class="form-control pull-right" placeholder="Nascimento"/>
-                                                </div>
-                                                <div class="input-group mb-2">
-                                                    <span class="input-group-addon"><i class="mr-1 fa fa-lock"></i></span>
-                                                    <input type="text" class="form-control pull-right" placeholder="Nova senha"/>
-                                                </div>
-                                                <div class="input-group mb-2">
-                                                    <span class="input-group-addon"><i class="mr-1 fa fa-lock"></i></span>
-                                                    <input type="text" class="form-control pull-right" placeholder="Repetir senha"/>
-                                                </div>
-                                                <button class="btn btn-danger btn-block btn-round mt-5">Salvar</button>
-                                            </form>
+                                            
                                         </div>
                                     </div>
                                 </div>
                                 <div class="tab-pane" id="projects" role="tabpanel">
                                     <div class="row">
                                         <div class="col-md-6 ml-auto mr-auto">
-                                            <form class="card-form">
-                                                <div class="input-group mb-2">
-                                                    <span class="input-group-addon"><i class="mr-1 fa fa-user-o"></i></span>
-                                                    <input type="text" class="form-control pull-right" placeholder="Nome"/>
-                                                </div>
-                                                <div class="input-group mb-2">
-                                                    <span class="input-group-addon"><i class="mr-1 fa fa-envelope-o"></i></span>
-                                                    <input type="text" class="form-control pull-right" placeholder="Email"/>
-                                                </div>
-                                                <div class="input-group mb-2">
-                                                    <span class="input-group-addon"><i class="mr-1 fa fa-gift"></i></span>
-                                                    <input type="text" class="form-control pull-right" placeholder="Nascimento"/>
-                                                </div>
-                                                <div class="input-group mb-2">
-                                                    <span class="input-group-addon"><i class="mr-1 fa fa-lock"></i></span>
-                                                    <input type="text" class="form-control pull-right" placeholder="Nova senha"/>
-                                                </div>
-                                                <div class="input-group mb-2">
-                                                    <span class="input-group-addon"><i class="mr-1 fa fa-lock"></i></span>
-                                                    <input type="text" class="form-control pull-right" placeholder="Repetir senha"/>
-                                                </div>
-                                                <button class="btn btn-danger btn-block btn-round mt-5">Salvar</button>
-                                            </form>
+                                            <div class="input-group">
+                                                <i class="fa fa-map-marker mark_icon" aria-hidden="true"></i>
+                                                <p className="repart_title">Painel Solar Produtivo</p> 
+                                            </div>
+                                            <p className="ml-34">Euterpa oleracea</p>
                                         </div>
                                     </div>
                                 </div>
