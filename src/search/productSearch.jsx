@@ -10,8 +10,8 @@ const getSuggestions = value => {
   const inputValue = value.trim().toLowerCase();
   const inputLength = inputValue.length;
   
-  return inputLength === 0 ? [] : products.filter(lang =>
-	  lang.common_name.toLowerCase().slice(0, inputLength) === inputValue || lang.scientific_name.toLowerCase().slice(0, inputLength) === inputValue
+  return inputLength === 0 ? [] : products.filter(product =>
+	  product.common_name.toLowerCase().slice(0, inputLength) === inputValue || product.scientific_name.toLowerCase().slice(0, inputLength) === inputValue
 	);
   };
   
@@ -47,32 +47,45 @@ export default class Search extends Component {
 	// You already implemented this logic above, so just use it.
 	onSuggestionsFetchRequested = ({ value }) => {
 		this.setState({
-			suggestions: getSuggestions(value)
+			suggestions: getSuggestions(value),
 		});
 	};
 
 	// Autosuggest will call this function every time you need to clear suggestions.
 	onSuggestionsClearRequested = () => {
 		this.setState({
-			suggestions: []
+			suggestions: [],
 		});
 	};
 
+	// When suggestion is selected
+	onSuggestionSelected = (event, {suggestion}) => {
+		this.setState({
+			id: suggestion.id,
+		});
+	}
+
+	async submitHandle(event, id){
+		event.preventDefault();
+		var token = localStorage.getItem("tokenib");
+		var res = await requests.searchProduct(token,id);
+		var communities = res.data;
+		this.props.history.push({pathname: '/valuesearch', state: {communities: communities} });
+	}
+
 	async componentWillMount(){
 		var token = localStorage.getItem("tokenib");
-		var res = await requests.searchProduct(token);
+		var res = await requests.searchProductList(token);
 		products = res.data;
 	}
 
     render() {
 		const { value, suggestions } = this.state;
-		
 		// Autosuggest will pass through all these props to the input.
 		const inputProps = {
 			placeholder: 'Digite o produto',
 			value,
-			onChange: this.onChange,
-			'data-product-id': '',
+			onChange: this.onChange
 		};
         return (
             <div>
@@ -94,59 +107,16 @@ export default class Search extends Component {
 											onSuggestionsClearRequested={this.onSuggestionsClearRequested}
 											getSuggestionValue={getSuggestionValue}
 											renderSuggestion={renderSuggestion}
+											onSuggestionSelected={this.onSuggestionSelected}
 											inputProps={inputProps}
 										/>
-									</div>
-									<div class="form-check">
-										<label class="form-check-label">
-											<input class="form-check-input" type="checkbox" value=""/>
-											Patrimônio genético
-											<span class="form-check-sign"></span>
-										</label>
-									</div>
-									<div class="form-check">
-										<label class="form-check-label">
-											<input class="form-check-input" type="checkbox" value=""/>
-											Conhecimento tradicional não identificável
-											<span class="form-check-sign"></span>
-										</label>
-									</div>
-									<div class="form-check">
-										<label class="form-check-label">
-											<input class="form-check-input" type="checkbox" value=""/>
-											Conhecimento tradicional identificável
-											<span class="form-check-sign"></span>
-										</label>
-									</div>
-								</form>
-							</div>
-						</div>
-						<div class="col-lg-5 ml-auto mr-auto">
-							<div class="card card-plain card-search">
-								<h3>Busca projeto:</h3>
-								<form class="register-form">
-									<div class="input-group mt-3 mb-2">
-										<span class="input-group-addon"><i class="mr-1 fa fa-search"></i></span>
-										<input type="text" class="form-control pull-right" placeholder="Valor do projeto"/>
-									</div>
-									<div class="dropdown">
-										<a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-											Área de atuação
-											<b class="caret"></b>
-										</a>
-										<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-											<li class="dropdown-header">Escolha da lista abaixo</li>
-											<a class="dropdown-item" href="#pk">Energia renovável</a>
-											<a class="dropdown-item" href="#pk">Empoderamento feminino</a>
-											<a class="dropdown-item" href="#pk">Reflorestamento</a>
-										</ul>
 									</div>
 								</form>
 							</div>
 						</div>
 						<div class="col-xs-4 ml-auto mr-auto">
 							<div class="card card-plain card-search">
-								<button class="btn btn-danger btn-block btn-round">Buscar</button>
+								<button onClick={(event) => this.submitHandle(event,this.state.id)} class="btn btn-danger btn-block btn-round">Buscar</button>
 							</div>
 						</div>
 					</div>

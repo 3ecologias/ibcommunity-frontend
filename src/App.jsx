@@ -7,8 +7,9 @@ import Login from "./login";
 import Landing from "./landing";
 import Register from "./register";
 import Profile from "./profile";
-import Search from "./search";
-import Result from "./search/result"
+import ProductSearch from "./search/productSearch";
+import ValueSearch from "./search/valueSearch";
+import Result from "./search/result";
 
 class App extends Component {
   constructor(props){
@@ -51,7 +52,8 @@ ReactDOM.render(
         <Route exact path= "/login" component={Login} />
         <Route exact path= "/register" component={Register} />
         <Route exact path= "/profile" component={Profile} />
-        <Route exact path= "/search" component={Search} />
+        <Route exact path= "/productsearch" component={ProductSearch} />
+        <Route exact path= "/valuesearch" component={ValueSearch} />
         <Route exact path= "/result" component={Result} />
     </Switch>
   </BrowserRouter>

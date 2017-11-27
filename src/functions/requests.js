@@ -1,6 +1,6 @@
 import axios from "axios";
 
-var ip_server = "http://192.168.15.8:8000"
+var ip_server = "http://192.168.15.17:8000"
 
 
 var requests = {
@@ -35,21 +35,49 @@ var requests = {
 
         return token
     },
-    searchProduct: async function(token){
-        console.log("JWT ", token);
+    searchProductList: async function(token){
         var response = await axios({
             method: "GET",
             url: ip_server + "/product/list/",
             params: {
-                qs: "true",
+                names: "true",
             },
             headers: {
                 'Authorization': ' JWT '+ token,
                 'Content-Type': 'application/json',
             },
             withCredentials: false
-        }).catch(err => console.log("RENATO" , err));
+        }).catch(err => console.log(err));
 
+        return response
+    },
+    searchProduct: async function(token,id){
+        var response = await axios({
+            method: "GET",
+            url: ip_server + "/product/detail/" + id,
+            params: {
+            },
+            headers: {
+                'Authorization': ' JWT '+ token,
+                'Content-Type': 'application/json',
+            },
+            withCredentials: false
+        }).catch(err => console.log(err));
+        return response
+    },
+    communityList: async function(token, productId){
+        var response = await axios({
+            method: "GET",
+            url: ip_server + "/community/list/",
+            params: {
+                product_id: productId
+            },
+            headers: {
+                'Authorization': ' JWT '+ token,
+                'Content-Type': 'application/json',
+            },
+            withCredentials: false
+        }).catch(err => console.log(err));
         return response
     }
 }
