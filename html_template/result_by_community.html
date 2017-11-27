@@ -13,6 +13,7 @@
 	<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
 	<link href="assets/css/paper-kit.css?v=2.1.0" rel="stylesheet"/>
 	<link href="assets/css/demo.css" rel="stylesheet" />
+	<link href="assets/css/style.css" rel="stylesheet" />
 
 	<!--     Fonts and icons     -->
 	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,300,700' rel='stylesheet' type='text/css'>
@@ -22,8 +23,6 @@
 	<!-- Mapbox -->
 	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.41.0/mapbox-gl.js'></script>
 	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.41.0/mapbox-gl.css' rel='stylesheet' />
-
-	<style>#map { position:relative; top: inherit; width: 100%; height: 60vh;}</style>
 
 </head>
 <body>
@@ -69,30 +68,66 @@
 		<!-- end navbar  -->
 		<!-- Content -->
 		<div class="wrapper">
-			<div class="page-header items-end">
-				<div class="container-fluid">
-					<div class="row mb-50">
-						<div class="col-lg-5 ml-auto mr-auto mt-75">
-							<div class="">
-								<h2 style="color:white;text-align:center;">Euterpe oleracea</h2>
-								<p style="color:white;text-align:center;">Valor a ser repoartido US$ 70.000,00</p>
-								<h1 style="color:white;text-align:center;">10</h1>
-								<h4 style="color:white;text-align:center;">Projetos</h4>
+			<div class="page-header">
+				<div class="container ph-30">
+					<div class="row first_row">
+                        <div class="col-md-12">
+							<h2 class="title_text">Euterpe oleracea</h2>
+							<h5 class="main_value">US$ 70.000,00</h5>
+							<p class="comunity_text">Comunidade <span class="comunity_name">Bela Aurora</span></p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="outer_product pt-20">
+								<div class="product_div">
+									<p class="product_name">Cadeia produtiva do cupuaçu</p>
+									<p class="product_value">US$ 120.000,00</p>
+								</div>
+								<div class="plus_div">
+									<i class="fa fa-plus" aria-hidden="true"></i>
+								</div>
 							</div>
 						</div>
 					</div>
 					<div class="row">
-						<div id='map'></div>
-						<script>
-						mapboxgl.accessToken = 'pk.eyJ1IjoiM2Vjb2xvZ2lhcyIsImEiOiJjajBpajduNjcwMGc4MndwcW9pY2ljYmt4In0.Hqi-m8UXDmVl7Otod2o_HA';
-						var map = new mapboxgl.Map({
-							container: 'map',
-							style: 'mapbox://styles/3ecologias/cj9q4e3b55wzt2rt6cmiwi3wk',
-							zoom: 5,
-							center: [-62.401866, -3.912172]
-						});
-						map.addControl(new mapboxgl.NavigationControl());
-						</script>
+						<div class="col-md-12">
+							<div class="outer_product pt-20">
+								<div class="product_div">
+									<p class="product_name">Cadeia produtiva do cupuaçu</p>
+									<p class="product_value">US$ 120.000,00</p>
+								</div>
+								<div class="plus_div">
+									<i class="fa fa-plus" aria-hidden="true"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="outer_product pt-20">
+								<div class="product_div">
+									<p class="product_name">Cadeia produtiva do cupuaçu</p>
+									<p class="product_value">US$ 120.000,00</p>
+								</div>
+								<div class="plus_div">
+									<i class="fa fa-plus" aria-hidden="true"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="outer_product pt-20">
+								<div class="product_div">
+									<p class="product_name">Cadeia produtiva do cupuaçu</p>
+									<p class="product_value">US$ 120.000,00</p>
+								</div>
+								<div class="plus_div">
+									<i class="fa fa-plus" aria-hidden="true"></i>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

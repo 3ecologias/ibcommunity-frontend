@@ -192,3 +192,9 @@
 .m-h-0{
     min-height: 0px !important;
 }
+
+/* ================================== FLEX ============================= */
+
+.items-end{
+    align-items: flex-end !important;
+}

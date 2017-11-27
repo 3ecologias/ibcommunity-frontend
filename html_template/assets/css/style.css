@@ -1,0 +1,57 @@
+.first_row{
+    border-top: 2px solid rgba(255, 255, 255, 0.11);
+    padding: 60px 0px 10px 0px;
+    margin-top: 40px;
+}
+.title_text{
+    font-weight: 500;
+}
+.main_value{
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+.comunity_text{
+    font-size: 12px;
+}
+.comunity_name{
+    font-size: 18px;
+}
+.product_name{
+    font-weight: 500;
+}
+.product_value{
+    font-size: 12px;
+}
+.outer_product{
+    border-bottom: 2px solid rgba(255, 255, 255, 0.11);
+    display: flex;
+    padding-bottom: 7px;
+}
+.product_div{
+    min-width: 270px;
+}
+.plus_div{
+    float: right;
+    color: white;
+    font-size: 32px;
+}
+
+.pb-10{
+    padding-bottom: 10px;
+}
+.pb-20{
+    padding-bottom: 20px;
+}
+.pt-10{
+    padding-top: 10px;
+}
+.pt-20{
+    padding-top: 20px;
+}
+.pt-30{
+    padding-top: 100px;
+}
+.ph-30{
+    padding-left: 30px;
+    padding-right: 30px;
+}
