@@ -14,6 +14,13 @@ export default class ProjectPage extends Component {
     this.setState({project: this.props.location.state.project});
   }
 
+  async submitHandle(event){
+    event.preventDefault();
+    var token = localStorage.getItem("tokenib");    
+    var res = requests.projectRequestSupport(token, this.props.location.state.project.id) 
+
+  }
+
   render() {
     return (
       <div>
@@ -21,6 +28,7 @@ export default class ProjectPage extends Component {
         <div class="wrapper">
 			    <div class="page-header">
             <h1>{this.state.project.community}</h1>
+            <button onClick={(event) => {this.submitHandle(event)}}>Apoiar</button>
 			    </div>
 		    </div>
       </div>

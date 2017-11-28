@@ -79,6 +79,18 @@ var requests = {
             withCredentials: false
         }).catch(err => console.log(err));
         return response
+    },
+    projectRequestSupport: async function(token, project_id){
+        var response = await axios({
+            method: "POST",
+            url: ip_server + "/project/detail/" + project_id+'/',
+            headers: {
+                'Authorization': ' JWT ' + token,
+                'Content-Type': 'application/json',
+            },
+            withCredentials: false
+        }).catch(err => console.log(err));
+        return response
     }
 }
 

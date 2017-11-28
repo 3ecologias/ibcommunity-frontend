@@ -16,7 +16,6 @@ export default class Login extends Component {
   async _login(event, login, password){
     event.preventDefault();    
     var token = await requests.login(login, password);
-    console.log(token.data.token);
     localStorage.setItem('tokenib', token.data.token);
     this.props.history.push({pathname: "/productsearch" , state:{name: "logado"}})
   }
