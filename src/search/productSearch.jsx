@@ -69,8 +69,8 @@ export default class Search extends Component {
 		event.preventDefault();
 		var token = localStorage.getItem("tokenib");
 		var res = await requests.searchProduct(token,id);
-		var communities = res.data;
-		this.props.history.push({pathname: '/valuesearch', state: {communities: communities} });
+		var product = res.data;
+		this.props.history.push({pathname: '/valuesearch', state: {product: product} });
 	}
 
 	async componentWillMount(){

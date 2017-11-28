@@ -9,7 +9,9 @@ import Register from "./register";
 import Profile from "./profile";
 import ProductSearch from "./search/productSearch";
 import ValueSearch from "./search/valueSearch";
-import Result from "./search/result";
+import Resultbymoney from "./result/result_by_money";
+import ProjectPage from "./projectPage/projectPage";
+import ConfirmedInterest from "./projectPage/confirmedInterest";
 
 class App extends Component {
   constructor(props){
@@ -33,28 +35,19 @@ class App extends Component {
   }
 }
 
-class Welcome extends Component {
-  render() {
-    return(
-      <div>
-        <h1>Welcome {this.props.location.state.name}</h1>
-      </div>
-    );
-  }
-}
-
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
         <Route exact path= "/" component={Landing} />
-        <Route path= "/welcome" component={Welcome} />
         <Route exact path= "/login" component={Login} />
         <Route exact path= "/register" component={Register} />
         <Route exact path= "/profile" component={Profile} />
         <Route exact path= "/productsearch" component={ProductSearch} />
         <Route exact path= "/valuesearch" component={ValueSearch} />
-        <Route exact path= "/result" component={Result} />
+        <Route exact path= "/result" component={Resultbymoney} />
+        <Route exact path= "/community" component={ProjectPage} />
+        <Route exact path= "/confirmedInterest" component={ConfirmedInterest} />
     </Switch>
   </BrowserRouter>
 , document.getElementById('root'));

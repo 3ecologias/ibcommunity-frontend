@@ -65,12 +65,12 @@ var requests = {
         }).catch(err => console.log(err));
         return response
     },
-    communityList: async function(token, productId){
+    projectList: async function(token, product_id){
         var response = await axios({
             method: "GET",
-            url: ip_server + "/community/list/",
+            url: ip_server + "/project/list/",
             params: {
-                product_id: productId
+                product_id: product_id
             },
             headers: {
                 'Authorization': ' JWT '+ token,
