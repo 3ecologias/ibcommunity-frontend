@@ -1,6 +1,6 @@
 import axios from "axios";
 
-var ip_server = "http://162.243.24.246"
+var ip_server = "http://162.243.24.246:8100"
 
 
 var requests = {
@@ -30,7 +30,7 @@ var requests = {
                 'Content-Type': 'application/json'
             },
         }).then(function(res, data) { token = res; return token }).catch((err) => console.log(err));
-
+        console.log(token);
         return token
     },
     searchProductList: async function(token){
