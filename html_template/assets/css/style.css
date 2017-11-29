@@ -55,3 +55,26 @@
     padding-left: 30px;
     padding-right: 30px;
 }
+
+/* CUSTOM SETTINGS */
+
+.section, .navbar {
+  background-color: #f5e3f5;
+}
+.s01 img, .s02 img, .s03 img {
+  width: 3em;
+}
+.s04 img {
+  width: 2em;
+}
+.s04 {
+  text-align: center;
+}
+.s05 img {
+  width: 2em;
+}
+.s05 {
+  position: absolute;
+  right: -1em;
+  top: 1em;
+}
