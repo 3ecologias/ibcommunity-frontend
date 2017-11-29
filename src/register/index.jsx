@@ -6,21 +6,21 @@ export default class Register extends Component {
   constructor(props){
     super(props);
     this.state = {
-        name: "moabe",
-        email: "sonic@moabe.com",
+        name: "",
+        email: "",
         nascimento: "",
-        password: "moabe124",
-        passwordConfirm: "moabe124",
+        password: "",
+        passwordConfirm: "",
     }
     this._register = this._register.bind(this);
   }
 
   _register(event,nome,email,password,passwordConfirm){
-    if(password == passwordConfirm){
+    if(password === passwordConfirm){
         requests.register(nome,email,password);
     }
     else{
-        console.log("password nao bate");
+        alert("Passwords diferentes");
     }
     event.preventDefault();
   }
@@ -54,7 +54,7 @@ export default class Register extends Component {
                                     <span className="input-group-addon"><i className="mr-1 fa fa-lock"></i></span>
                                     <input type="password" className="form-control pull-right" placeholder="Repetir senha" onChange={(e)=>{this.setState({passwordConfirm: e.target.value})}}/>
                                 </div>
-                                <button className="btn btn-danger btn-block btn-round">Creat</button>
+                                <button className="btn btn-danger btn-block btn-round">Criar</button>
                             </form>
                             <div className="forgot"> 
                                 <a href="#" className="btn btn-link btn-neutral">Concordo com os termos de uso!</a>

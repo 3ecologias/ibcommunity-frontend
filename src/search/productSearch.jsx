@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from "../mainComponents/Header";
 import Autosuggest from 'react-autosuggest';
 import requests from "../functions/requests";
+import extraFunctions from "../functions/extraFunctions";
 
 var products = [];
 
@@ -31,9 +32,10 @@ export default class Search extends Component {
     constructor(props){
         super(props);
         this.state = {
-			value: '',
+			value: "",
 			suggestions: [],
-			id: '',
+			id: "",
+			token: ""
         }
 	}
 
@@ -67,14 +69,14 @@ export default class Search extends Component {
 
 	async submitHandle(event, id){
 		event.preventDefault();
-		var token = localStorage.getItem("tokenib");
-		var res = await requests.searchProduct(token,id);
+		var res = await requests.searchProduct(this.state.token,id);
 		var product = res.data;
 		this.props.history.push({pathname: '/valuesearch', state: {product: product} });
 	}
 
 	async componentWillMount(){
 		var token = localStorage.getItem("tokenib");
+		this.state.token = token;
 		var res = await requests.searchProductList(token);
 		products = res.data;
 	}
@@ -89,18 +91,19 @@ export default class Search extends Component {
 		};
         return (
             <div>
-            <Header logado={true}/>
-            <div class="wrapper">
-			<div id="search-div" class="page-header search-background">
-				<div class="filter"></div>
-				<div class="container mt-5">
-					<div class="row mt-5">
-						<div class="col-lg-5 ml-auto mr-auto ">
-							<div class="card card-plain card-search ">
+            <Header logado={extraFunctions.checklogin(this.state.token)}/>
+			{extraFunctions.redirectNotLoged(this.state.token)}
+            <div className="wrapper">
+			<div id="search-div" className="page-header search-background">
+				<div className="filter"></div>
+				<div className="container">
+					<div className="row">
+						<div className="col col-md ml-auto mr-auto z-2">
+							<div className="card card-plain card-search p-0">
 								<h3>Busca produto:</h3>
-								<form class="register-form">
-									<div class="input-group mt-3 mb-2">
-										<span class="input-group-addon"><i class="mr-1 fa fa-search"></i></span>
+								<form className="register-form">
+									<div className="input-group mt-3 mb-2">
+										<span className="input-group-addon"><i className="mr-1 fa fa-search"></i></span>
 										<Autosuggest
 											suggestions={suggestions}
 											onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
@@ -114,9 +117,9 @@ export default class Search extends Component {
 								</form>
 							</div>
 						</div>
-						<div class="col-xs-4 ml-auto mr-auto">
-							<div class="card card-plain card-search">
-								<button onClick={(event) => this.submitHandle(event,this.state.id)} class="btn btn-danger btn-block btn-round">Buscar</button>
+						<div className="col-8 col-md-3 ml-auto mr-auto z-1">
+							<div className="card card-plain card-search p-0">
+								<button onClick={(event) => this.submitHandle(event,this.state.id)} className="btn btn-danger btn-block btn-round">Buscar</button>
 							</div>
 						</div>
 					</div>

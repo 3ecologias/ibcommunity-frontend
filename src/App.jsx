@@ -39,7 +39,7 @@ class App extends Component {
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-        <Route exact path= "/" component={Landing} />
+        <Route exact path= "/" component={Login} />
         <Route exact path= "/login" component={Login} />
         <Route exact path= "/register" component={Register} />
         <Route exact path= "/profile" component={Profile} />

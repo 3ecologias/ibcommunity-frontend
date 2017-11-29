@@ -1,6 +1,6 @@
 import axios from "axios";
 
-var ip_server = "http://192.168.15.17:8000"
+var ip_server = "http://127.0.0.1:8000"
 
 
 var requests = {
@@ -16,7 +16,6 @@ var requests = {
             headers: {
                 'Content-Type': 'application/json'
             },
-            withCredentials: false
         }).then(function(response){}).catch((err)=>console.log(err));
     },
     login: function(login, senha){
@@ -30,7 +29,6 @@ var requests = {
             headers: {
                 'Content-Type': 'application/json'
             },
-            withCredentials: false
         }).then(function(res, data) { token = res; return token }).catch((err) => console.log(err));
 
         return token
@@ -46,7 +44,6 @@ var requests = {
                 'Authorization': ' JWT '+ token,
                 'Content-Type': 'application/json',
             },
-            withCredentials: false
         }).catch(err => console.log(err));
 
         return response
@@ -61,7 +58,6 @@ var requests = {
                 'Authorization': ' JWT '+ token,
                 'Content-Type': 'application/json',
             },
-            withCredentials: false
         }).catch(err => console.log(err));
         return response
     },
@@ -76,7 +72,6 @@ var requests = {
                 'Authorization': ' JWT '+ token,
                 'Content-Type': 'application/json',
             },
-            withCredentials: false
         }).catch(err => console.log(err));
         return response
     },
@@ -88,7 +83,17 @@ var requests = {
                 'Authorization': ' JWT ' + token,
                 'Content-Type': 'application/json',
             },
-            withCredentials: false
+        }).catch(err => console.log(err));
+        return response
+    },
+    productDetail: async function(token, product_id){
+        var response = await axios({
+            method: "GET",
+            url: ip_server + "/product/detail/" + product_id+'/',
+            headers: {
+                'Authorization': ' JWT ' + token,
+                'Content-Type': 'application/json',
+            },
         }).catch(err => console.log(err));
         return response
     }

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Header from "../mainComponents/Header.jsx";
 import requests from "../functions/requests.js";
+import extraFunctions from "../functions/extraFunctions";
+
 
 export default class ProjectPage extends Component {
   constructor(props){
@@ -13,9 +15,10 @@ export default class ProjectPage extends Component {
   render() {
     return (
       <div>
-        <Header/>
-        <div class="wrapper">
-			    <div class="page-header">
+        <Header logado={extraFunctions.checklogin(this.state.token)}/>
+		    {extraFunctions.redirectNotLoged(this.state.token)}
+        <div className="wrapper">
+			    <div className="page-header">
             <h1>{this.state.project.community}</h1>
 			    </div>
 		    </div>
