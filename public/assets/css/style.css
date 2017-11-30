@@ -178,3 +178,14 @@ h1,h2,h3,h4,h5,h6,p,small,label{
   margin: 0 auto;
   margin-top: 5px;
 }
+.notification_div{
+  display: flex;
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 20px 0px;
+}
+.check{
+  font-size: 36px;
+  color: #50d2c2;
+  padding-top:15px;
+}

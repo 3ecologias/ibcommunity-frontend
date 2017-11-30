@@ -36,6 +36,7 @@
 .mr-60 {margin-right:60px;}
 
 .mb-0 {margin-bottom:0 !important;}
+.mb-2 {margin-bottom:2px !important;}
 .mb-5 {margin-bottom:5px !important;}
 .mb-10 {margin-bottom:10px !important;}
 .mb-15 {margin-bottom:15px !important;}
@@ -187,6 +188,10 @@
 
 /* ===================================== COLORS =================================== */
 
+
+/* ================================== WIDTH ============================= */
+
+.w-inherit{ width: inherit !important;}
 
 /* ================================== MIN-HEIGHT ============================= */
 
