@@ -85,7 +85,6 @@
     padding-left: 30px;
     padding-right: 30px;
 }
-<<<<<<< HEAD
 
 /* CUSTOM SETTINGS */
 
@@ -102,7 +101,7 @@
   text-align: center;
 }
 .s05 img {
-  width: 2em;
+  width: 15em;
 }
 .s05 {
   position: absolute;
@@ -115,4 +114,7 @@
 }
 
 .ft-w-500{ font-weight: 500 !important; }
->>>>>>> 38017244281c8c36b82cf174a609d2934ad1a7d3
+
+.title {
+  font-size: 2em;
+}

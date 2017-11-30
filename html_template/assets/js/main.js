@@ -4,17 +4,17 @@
 $(document).ready(function(){
   'use strict';
 
-  window.sr = ScrollReveal({ reset: true, mobile: true });
+  window.sr = ScrollReveal({ reset: true, mobile: false });
 
   var topLight = {
     origin   : "top",
-    distance : "100px",
+    distance : "2rem",
     duration : 1500,
     scale    : 3.05,
   }
   var rightLight = {
     origin   : "right",
-    distance : "100px",
+    distance : "2rem",
     duration : 2000,
     scale    : 5.05,
   }
