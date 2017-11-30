@@ -98,7 +98,7 @@ export default class Search extends Component {
 				<div className="filter"></div>
 				<div className="container">
 					<div className="row">
-						<div className="col col-md ml-auto mr-auto z-2">
+						<div className="col-12 ml-auto mr-auto z-2">
 							<div className="card card-plain card-search p-0">
 								<h3>Busca produto:</h3>
 								<form className="register-form">
@@ -117,7 +117,7 @@ export default class Search extends Component {
 								</form>
 							</div>
 						</div>
-						<div className="col-8 col-md-3 ml-auto mr-auto z-1">
+						<div className="col-8 ml-auto mr-auto z-1">
 							<div className="card card-plain card-search p-0">
 								<button onClick={(event) => this.submitHandle(event,this.state.id)} className="btn btn-danger btn-block btn-round">Buscar</button>
 							</div>
