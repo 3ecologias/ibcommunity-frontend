@@ -1,6 +1,6 @@
 import axios from "axios";
 
-var ip_server = "http://162.243.24.246:8100"
+var ip_server = "http://admin.repartebr.com"
 
 
 var requests = {
