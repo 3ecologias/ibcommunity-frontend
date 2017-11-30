@@ -15,7 +15,6 @@ export default class Landing extends Component {
   }
 
   _login(event,login,password){
-    console.log("teste" , login, password);
     this.props.history.push({pathname: "/welcome" , state:{name: "logado"}})
     event.preventDefault();
   }
@@ -230,13 +229,13 @@ export default class Landing extends Component {
 								</form>
 								<div className="row mt-5">
 									<div className="col-md-6 ml-auto mr-auto text-center">
-										<a href="http://www.facebook.com/institutoberaca" target="_blank" className="btn btn-link btn-danger"><i className="fa fa-2x fa-facebook"></i></a>
-										<a href="http://www.instagram.com/institutoberaca" target="_blank" className="btn btn-link btn-danger"><i className="fa fa-2x fa-instagram"></i></a>
+										<a href="http://www.facebook.com/institutoberaca" target="_blank" rel="noopener noreferrer" className="btn btn-link btn-danger"><i className="fa fa-2x fa-facebook"></i></a>
+										<a href="http://www.instagram.com/institutoberaca" target="_blank" rel="noopener noreferrer" className="btn btn-link btn-danger"><i className="fa fa-2x fa-instagram"></i></a>
 									</div>
 							</div>
 							<div className="row mt-5">
 								<div className="col-md-6 ml-auto mr-auto text-center">
-									<a href="http://www.institutoberaca.org" target="_blank" className="btn btn-link btn-danger"><img src="assets/img/logo-beraca.svg" width="78" height="36" alt="Instituto Beraca"/></a>
+									<a href="http://www.institutoberaca.org" target="_blank" rel="noopener noreferrer" className="btn btn-link btn-danger"><img src="assets/img/logo-beraca.svg" width="78" height="36" alt="Instituto Beraca"/></a>
 								</div>
 						</div>
 						</div>

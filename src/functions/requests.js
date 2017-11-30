@@ -1,6 +1,6 @@
 import axios from "axios";
 
-var ip_server = "http://192.168.15.17:8000"
+var ip_server = "http://admin.repartebr.com"
 
 
 var requests = {
@@ -16,7 +16,6 @@ var requests = {
             headers: {
                 'Content-Type': 'application/json'
             },
-            withCredentials: false
         }).then(function(response){}).catch((err)=>console.log(err));
     },
     login: function(login, senha){
@@ -30,9 +29,7 @@ var requests = {
             headers: {
                 'Content-Type': 'application/json'
             },
-            withCredentials: false
         }).then(function(res, data) { token = res; return token }).catch((err) => console.log(err));
-
         return token
     },
     searchProductList: async function(token){
@@ -46,7 +43,6 @@ var requests = {
                 'Authorization': ' JWT '+ token,
                 'Content-Type': 'application/json',
             },
-            withCredentials: false
         }).catch(err => console.log(err));
 
         return response
@@ -54,29 +50,49 @@ var requests = {
     searchProduct: async function(token,id){
         var response = await axios({
             method: "GET",
-            url: ip_server + "/product/detail/" + id,
+            url: ip_server + "/product/detail/" + id + "/",
             params: {
             },
             headers: {
                 'Authorization': ' JWT '+ token,
                 'Content-Type': 'application/json',
             },
-            withCredentials: false
         }).catch(err => console.log(err));
         return response
     },
-    communityList: async function(token, productId){
+    projectList: async function(token, product_id){
         var response = await axios({
             method: "GET",
-            url: ip_server + "/community/list/",
+            url: ip_server + "/project/list/",
             params: {
-                product_id: productId
+                product_id: product_id
             },
             headers: {
                 'Authorization': ' JWT '+ token,
                 'Content-Type': 'application/json',
             },
-            withCredentials: false
+        }).catch(err => console.log(err));
+        return response
+    },
+    projectRequestSupport: async function(token, project_id){
+        var response = await axios({
+            method: "POST",
+            url: ip_server + "/project/detail/" + project_id+'/',
+            headers: {
+                'Authorization': ' JWT ' + token,
+                'Content-Type': 'application/json',
+            },
+        }).catch(err => console.log(err));
+        return response
+    },
+    productDetail: async function(token, product_id){
+        var response = await axios({
+            method: "GET",
+            url: ip_server + "/product/detail/" + product_id+'/',
+            headers: {
+                'Authorization': ' JWT ' + token,
+                'Content-Type': 'application/json',
+            },
         }).catch(err => console.log(err));
         return response
     }

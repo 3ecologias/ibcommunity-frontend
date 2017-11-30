@@ -36,6 +36,7 @@
 .mr-60 {margin-right:60px;}
 
 .mb-0 {margin-bottom:0 !important;}
+.mb-2 {margin-bottom:2px !important;}
 .mb-5 {margin-bottom:5px !important;}
 .mb-10 {margin-bottom:10px !important;}
 .mb-15 {margin-bottom:15px !important;}
@@ -91,6 +92,7 @@
 .pt-30 {padding-top:30px;}
 .pt-36 {padding-top:36px;}
 .pt-40 {padding-top:40px;}
+.pt-45 {padding-top:45px !important;}
 .pt-50 {padding-top:50px;}
 .pt-55 {padding-top:55px;}
 .pt-60 {padding-top:60px;}
@@ -187,6 +189,10 @@
 /* ===================================== COLORS =================================== */
 
 
+/* ================================== WIDTH ============================= */
+
+.w-inherit{ width: inherit !important;}
+
 /* ================================== MIN-HEIGHT ============================= */
 
 .m-h-0{
@@ -198,3 +204,8 @@
 .items-end{
     align-items: flex-end !important;
 }
+
+/* ================================== z-index ============================= */
+
+.z-1{ z-index:1 !important;}
+.z-2{ z-index:2 !important;}

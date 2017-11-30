@@ -11,7 +11,6 @@ export default class Header extends Component {
   }
 
   _login(event,login,password){
-    console.log("teste" , login, password);
     event.preventDefault();
   }
 
@@ -21,24 +20,24 @@ export default class Header extends Component {
         list =  <div className="collapse navbar-collapse" id="navbarToggler">
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item">
-                            <a href="#" class="nav-link"><i class="nc-icon nc-layout-11"></i>Repartir</a>
+                            <a href="#" className="nav-link"><i className="nc-icon nc-layout-11"></i>Repartir</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#" target="" class="nav-link"><i class="nc-icon nc-ruler-pencil"></i>Projetos</a>
+                            <a href="#" target="" className="nav-link"><i className="nc-icon nc-ruler-pencil"></i>Projetos</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" target=""><i class="nc-icon nc-shop"></i>Comunidades</a>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#" target=""><i className="nc-icon nc-shop"></i>Comunidades</a>
 					    </li>
-                        <li class="nav-item">
-                            <a class="nav-link" rel="tooltip" title="Perfil" data-placement="bottom" href="#" target="">
-                                <i class="nc-icon nc-badge"></i>
-                                <p class="d-lg-none">Meu Perfil</p>
+                        <li className="nav-item">
+                            <a className="nav-link" rel="tooltip" title="Perfil" data-placement="bottom" href="#" target="">
+                                <i className="nc-icon nc-badge"></i>
+                                <p className="d-lg-none">Meu Perfil</p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" rel="tooltip" title="Perfil" data-placement="bottom" href="http://www.institutoberaca.org" target="_blank">
-                                <i class="nc-icon nc-alert-circle-i"></i>
-                                <p class="d-lg-none">Saiba Mais</p>
+                        <li className="nav-item">
+                            <a className="nav-link" rel="tooltip" title="Perfil" data-placement="bottom" href="http://www.institutoberaca.org" target="_blank" rel="noopener noreferrer">
+                                <i className="nc-icon nc-alert-circle-i"></i>
+                                <p className="d-lg-none">Saiba Mais</p>
                             </a>
                         </li>
                     </ul>
@@ -51,7 +50,7 @@ export default class Header extends Component {
                         <a href="/login" className="nav-link"><i className="nc-icon nc-touch-id"></i>Login</a>
                     </li>
                     <li className="nav-item">
-                        <a href="register.html" target="" className="nav-link"><i className="nc-icon nc-trophy"></i>Criar conta</a>
+                        <a href="/register" target="" className="nav-link"><i className="nc-icon nc-trophy"></i>Criar conta</a>
                     </li>
                     </ul>
                 </div>
@@ -67,7 +66,7 @@ export default class Header extends Component {
                                 <span className="navbar-toggler-bar"></span>
                                 <span className="navbar-toggler-bar"></span>
                             </button>
-                            <a className="navbar-brand" href="/landing"><i className="icon nc-icon nc-air-baloon"></i> IBCommunity</a>
+                            <a className="navbar-brand" href="/"><i className="icon nc-icon nc-air-baloon"></i> IBCommunity</a>
                         </div>
                         {list}
 
