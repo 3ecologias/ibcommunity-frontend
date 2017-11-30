@@ -30,7 +30,6 @@ var requests = {
                 'Content-Type': 'application/json'
             },
         }).then(function(res, data) { token = res; return token }).catch((err) => console.log(err));
-        console.log(token);
         return token
     },
     searchProductList: async function(token){
@@ -51,7 +50,7 @@ var requests = {
     searchProduct: async function(token,id){
         var response = await axios({
             method: "GET",
-            url: ip_server + "/product/detail/" + id,
+            url: ip_server + "/product/detail/" + id + "/",
             params: {
             },
             headers: {

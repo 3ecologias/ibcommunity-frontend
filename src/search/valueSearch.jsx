@@ -48,7 +48,7 @@ export default class Login extends Component {
 				<div className="filter"></div>
 				<div className="container">
 					<div className="row">
-						<div className="col col-md ml-auto mr-auto ">
+						<div className="col-12 ml-auto mr-auto ">
 							<div className="card card-plain card-search p-0">
 								<h3>Valor global para cálculo:</h3>
 								<form className="register-form">
@@ -59,7 +59,7 @@ export default class Login extends Component {
 								</form>
 							</div>
 						</div>
-						<div className="col-8 col-md-3 ml-auto mr-auto">
+						<div className="col-8 ml-auto mr-auto">
 							<div className="card card-plain card-search p-0">
 								<button onClick={(event) => {this.submitHandle(event)}} className="btn btn-danger btn-block btn-round">Buscar</button>
 							</div>
