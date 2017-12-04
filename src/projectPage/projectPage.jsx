@@ -38,7 +38,7 @@ export default class ProjectPage extends Component {
                 <div className="col-12">
                   <h1 className="mb-20">{this.state.project.name}</h1>
                 </div>
-                <div className="descriptions_block">
+                <div className="descriptions_block" id="style-1">
                   <div className="col-12 objective_div">
                     <h3 className="ft-w-500 mt-0">1</h3>
                     <div className="ml-30">	

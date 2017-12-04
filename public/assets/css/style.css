@@ -11,15 +11,25 @@
 .search-background{
     background-image: url('../img/search-image.jpg');
 }
+.value-search-background{
+  background-image: url('../img/Comunidade Jobim-4.jpg');
+}
+.confirmedInterest-background{
+  background-image: url('../img/devlocal.jpg');
+}
 
+/**/
 h1,h2,h3,h4,h5,h6,p,small,label{
   color: white;
 }
 
+input::-webkit-input-placeholder{color: rgba(0, 0, 0, 0.6);}
+input::-moz-placeholder{color: rgba(0, 0, 0, 0.6);}
+
 .react-autosuggest__container {
     position: relative;
     width: 100%;
-  }
+}
   
 .react-autosuggest__input {
   width: 100%;
@@ -87,6 +97,30 @@ h1,h2,h3,h4,h5,h6,p,small,label{
 
 .react-autosuggest__suggestion--highlighted {
   background-color: #ddd;
+}
+
+#style-1::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: rgba(102, 92, 141, 0.75);
+}
+
+#style-1::-webkit-scrollbar
+{
+	width: 8px;
+	background-color: rgba(49, 27, 146, 0.75);
+}
+
+#style-1::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: rgba(49, 27, 146, 0.75);
+}
+
+.search-btn{
+  max-width:140px;
 }
 
 .icon_profile{
@@ -174,7 +208,7 @@ h1,h2,h3,h4,h5,h6,p,small,label{
   font-size: 12px;
 }
 .btn-interest{
-  width: 90%;
+  width: 270px;
   margin: 0 auto;
   margin-top: 5px;
 }

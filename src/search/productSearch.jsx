@@ -35,7 +35,8 @@ export default class Search extends Component {
 			value: "",
 			suggestions: [],
 			id: "",
-			token: ""
+			token: "",
+			message: {class: "d-none" , data: ""}
         }
 	}
 
@@ -69,9 +70,13 @@ export default class Search extends Component {
 
 	async submitHandle(event, id){
 		event.preventDefault();
-		var res = await requests.searchProduct(this.state.token,id);
-		var product = res.data;
-		this.props.history.push({pathname: '/valuesearch', state: {product: product} });
+		if (id) {
+			var res = await requests.searchProduct(this.state.token,id);
+			var product = res.data;
+			this.setState({message: {class: "d-none" ,data:""}})
+			this.props.history.push({pathname: '/valuesearch', state: {product: product} });
+		}
+		else{this.setState({message: {class: "d-block text-danger ml-2" ,data:"Campo em branco ou nome inválido"}})}
 	}
 
 	async componentWillMount(){
@@ -98,8 +103,8 @@ export default class Search extends Component {
 				<div className="filter"></div>
 				<div className="container">
 					<div className="row">
-						<div className="col-12 ml-auto mr-auto z-2">
-							<div className="card card-plain card-search p-0">
+						<div className="col-12 col-md-6 ml-auto mr-auto z-2">
+							<div className="card card-plain card-search ml-auto mr-auto p-0">
 								<h3>Busca produto:</h3>
 								<form className="register-form">
 									<div className="input-group mt-3 mb-2">
@@ -114,14 +119,16 @@ export default class Search extends Component {
 											inputProps={inputProps}
 										/>
 									</div>
+									<small className={this.state.message.class}>{this.state.message.data}</small>
+									<div className="col-6 col-sm-4 col-md-6 ml-auto mr-auto z-1">
+										<div className="card card-plain card-search p-0 ml-auto mr-auto search-btn">
+											<button onClick={(event) => this.submitHandle(event,this.state.id)} className="btn btn-danger btn-block btn-round">Buscar</button>
+										</div>
+									</div>
 								</form>
 							</div>
 						</div>
-						<div className="col-8 ml-auto mr-auto z-1">
-							<div className="card card-plain card-search p-0">
-								<button onClick={(event) => this.submitHandle(event,this.state.id)} className="btn btn-danger btn-block btn-round">Buscar</button>
-							</div>
-						</div>
+
 					</div>
 				</div>
 			</div>

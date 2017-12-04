@@ -28,9 +28,9 @@ export default class ProjectPage extends Component {
         <Header logado={extraFunctions.checklogin(this.state.token)}/>
 		    {extraFunctions.redirectNotLoged(this.state.token)}
         <div className="wrapper">
-			    <div className="page-header">
+			    <div className="page-header confirmedInterest-background">
           <div className="filter"></div>
-            <div className="container z-1">
+            <div className="container z-1 pt-50">
               <div className="row text-center">
                 <div className="col-12">
                   <h2 className="mb-2">Obrigado!</h2>
