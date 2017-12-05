@@ -9,15 +9,21 @@ export default class Login extends Component {
       login: "",
       password: "",
       token:'',
+      message: {class: "d-none" , data: ""}
     }
     this._login = this._login.bind(this);
   }
 
   async _login(event, login, password){
-    event.preventDefault();    
-    var token = await requests.login(login, password);
-    localStorage.setItem('tokenib', token.data.token);
-    this.props.history.push({pathname: "/productsearch" , state:{name: "logado"}})
+    event.preventDefault();
+    try{
+        if(login || password){
+            var token = await requests.login(login, password);
+            localStorage.setItem('tokenib', token.data.token);
+            this.props.history.push({pathname: "/productsearch" , state:{name: "logado"}})
+        }
+        else{throw new Error("");}
+    }catch(err){this.setState({message: {class: "d-block text-danger ml-2", data:"Email ou senha inválido"}})}
   }
 
   render() {
@@ -39,20 +45,21 @@ export default class Login extends Component {
                             </div>
                             <div className="input-group mb-2">
                                 <span className="input-group-addon"><i className="mr-1 fa fa-lock"></i></span>
-                                <input onChange={(event) => {this.setState({password: event.target.value})}} type="password" className="form-control pull-right" placeholder="Password"/>
+                                <input onChange={(event) => {this.setState({password: event.target.value})}} type="password" className="form-control pull-right" placeholder="Senha"/>
                             </div>
+                            <small className={this.state.message.class}>{this.state.message.data}</small>
                             <button className="btn btn-danger btn-block btn-round">Login</button>
-                        </form>
-                        <div className="forgot"> 
-                            <a href="#" className="btn btn-link btn-neutral">Don´t have an account? Sign up!</a>
+                            </form>
+                            <div className="forgot"> 
+                                <a href="#" className="btn btn-link btn-neutral">Não tem uma conta? Cadastre-se</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-      </div>
+    </div>
     );
   }
 }
