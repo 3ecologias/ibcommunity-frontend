@@ -12,6 +12,7 @@ import ValueSearch from "./search/valueSearch";
 import Resultbymoney from "./result/result_by_money";
 import ProjectPage from "./projectPage/projectPage";
 import ConfirmedInterest from "./projectPage/confirmedInterest";
+import Page404 from "./mainComponents/404";
 
 class App extends Component {
   constructor(props){
@@ -48,6 +49,7 @@ ReactDOM.render(
         <Route exact path= "/result" component={Resultbymoney} />
         <Route exact path= "/community" component={ProjectPage} />
         <Route exact path= "/confirmedInterest" component={ConfirmedInterest} />
+        <Route component={Page404} />
     </Switch>
   </BrowserRouter>
 , document.getElementById('root'));
