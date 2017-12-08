@@ -36,7 +36,7 @@ export default class Register extends Component {
                     <div className="row">
                         <div className="col-lg-5 ml-auto mr-auto">
                             <div className="card card-register">
-                            <h1>New Account</h1>
+                            <h1>Nova Conta</h1>
                             <form className="register-form mt-5" onSubmit={(event) => {this._register(event,this.state.name,this.state.email,this.state.password,this.state.passwordConfirm);}}>
                                 <div className="input-group mb-2">
                                     <span className="input-group-addon"><i className="mr-1 fa fa-user-o"></i></span>

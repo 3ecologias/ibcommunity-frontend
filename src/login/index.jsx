@@ -51,7 +51,7 @@ export default class Login extends Component {
                             <button className="btn btn-danger btn-block btn-round">Login</button>
                             </form>
                             <div className="forgot"> 
-                                <a href="#" className="btn btn-link btn-neutral">Não tem uma conta? Cadastre-se</a>
+                                <a href="/register" className="btn btn-link btn-neutral">Não tem uma conta? Cadastre-se</a>
                             </div>
                         </div>
                     </div>
