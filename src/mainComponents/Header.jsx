@@ -20,14 +20,14 @@ export default class Header extends Component {
         list =  <div className="collapse navbar-collapse" id="navbarToggler">
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item">
-                            <a href="#" className="nav-link"><i className="nc-icon nc-layout-11"></i>Repartir</a>
+                            <a href="/productsearch" className="nav-link"><i className="nc-icon nc-layout-11"></i>Repartir</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#" target="" className="nav-link"><i className="nc-icon nc-ruler-pencil"></i>Projetos</a>
+                            <a href="/productsearch" target="" className="nav-link"><i className="nc-icon nc-ruler-pencil"></i>Projetos</a>
                         </li>
-                        <li className="nav-item">
+                        {/*<li className="nav-item">
                             <a className="nav-link" href="#" target=""><i className="nc-icon nc-shop"></i>Comunidades</a>
-					    </li>
+					    </li>*/}
                         <li className="nav-item">
                             <a className="nav-link" rel="tooltip" title="Perfil" data-placement="bottom" href="#" target="">
                                 <i className="nc-icon nc-badge"></i>

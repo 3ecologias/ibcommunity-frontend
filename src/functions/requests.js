@@ -16,7 +16,7 @@ var requests = {
             headers: {
                 'Content-Type': 'application/json'
             },
-        }).then(function(response){}).catch((err)=>console.log(err));
+        }).then(function(res, data){}).catch((err)=>console.log(err));
     },
     login: function(login, senha){
         var token = axios({

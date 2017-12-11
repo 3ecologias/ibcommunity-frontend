@@ -36,7 +36,7 @@ export default class Login extends Component {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-5 ml-auto mr-auto">
-                        <div className="card card-register">
+                        <div className="card card-register ml-auto mr-auto">
                            <h1><i className="fa fa-check fa-3x"></i></h1>
                            <form className="register-form" onSubmit={(event) => {this._login(event,this.state.login,this.state.password)}}>
                             <div className="input-group mb-2">
@@ -51,7 +51,7 @@ export default class Login extends Component {
                             <button className="btn btn-danger btn-block btn-round">Login</button>
                             </form>
                             <div className="forgot"> 
-                                <a href="#" className="btn btn-link btn-neutral">Não tem uma conta? Cadastre-se</a>
+                                <a href="/register" className="btn btn-link btn-neutral">Não tem uma conta? Cadastre-se</a>
                             </div>
                         </div>
                     </div>
