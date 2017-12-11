@@ -54,7 +54,7 @@ export default class Login extends Component {
 					<div className="row">
 						<div className="col-12 col-md-6 ml-auto mr-auto">
 							<div className="card card-plain card-search ml-auto mr-auto p-0">
-								<h3>Valor global para cálculo:</h3>
+								<h3>Valor a ser repartido:</h3>
 								<form className="register-form">
 									<div className="input-group mt-3 mb-2">
 										<span className="input-group-addon"><i className="mr-1 fa fa-search"></i></span>

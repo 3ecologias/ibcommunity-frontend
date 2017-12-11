@@ -40,7 +40,7 @@ export default class Register extends Component {
                             <form className="register-form mt-5" onSubmit={(event) => {this._register(event,this.state.name,this.state.email,this.state.password,this.state.passwordConfirm);}}>
                                 <div className="input-group mb-2">
                                     <span className="input-group-addon"><i className="mr-1 fa fa-user-o"></i></span>
-                                    <input type="text" className="form-control pull-right" placeholder="Nome" onChange={(e)=>{this.setState({name: e.target.value})}}/>
+                                    <input type="text" className="form-control pull-right" placeholder="Login" onChange={(e)=>{this.setState({name: e.target.value})}}/>
                                 </div>
                                 <div className="input-group mb-2">
                                     <span className="input-group-addon"><i className="mr-1 fa fa-envelope-o"></i></span>

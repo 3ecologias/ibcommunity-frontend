@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Header from "../mainComponents/Header.jsx";
-import requests from "../functions/requests.js";
 import extraFunctions from "../functions/extraFunctions";
 
 

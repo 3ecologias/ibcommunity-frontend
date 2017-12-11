@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Header from "../mainComponents/Header.jsx";
-import requests from "../functions/requests.js";
 import { Link } from "react-router-dom";
 import extraFunctions from "../functions/extraFunctions";
 

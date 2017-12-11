@@ -27,13 +27,13 @@ export default class Header extends Component {
                         </li>
                         {/*<li className="nav-item">
                             <a className="nav-link" href="#" target=""><i className="nc-icon nc-shop"></i>Comunidades</a>
-					    </li>*/}
+					    </li>
                         <li className="nav-item">
                             <a className="nav-link" rel="tooltip" title="Perfil" data-placement="bottom" href="#" target="">
                                 <i className="nc-icon nc-badge"></i>
                                 <p className="d-lg-none">Meu Perfil</p>
                             </a>
-                        </li>
+                        </li>*/}
                         <li className="nav-item">
                             <a className="nav-link" rel="tooltip" title="Perfil" data-placement="bottom" href="http://www.institutoberaca.org" target="_blank" rel="noopener noreferrer">
                                 <i className="nc-icon nc-alert-circle-i"></i>
@@ -66,7 +66,7 @@ export default class Header extends Component {
                                 <span className="navbar-toggler-bar"></span>
                                 <span className="navbar-toggler-bar"></span>
                             </button>
-                            <a className="navbar-brand" href="/"><i className="icon nc-icon nc-air-baloon"></i> IBCommunity</a>
+                            <a className="navbar-brand" href="/"><i className="icon nc-icon nc-air-baloon"></i> ReparteBR</a>
                         </div>
                         {list}
 

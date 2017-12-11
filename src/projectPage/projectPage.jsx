@@ -16,7 +16,6 @@ export default class ProjectPage extends Component {
   componentWillMount(){
     var token = localStorage.getItem("tokenib");
     this.state.token = token;
-    console.log(this.props.location.state.project);
     this.setState({project: this.props.location.state.project});
   }
 
@@ -32,8 +31,8 @@ export default class ProjectPage extends Component {
   imagesRender(images){
     var active = "carousel-item active"
     var imagesTags = images.map((imagem) => {
-      var imageTag = (<div class={active}>
-                        <a href={imagem.image} target="_blank"><img class="d-block img-fluid" src={imagem.image} alt="First slide"/></a>
+      var imageTag = (<div className={active}>
+                        <a href={imagem.image} target="_blank"><img className="d-block img-fluid" src={imagem.image} alt="First slide"/></a>
                       </div>);
       active = "carousel-item";
       return imageTag;
@@ -65,86 +64,86 @@ export default class ProjectPage extends Component {
                     <h3 className="ft-w-500 mt-0">1</h3>
                     <div className="ml-30">	
                       <h4>Área de atuação</h4>
-                      <p className="desciption_text">{this.state.project.target_area}</p>
+                      <p className="desciption_text ml-1">{this.state.project.target_area}</p>
                     </div>
                   </div>
                   <div className="col-12 objective_div">
                     <h3 className="ft-w-500 mt-0">2</h3>
                     <div className="ml-30">	
                       <h4>Tema</h4>
-                      <p className="desciption_text">{this.state.project.theme_description}</p>
+                      <p className="desciption_text ml-1">{this.state.project.theme_description}</p>
                     </div>
                   </div>
                   <div className="col-12 objective_div">
                     <h3 className="ft-w-500 mt-0">3</h3>
                     <div className="ml-30">	
                       <h4>Objetivos</h4>
-                      <p className="desciption_text">{this.state.project.goals}</p>
+                      <p className="desciption_text ml-1">{this.state.project.goals}</p>
                     </div>
                   </div>
                   <div className="col-12 objective_div">
                     <h3 className="ft-w-500 mt-0">4</h3>
                     <div className="ml-30">	
                       <h4>Objetivos especificos</h4>
-                      <p className="desciption_text">{this.state.project.specific_goals}</p>
+                      <p className="desciption_text ml-1">{this.state.project.specific_goals}</p>
                     </div>
                   </div>
                   <div className="col-12 objective_div">
                     <h3 className="ft-w-500 mt-0">5</h3>
                     <div className="ml-30">	
                       <h4>Atividades a serem desenvolvidas</h4>
-                      <p className="desciption_text">{this.state.project.activities}</p>
+                      <p className="desciption_text ml-1">{this.state.project.activities}</p>
                     </div>
                   </div>
                   <div className="col-12 objective_div">
                     <h3 className="ft-w-500 mt-0">6</h3>
                     <div className="ml-30">	
                       <h4>Resultados esperados</h4>
-                      <p className="desciption_text">{this.state.project.results}</p>
+                      <p className="desciption_text ml-1">{this.state.project.results}</p>
                     </div>
                   </div>
                   <div className="col-12 objective_div">
                     <h3 className="ft-w-500 mt-0">7</h3>
                     <div className="ml-30">	
                       <h4>Cronograma</h4>
-                      <a className="desciption_text" href={this.state.project.schedule}>Baixar PDF</a>
+                      <a className="desciption_text ml-1" href={this.state.project.schedule}>Baixar PDF</a>
                     </div>
                   </div>
                   <div className="col-12 objective_div">
                     <h3 className="ft-w-500 mt-0">8</h3>
                     <div className="ml-30">	
                       <h4>Valores</h4>
-                      <p className="desciption_text">Valor do projeto: <br/> US$ {this.state.project.project_totals} <br/><br/> Custos administrativos: <br/> {this.state.project.taxes}%</p>
+                      <p className="desciption_text ml-1">Valor do projeto: <br/> US$ {this.state.project.project_totals} <br/><br/> Custos administrativos: <br/> {this.state.project.taxes}%</p>
                     </div>
                   </div>
                   <div className="col-12 objective_div">
                     <h3 className="ft-w-500 mt-0">9</h3>
                     <div className="ml-30">	
                       <h4>Visão de futuro</h4>
-                      <p className="desciption_text">{this.state.project.future_vision}</p>
+                      <p className="desciption_text ml-1">{this.state.project.future_vision}</p>
                     </div>
                   </div>
                   <div className="col-12 objective_div">
                     <h3 className="ft-w-500 mt-0">10</h3>
                     <div className="ml-30">	
                       <h4>Categorias</h4>
-                      <p className="desciption_text">{this.categoriesRender(this.state.project.category)}</p>
+                      <p className="desciption_text ml-1">{this.categoriesRender(this.state.project.category)}</p>
                     </div>
                   </div>
                   <div className="col-12 objective_div">
                     <h3 className="ft-w-500 mt-0">11</h3>
                     <div className="ml-30">	
                       <h4>Imagens</h4>
-                      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="1000">
-                        <div class="carousel-inner" role="listbox">
+                      <div id="carouselExampleSlidesOnly" className="carousel slide" data-ride="carousel" data-interval="1000">
+                        <div className="carousel-inner" role="listbox">
                           {this.imagesRender(this.state.project.images)}
-                          <a class="carousel-control-prev" href="#carouselExampleSlidesOnly" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
+                          <a className="carousel-control-prev" href="#carouselExampleSlidesOnly" role="button" data-slide="prev">
+                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span className="sr-only">Previous</span>
                           </a>
-                          <a class="carousel-control-next" href="#carouselExampleSlidesOnly" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
+                          <a className="carousel-control-next" href="#carouselExampleSlidesOnly" role="button" data-slide="next">
+                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span className="sr-only">Next</span>
                           </a>
                         </div>
                       </div>
