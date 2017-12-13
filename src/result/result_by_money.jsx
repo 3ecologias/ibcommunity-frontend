@@ -39,6 +39,23 @@ export default class Resultbymoney extends Component {
   }
 
   render() {
+      if(this.state.projectsList.length > 0){
+          var content = (
+          <div className="col-md-12">
+            <h2 className="title_text mb-10">{this.props.location.state.productName}</h2>
+            <small className="value_text pt-10">Exibindo resultados menor ou igual a </small>
+            <h5 className="main_value mb-0">US$ {this.props.location.state.valor}</h5>
+          </div>
+          )
+      }
+      else{
+       var content = (
+        <div className="col-md-12">
+            <h3 className="mt-10">Nenhum projeto relacionado a <strong>{this.props.location.state.productName}</strong> existe abaixo de <strong>US$ {this.props.location.state.valor}</strong></h3>
+            <h5 className="mt-10">Por favor tente valores maiores para obter resultados.</h5>
+            <button className="btn btn-danger btn-block btn-round mt-10" onClick={() => {this.props.history.push({pathname: "/productsearch"})}}>Voltar</button>
+        </div>)
+      }
     return (
       <div>
         <Header logado={extraFunctions.checklogin(this.state.token)}/>
@@ -48,11 +65,7 @@ export default class Resultbymoney extends Component {
             <div className="filter"></div>
 				<div className="container ph-30 z-1">
 					<div className="row first_row">
-                        <div className="col-md-12">
-							<h2 className="title_text mb-10">{this.props.location.state.productName}</h2>
-                            <small className="value_text pt-10">Exibindo resultados menor ou igual a </small>
-							<h5 className="main_value mb-0">US$ {this.props.location.state.valor}</h5>
-						</div>
+                        {content}
 					</div>
                     {this.renderProjects()}			
 				</div>

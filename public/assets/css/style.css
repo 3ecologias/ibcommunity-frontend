@@ -183,9 +183,13 @@ input::-moz-placeholder{color: rgba(0, 0, 0, 0.6);}
   border-bottom: 2px solid rgba(255, 255, 255, 0.4);
   display: flex;
   padding-bottom: 7px;
+  justify-content: space-between;
 }
 .product_div{
-  min-width: 270px;
+  min-width: 260px;
+}
+.plus_div{
+  margin-right: 20px;
 }
 .plus_div a{
   float: right;
@@ -225,4 +229,18 @@ input::-moz-placeholder{color: rgba(0, 0, 0, 0.6);}
   font-size: 36px;
   color: #50d2c2;
   padding-top:15px;
+}
+.modal-body p{
+  color:#000;
+}
+.modal-footer{
+  border-top: 0px;
+  padding: 15px;
+}
+.terms-text{
+  white-space: inherit;
+}
+.checkbox{
+  height: 24px;
+  width: 24px;
 }

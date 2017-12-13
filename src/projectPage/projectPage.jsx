@@ -58,79 +58,78 @@ export default class ProjectPage extends Component {
               <div className="row ml-30">
                 <div className="col-12">
                   <h1 className="mb-20">{this.state.project.name}</h1>
-                </div>
                 <div className="descriptions_block" id="style-1">
-                  <div className="col-12 objective_div">
+                  <div className="objective_div">
                     <h3 className="ft-w-500 mt-0">1</h3>
                     <div className="ml-30">	
                       <h4>Área de atuação</h4>
                       <p className="desciption_text ml-1">{this.state.project.target_area}</p>
                     </div>
                   </div>
-                  <div className="col-12 objective_div">
+                  <div className="objective_div">
                     <h3 className="ft-w-500 mt-0">2</h3>
                     <div className="ml-30">	
                       <h4>Tema</h4>
                       <p className="desciption_text ml-1">{this.state.project.theme_description}</p>
                     </div>
                   </div>
-                  <div className="col-12 objective_div">
+                  <div className="objective_div">
                     <h3 className="ft-w-500 mt-0">3</h3>
                     <div className="ml-30">	
                       <h4>Objetivos</h4>
                       <p className="desciption_text ml-1">{this.state.project.goals}</p>
                     </div>
                   </div>
-                  <div className="col-12 objective_div">
+                  <div className="objective_div">
                     <h3 className="ft-w-500 mt-0">4</h3>
                     <div className="ml-30">	
                       <h4>Objetivos especificos</h4>
                       <p className="desciption_text ml-1">{this.state.project.specific_goals}</p>
                     </div>
                   </div>
-                  <div className="col-12 objective_div">
+                  <div className="objective_div">
                     <h3 className="ft-w-500 mt-0">5</h3>
                     <div className="ml-30">	
                       <h4>Atividades a serem desenvolvidas</h4>
                       <p className="desciption_text ml-1">{this.state.project.activities}</p>
                     </div>
                   </div>
-                  <div className="col-12 objective_div">
+                  <div className="objective_div">
                     <h3 className="ft-w-500 mt-0">6</h3>
                     <div className="ml-30">	
                       <h4>Resultados esperados</h4>
                       <p className="desciption_text ml-1">{this.state.project.results}</p>
                     </div>
                   </div>
-                  <div className="col-12 objective_div">
+                  <div className="objective_div">
                     <h3 className="ft-w-500 mt-0">7</h3>
                     <div className="ml-30">	
                       <h4>Cronograma</h4>
                       <a className="desciption_text ml-1" href={this.state.project.schedule}>Baixar PDF</a>
                     </div>
                   </div>
-                  <div className="col-12 objective_div">
+                  <div className="objective_div">
                     <h3 className="ft-w-500 mt-0">8</h3>
                     <div className="ml-30">	
                       <h4>Valores</h4>
                       <p className="desciption_text ml-1">Valor do projeto: <br/> US$ {this.state.project.project_totals} <br/><br/> Custos administrativos: <br/> {this.state.project.taxes}%</p>
                     </div>
                   </div>
-                  <div className="col-12 objective_div">
+                  <div className="objective_div">
                     <h3 className="ft-w-500 mt-0">9</h3>
                     <div className="ml-30">	
                       <h4>Visão de futuro</h4>
                       <p className="desciption_text ml-1">{this.state.project.future_vision}</p>
                     </div>
                   </div>
-                  <div className="col-12 objective_div">
+                  <div className="objective_div">
                     <h3 className="ft-w-500 mt-0">10</h3>
                     <div className="ml-30">	
                       <h4>Categorias</h4>
                       <p className="desciption_text ml-1">{this.categoriesRender(this.state.project.category)}</p>
                     </div>
                   </div>
-                  <div className="col-12 objective_div">
+                  <div className="objective_div">
                     <h3 className="ft-w-500 mt-0">11</h3>
                     <div className="ml-30">	
                       <h4>Imagens</h4>
@@ -150,8 +149,9 @@ export default class ProjectPage extends Component {
                     </div>
                   </div>
                 </div>
+                </div>
               </div>
-              <button onClick={(event) => {this.submitHandle(event)}} className="btn btn-danger btn-block btn-round btn-interest">Tenho interesse nesse projeto</button>
+              <button onClick={(event) => {this.submitHandle(event)}} className="btn btn-danger btn-block btn-round btn-interest mt-10 mb-10">Tenho interesse nesse projeto</button>
             </div>
 			    </div>
 		    </div>

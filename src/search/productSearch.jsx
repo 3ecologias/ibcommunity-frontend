@@ -120,7 +120,7 @@ export default class Search extends Component {
 										/>
 									</div>
 									<small className={this.state.message.class}>{this.state.message.data}</small>
-									<div className="col-6 col-sm-4 col-md-6 ml-auto mr-auto z-1">
+									<div className="col-6 col-sm-6 col-md-6 ml-auto mr-auto z-1">
 										<div className="card card-plain card-search p-0 ml-auto mr-auto search-btn">
 											<button onClick={(event) => this.submitHandle(event,this.state.id)} className="btn btn-danger btn-block btn-round">Buscar</button>
 										</div>

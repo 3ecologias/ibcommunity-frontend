@@ -64,7 +64,7 @@ export default class Login extends Component {
                   </div>
                   <small className={this.state.message.class}>{this.state.message.data}</small>
                   <small className="ml-2">Digite apenas numeros*</small>
-                  <div className="col-6 col-sm-4 col-md-6 ml-auto mr-auto z-1">
+                  <div className="col-6 col-sm-6 col-md-6 ml-auto mr-auto z-1">
                     <div className="ard card-plain card-search p-0 ml-auto mr-auto search-btn">
                       <button onClick={(event) => {this.submitHandle(event)}} className="btn btn-danger btn-block btn-round">Buscar</button>
                     </div>

@@ -1,3 +1,8 @@
+@media only screen and (max-width: 340px) {
+    .pt-80-340{
+        padding-top: 80px;
+    }
+}
 @media only screen and (min-width: 768px) {
     .search-btn{
         padding-top: 40px !important;
