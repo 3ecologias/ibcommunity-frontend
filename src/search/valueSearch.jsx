@@ -21,10 +21,12 @@ export default class Login extends Component {
 
   async submitHandle(event){
     event.preventDefault();
-    if(this.state.value){
-    var max = parseInt(this.state.value);
+    var moneyRegex = new RegExp(/^[0-9]([0-9]*\.*)+(,)*([0-9]*)+/,"g");
+    if(moneyRegex.test(this.state.value)){
+    var max = parseFloat(this.state.value);
+    console.log(max);
     this.filteredProjectsList = this.projectsList.filter((project) => {
-      if (parseInt(project.project_totals) <= max) {
+      if (parseFloat(project.project_totals) <= max) {
         return project;
       }
     });
