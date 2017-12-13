@@ -57,11 +57,23 @@
 
 /* Coisas que tem no SEOClasses */
 
+.mt-110 {
+  margin-top: 110px;
+}
+.mt-10 {
+  margin-top: 10em;
+}
+.mt-20 {
+  margin-top: 20em;
+}
 .mt-4 {
   margin-top: 4em;
 }
 .mt-80{
     margin-top: 80px;
+}
+.mt-40 {
+  margin-top: 40px;
 }
 .mb-20{
     margin-bottom: 20px;
@@ -97,7 +109,7 @@
 }
 
 .main {
-  background-color: rgba(49, 27, 146, 0.75);
+  background-color: rgb(148, 116, 206);
 }
 
 /* CUSTOM SETTINGS SCROLLREVEALL STYLE */
@@ -108,34 +120,20 @@
 .s01 img, .s02 img, .s03 img {
   width: 3em;
 }
-.s04 img {
-  width: 2em;
-}
-.s04 {
-  text-align: center;
-  position: absolute;
-}
-.s05 img {
-  width: 15em;
-}
-.s05 {
-  position: absolute;
-  right: 0em;
-  top: -0.5em;
-}
 .scene-city img {
   position: relative;
-  top: 1em;
+  top: -17em;
 }
 .scene-background-purple {
   height: 100%;
   position: relative;
-  top: -8em;
+  top: -15em;
+  height: 0em;
 }
 .scene-entrepreneur {
   display: inline;
   position: absolute;
-  top: -8em;
+  top: -20em;
   right: 3em;
   z-index: 1;
 }
@@ -149,9 +147,38 @@
 .scene-world {
   position: relative;
   z-index: 1;
-  top: -7em;
+  top: -5em;
+}
+.scene-world-trace-1 {
+  position: relative;
+  top: -14em;
+  right: -9em;
+  width: 13em;
+  z-index: 1;
+}
+.scene-world-trace-2 {
+  position: relative;
+  top: -20em;
+  right: -8.5em;
+  width: 4em;
+  z-index: 1;
+}
+.scene-world-trace-3 {
+  position: relative;
+  top: -26em;
+  right: -3.5em;
+  width: 5em;
+  z-index: 1;
 }
 
+.scene-text-reparte-1 {
+  position: relative;
+  top: -8em;
+}
+.scene-text-reparte-2 {
+  position: relative;
+  top: -20em;
+}
 /* END SCROLL STYLE */
 
 .flex{
