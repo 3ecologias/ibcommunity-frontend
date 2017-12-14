@@ -53,7 +53,8 @@ $(document).ready(function(){
   sr.reveal(".scene-text-reparte-1", topLight)
   sr.reveal(".scene-world", topLight)
   sr.reveal(".scene-world-trace-1, .scene-world-trace-2, .scene-world-trace-3", topLightVerySlow)
-  sr.reveal(".scene-text-reparte-2", topLight)
+  sr.reveal(".scene-text-reparte-2, .scene-text-reparte-3", topLight)
+  sr.reveal(".scene-ibcommunity-states, .scene-ibcommunity-communities, .scene-ibcommunity-families", topLight)
 
 
 

@@ -142,7 +142,8 @@
 }
 .scene-genetic {
   position: relative;
-  top: 0em;
+  top: -14em;
+  width: 13em;
 }
 .scene-world {
   position: relative;
@@ -179,6 +180,39 @@
   position: relative;
   top: -20em;
 }
+
+.scene-text-reparte-3 {
+  position: relative;
+  top: -20em;
+  z-index: 2;
+}
+.scene-ibcommunity-states {
+  position: relative;
+  top: -12em;
+  z-index: 2;
+}
+.scene-ibcommunity-states img {
+  width: 6em;
+}
+.scene-ibcommunity-states span {
+  margin-left: 4em;
+}
+.scene-ibcommunity-communities {
+  position: relative;
+  top: -14.7em;
+  z-index: 1;
+}
+.scene-ibcommunity-communities img {
+  width: 14em;
+}
+.scene-ibcommunity-families {
+  position: relative;
+  top: -19.7em;
+  z-index: 0;
+}
+.scene-ibcommunity-families img {
+  width: 18em;
+}
 /* END SCROLL STYLE */
 
 .flex{
@@ -189,4 +223,8 @@
 
 .title {
   font-size: 2em;
+}
+
+.subtitle {
+  font-size: 1.5em;
 }
