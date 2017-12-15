@@ -19,6 +19,20 @@ $(document).ready(function(){
     delay    : 1000,
     scale    : 1,
   }
+  var topLightRotate = {
+    origin   : "top",
+    distance : "0em",
+    duration : 1000,
+    delay    : 1500,
+    scale    : 2,
+  }
+  var ShowQuickly = {
+    origin   : "top",
+    distance : "0em",
+    duration : 100,
+    delay    : 500,
+    scale    : 2,
+  }
   var topLightSlow = {
     origin   : "top",
     distance : "0em",
@@ -53,8 +67,12 @@ $(document).ready(function(){
   sr.reveal(".scene-text-reparte-1", topLight)
   sr.reveal(".scene-world", topLight)
   sr.reveal(".scene-world-trace-1, .scene-world-trace-2, .scene-world-trace-3", topLightVerySlow)
-  sr.reveal(".scene-text-reparte-2, .scene-text-reparte-3", topLight)
+  sr.reveal(".scene-text-reparte-2, .scene-text-reparte-3, .scene-text-reparte-4", topLight)
   sr.reveal(".scene-ibcommunity-states, .scene-ibcommunity-communities, .scene-ibcommunity-families", topLight)
+  sr.reveal(".avatar-people, .scene-eolic", topLight)
+  sr.reveal(".scene-eolic", topLightRotate)
+  sr.reveal(".scene-cloud, .scene-text-reparte-5", topLight)
+  sr.reveal(".scene-itens, .scene-windmill, .scene-windmill-an", ShowQuickly)
 
 
 
