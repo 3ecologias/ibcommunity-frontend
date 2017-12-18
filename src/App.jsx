@@ -6,6 +6,7 @@ import './App.css';
 import Login from "./login";
 import Landing from "./landing";
 import Register from "./register";
+import waitConfirm from "./register/waitConfirm";
 import Profile from "./profile";
 import ProductSearch from "./search/productSearch";
 import ValueSearch from "./search/valueSearch";
@@ -43,6 +44,7 @@ ReactDOM.render(
         <Route exact path= "/" component={Login} />
         <Route exact path= "/login" component={Login} />
         <Route exact path= "/register" component={Register} />
+        <Route exact path= "/waitconfirm" component={waitConfirm} />
         <Route exact path= "/profile" component={Profile} />
         <Route exact path= "/productsearch" component={ProductSearch} />
         <Route exact path= "/valuesearch" component={ValueSearch} />

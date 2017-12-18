@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from "../mainComponents/Header.jsx";
+import extraFunctions from "../functions/extraFunctions";
 
 export default class Profile extends Component {
   constructor(props){

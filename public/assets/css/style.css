@@ -240,11 +240,15 @@ input::-moz-placeholder{color: rgba(0, 0, 0, 0.6);}
   max-width: 70%;
   margin: 0 auto;
   padding: 20px 0px;
+  justify-content: center;
+  align-items: center;
+}
+.notification_div p{
+  padding-top: 5px;
 }
 .check{
   font-size: 36px;
   color: #50d2c2;
-  padding-top:15px;
 }
 .modal-body p{
   color:#000;
