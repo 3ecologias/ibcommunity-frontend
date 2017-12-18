@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from "../mainComponents/Header.jsx";
 import requests from "../functions/requests.js";
+import extraFunctions from "../functions/extraFunctions";
 
 export default class Login extends Component {
   constructor(props){
@@ -12,6 +13,14 @@ export default class Login extends Component {
       message: {class: "d-none" , data: ""}
     }
     this._login = this._login.bind(this);
+  }
+
+  componentWillMount(){
+      var token = localStorage.getItem('tokenib');
+      if(extraFunctions.checklogin(token)){
+        this.props.history.push({pathname: "/productsearch"});
+      }
+      this.setState({token: token});
   }
 
   async _login(event, login, password){
@@ -29,8 +38,8 @@ export default class Login extends Component {
   render() {
     return (
       <div>
-        <Header/>
-        <div className="row">
+        <Header logado={extraFunctions.checklogin(this.state.token)} history={this.props.history}/>
+        <div className="wrapper">
         <div className="page-header login-background">
             <div className="filter"></div>
             <div className="container">

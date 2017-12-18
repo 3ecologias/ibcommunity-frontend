@@ -7,11 +7,12 @@ export default class Header extends Component {
       login: "",
       password: ""
     }
-    this._login = this._login.bind(this);
   }
 
-  _login(event,login,password){
-    event.preventDefault();
+  _logout(event){
+      event.preventDefault();
+      localStorage.removeItem("tokenib");
+      this.props.history.push({pathname: "/login"});
   }
 
   render() {
@@ -39,6 +40,9 @@ export default class Header extends Component {
                                 <i className="nc-icon nc-alert-circle-i"></i>
                                 <p className="d-lg-none">Saiba Mais</p>
                             </a>
+                        </li>
+                        <li className="nav-item">
+                            <a href="/login" onClick={(event) => {this._logout(event)}} target="" className="nav-link"><i className="icon ion-log-out t-0"></i>Sair</a>
                         </li>
                     </ul>
                 </div>

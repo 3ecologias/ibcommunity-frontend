@@ -24,7 +24,7 @@ export default class ProjectPage extends Component {
   render() {
     return (
       <div>
-        <Header logado={extraFunctions.checklogin(this.state.token)}/>
+        <Header logado={extraFunctions.checklogin(this.state.token)} history={this.props.history}/>
 		    {extraFunctions.redirectNotLoged(this.state.token)}
         <div className="wrapper">
 			    <div className="page-header confirmedInterest-background">

@@ -49,15 +49,22 @@ export default class ProjectPage extends Component {
   render() {
     return (
       <div>
-        <Header logado={extraFunctions.checklogin(this.state.token)}/>
+        <Header logado={extraFunctions.checklogin(this.state.token)} history={this.props.history}/>
 		    {extraFunctions.redirectNotLoged(this.state.token)}
         <div className="wrapper">
-			    <div id="search-div" className="page-header search-background">
+			    <div id="search-div" className="page-header search-background items-inherit">
           <div className="filter"></div>
             <div className="container mt-70 z-1">
-              <div className="row ml-30">
+              <div className="row fab_row">
+                <a onClick={() => {this.props.history.goBack()}} href="">
+                  <div className="fab_div">
+                    <p className="fab_text">X</p>
+                  </div>
+                </a>
+              </div>
+              <div className="row ml-1">
                 <div className="col-12">
-                  <h1 className="mb-20">{this.state.project.name}</h1>
+                  <h2 className="mb-20">{this.state.project.name}</h2>
                 <div className="descriptions_block" id="style-1">
                   <div className="objective_div">
                     <h3 className="ft-w-500 mt-0">1</h3>
@@ -129,11 +136,13 @@ export default class ProjectPage extends Component {
                       <p className="desciption_text ml-1">{this.categoriesRender(this.state.project.category)}</p>
                     </div>
                   </div>
-                  <div className="objective_div">
-                    <h3 className="ft-w-500 mt-0">11</h3>
-                    <div className="ml-30">	
-                      <h4>Imagens</h4>
-                      <div id="carouselExampleSlidesOnly" className="carousel slide" data-ride="carousel" data-interval="1000">
+                  <div className="carousel_div">
+                    <div className="d-flex">
+                      <h3 className="ft-w-500 mt-0">11</h3>
+                      <h4 className="ml-30">Imagens</h4>
+                    </div>
+                    <div className="">
+                      <div id="carouselExampleSlidesOnly" className="carousel slide" data-ride="carousel" data-interval="3000">
                         <div className="carousel-inner" role="listbox">
                           {this.imagesRender(this.state.project.images)}
                           <a className="carousel-control-prev" href="#carouselExampleSlidesOnly" role="button" data-slide="prev">
@@ -151,7 +160,7 @@ export default class ProjectPage extends Component {
                 </div>
                 </div>
               </div>
-              <button onClick={(event) => {this.submitHandle(event)}} className="btn btn-danger btn-block btn-round btn-interest mt-10 mb-10">Tenho interesse nesse projeto</button>
+              <button onClick={(event) => {this.submitHandle(event)}} className="btn btn-danger btn-block btn-round btn-interest mt-20 mb-10">Tenho interesse nesse projeto</button>
             </div>
 			    </div>
 		    </div>

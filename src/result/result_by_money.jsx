@@ -58,13 +58,20 @@ export default class Resultbymoney extends Component {
       }
     return (
       <div>
-        <Header logado={extraFunctions.checklogin(this.state.token)}/>
+        <Header logado={extraFunctions.checklogin(this.state.token)} history={this.props.history}/>
 		{extraFunctions.redirectNotLoged(this.state.token)}
         <div className="wrapper">
-			<div className="page-header search-background">
+			<div className="page-header search-background items-inherit">
             <div className="filter"></div>
-				<div className="container ph-30 z-1">
-					<div className="row first_row">
+				<div className="container ph-30 pt-70 z-1">
+                    <div className="row fab_row">
+                        <a onClick={() => {this.props.history.push({pathname: "/productsearch"})}} href="">
+                        <div className="fab_div">
+                            <p className="fab_text">X</p>
+                        </div>
+                        </a>
+                    </div>
+					<div className="row">
                         {content}
 					</div>
                     {this.renderProjects()}			

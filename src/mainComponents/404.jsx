@@ -1,5 +1,6 @@
 import React , {Component}  from 'react';
 import Header from './Header';
+import extraFunctions from "../functions/extraFunctions";
 
 export default class Page404 extends Component{
     constructor(props){
@@ -12,7 +13,7 @@ export default class Page404 extends Component{
     render(){
         return(
             <div>
-                <Header/>
+                <Header logado={extraFunctions.checklogin(this.state.token)} history={this.props.history}/>
                 <div className="page-header">
                     <div className="filter"></div>
                     <div className="container z-1">

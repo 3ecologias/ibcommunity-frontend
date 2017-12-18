@@ -96,7 +96,7 @@ export default class Search extends Component {
 		};
         return (
             <div>
-            <Header logado={extraFunctions.checklogin(this.state.token)}/>
+            <Header logado={extraFunctions.checklogin(this.state.token)} history={this.props.history}/>
 			{extraFunctions.redirectNotLoged(this.state.token)}
             <div className="wrapper">
 			<div id="search-div" className="page-header search-background">

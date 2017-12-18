@@ -13,7 +13,7 @@ export default class Profile extends Component {
   render() {
     return (
       <div>
-        <Header logado={true}/>
+        <Header logado={extraFunctions.checklogin(this.state.token)} history={this.props.history}/>
         <div className="wrapper">
         <div className="page-header page-header-xs profile-upper-background" data-parallax="true">
             <h1 className="title moto">Meu Perfil</h1>

@@ -36,7 +36,7 @@ export default class Register extends Component {
   render() {
     return (
       <div>
-        <Header/>
+        <Header logado={false}/>
         <div className="wrapper">
             <div className="page-header login-background">
                 <div className="filter"></div>

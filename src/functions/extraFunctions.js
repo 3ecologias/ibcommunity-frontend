@@ -2,6 +2,7 @@ import React from 'react';
 import {Redirect} from 'react-router-dom';
 
 var extraFunctions = {
+    //checa se está logado para o header
     checklogin: function(token){
         if(token){
             return true;
@@ -10,6 +11,7 @@ var extraFunctions = {
             return false;
         }
     },
+    //Se não existir token redireciona
     redirectNotLoged: function(token){
         if(token){
         }
