@@ -62,7 +62,7 @@ export default class Header extends Component {
     return (
         <div className="row">
             <div className="col-md-12 m-h-0">
-                <nav className="navbar navbar-expand-md fixed-top navbar-transparent" color-on-scroll="150">
+                <nav className="navbar navbar-expand-md fixed-top navbar-transparent" color-on-scroll="20">
                     <div className="container">
                         <div className="navbar-translate">
                             <button className="navbar-toggler navbar-toggler-right navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">

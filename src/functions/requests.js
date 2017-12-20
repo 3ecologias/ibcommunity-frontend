@@ -5,7 +5,7 @@ var ip_server = "http://127.0.0.1:8000"
 
 var requests = {
     register: function(nome, email, senha){
-        axios({
+        var response = axios({
             method: "post",
             url: ip_server + "/auth/users/create/",
             data: {
@@ -16,7 +16,8 @@ var requests = {
             headers: {
                 'Content-Type': 'application/json'
             },
-        }).then(function(res, data){}).catch((err)=>console.log(err));
+        }).then(function(res, data){return res;}).catch((err)=> {console.log(err); return err.response;});
+        return response;
     },
     login: function(login, senha){
         var token = axios({
