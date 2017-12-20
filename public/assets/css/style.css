@@ -23,6 +23,7 @@ h1,h2,h3,h4,h5,h6,p,small,label{
   color: white;
 }
 
+/* Plug-Ins Styles */
 input::-webkit-input-placeholder{color: rgba(0, 0, 0, 0.6);}
 input::-moz-placeholder{color: rgba(0, 0, 0, 0.6);}
 
@@ -51,21 +52,17 @@ input::-moz-placeholder{color: rgba(0, 0, 0, 0.6);}
 .react-autosuggest__input::-moz-placeholder { /* Firefox 19+ */
   color: rgba(210, 210, 210, 0.6);
 }
-
 .react-autosuggest__input--focused {
   outline: none;
 }
-
 .react-autosuggest__input--open {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-
 .react-autosuggest__suggestions-container {
   display: none;
   z-index: 9999;
 }
-
 .react-autosuggest__suggestions-container--open {
   display: block;
   position: absolute;
@@ -121,10 +118,55 @@ input::-moz-placeholder{color: rgba(0, 0, 0, 0.6);}
 .carousel{margin: 20px 0px;}
 .carousel-inner .carousel-item img{ height: auto !important;}
 
+
+input[type=checkbox] {
+	visibility: hidden;
+}
+.checkboxFive {
+	width: 25px;
+	margin: 28px 0px;
+	position: relative;
+}
+.checkboxFive label {
+	cursor: pointer;
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	top: 0;
+  left: 0;
+	background: #eee;
+  border:1px solid #000;
+  border-radius: 6px;
+}
+.checkboxFive label:after {
+	opacity: 0;
+	content: '';
+	position: absolute;
+	width: 11px;
+	height: 7px;
+	background: transparent;
+	top: 7px;
+	left: 6px;
+	border: 3px solid #333;
+	border-top: none;
+	border-right: none;
+	transform: rotate(-45deg);
+}
+.checkboxFive label:hover::after {
+	opacity: 0;
+}
+.checkboxFive input[type=checkbox]:checked + label:after {
+	opacity: 1;
+}
+
+/* General Style */
+.terms_div{
+  display: flex;
+  margin-left: 4px;
+}
 .search-btn{
   max-width:140px;
 }
-
 .icon_profile{
   font-size: 18px;
   margin: 2px 8px 0px 0px !important;

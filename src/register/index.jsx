@@ -64,8 +64,11 @@ export default class Register extends Component {
                                 </div>
                                 <button className="btn btn-danger btn-block btn-round" data-toggle="modal" data-target=".bd-example-modal-sm">Criar</button>
                             </form>
-                            <div style={{display: "flex"}}>
-                                <input className="mt-50" type="checkbox" name="" id=""/>
+                            <div className="terms_div">
+                                <div className="checkboxFive">
+                                    <input type="checkbox" name="" id="checkboxFiveInput"/>
+                                    <label htmlFor="checkboxFiveInput"></label>
+                                </div>
                                 <a href="#" className="btn btn-link btn-neutral terms-text">Concordo com os termos de uso!</a>
                             </div>
                         </div>
