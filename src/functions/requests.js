@@ -1,7 +1,7 @@
 import axios from "axios";
 
-// var ip_server = "http://admin.repartebr.com"
-var ip_server = "http://127.0.0.1:8000"
+var ip_server = "http://admin.repartebr.com"
+// var ip_server = "http://127.0.0.1:8000"
 
 var requests = {
     register: function(nome, email, senha){
