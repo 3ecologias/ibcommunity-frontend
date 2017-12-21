@@ -24,7 +24,7 @@ const getSuggestions = value => {
   // Use your imagination to render suggestions.
   const renderSuggestion = suggestion => (
 	<div>
-	  {suggestion.common_name}, {suggestion.scientific_name}
+	  {suggestion.common_name}, <br/> {suggestion.scientific_name}
 	</div>
   );
 
