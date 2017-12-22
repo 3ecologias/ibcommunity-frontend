@@ -81,7 +81,7 @@ export default class Search extends Component {
 
 	async componentWillMount(){
 		var token = localStorage.getItem("tokenib");
-		this.state.token = token;
+		this.setState({token: token});
 		var res = await requests.searchProductList(token);
 		products = res.data;
 	}

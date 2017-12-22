@@ -1,7 +1,15 @@
 import axios from "axios";
 
-var ip_server = "http://admin.repartebr.com"
-// var ip_server = "http://127.0.0.1:8000"
+//var ip_server = "http://admin.repartebr.com"
+var ip_server = "http://127.0.0.1:8000"
+
+axios.interceptors.response.use(function(response){
+    return response;
+}, function(error){
+    if(error.response.status === 401 && error.response.statusText === "Unauthorized"){
+        localStorage.removeItem("tokenib");
+    }
+})
 
 var requests = {
     register: function(nome, email, senha){
@@ -44,7 +52,7 @@ var requests = {
                 'Authorization': ' JWT '+ token,
                 'Content-Type': 'application/json',
             },
-        }).catch(err => console.log(err));
+        }).catch(err => console.log(err.response));
 
         return response
     },
