@@ -73,6 +73,9 @@ $(document).ready(function(){
   sr.reveal(".scene-eolic", topLightRotate)
   sr.reveal(".scene-cloud, .scene-text-reparte-5", topLight)
   sr.reveal(".scene-itens, .scene-windmill, .scene-windmill-an", ShowQuickly)
+  sr.reveal(".scene-text-reparte-6, .scene-how-it-works", topLight)
+  sr.reveal(".scene-text-reparte-7,.scene-text-reparte-8,.scene-text-reparte-9,.scene-text-reparte-10,.scene-text-reparte-11,.scene-text-reparte-12 ", topLight)
+  sr.reveal(".scene-invest-title, .scene-investment, .scene-text-reparte-13, .scene-text-reparte-14, .scene-text-reparte-15, .scene-sign-in ", topLight)
 
 
 
