@@ -62,9 +62,25 @@
     <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
     <!--  Paper Kit Initialization snd functons -->
     <script src="assets/js/paper-kit.js?v=2.1.0"></script>
-    <script src="assets/js/ct-paper-checkbox.js"></script>    
+    <script src="assets/js/ct-paper-checkbox.js"></script>  
+    <script src="assets/js/scrollreveal.min.js" type="text/javascript"></script>
+    <script src="assets/js/main.js" type="text/javascript"></script>  
+    <script type="text/javascript" src="assets/js/jquery.backgroundvideo.min.js"></script>
     <script>
-
+    $(document).ready(function() {
+      if (!($("html").hasClass("mobile"))) {
+        var videobackground = new $.backgroundVideo($('.sm-video-reparte'), {
+          "align": "centerXY",
+          "width": 1920,
+          "height": 1080,
+          "path": "assets/video/",
+          "filename": "ReparteBR",
+          "types": ["mp4", "webm"],
+          "autoplay": true,
+          "loop": true
+        });
+      }
+    });
     </script>
     <div id="root"></div>
     <!--
