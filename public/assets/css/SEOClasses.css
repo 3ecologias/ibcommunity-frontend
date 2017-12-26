@@ -191,6 +191,7 @@
 
 /* ===================================== COLORS =================================== */
 
+.txt-white{ color: #fff !important};
 
 /* ================================== WIDTH ============================= */
 
@@ -205,8 +206,10 @@
 /* ================================== FLEX ============================= */
 
 .d-flex{display: flex;}
+.items-center{ align-items: center !important;}
 .items-end{align-items: flex-end !important;}
 .items-inherit{align-items: inherit !important;}
+.justify-center{justify-content: center !important;}
 
 /* ================================== z-index ============================= */
 

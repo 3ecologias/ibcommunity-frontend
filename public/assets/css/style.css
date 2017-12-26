@@ -341,6 +341,9 @@ input[type=checkbox] {
 .s01 img, .s02 img, .s03 img {
   width: 3em;
 }
+.scene-city {
+  width: 10em;
+}
 .scene-city img {
   position: relative;
   top: -17em;
@@ -377,9 +380,6 @@ input[type=checkbox] {
 }
 .scene-entrepreneur {
   display: inline;
-  position: absolute;
-  top: -20em;
-  right: 3em;
   z-index: 1;
 }
 .scene-entrepreneur img {
@@ -387,13 +387,15 @@ input[type=checkbox] {
 }
 .scene-genetic {
   position: relative;
-  top: -14em;
   width: 13em;
+  z-index: 2;
+}
+#genetic{
+  background: #f5e3f5;
 }
 .scene-world {
   position: relative;
   z-index: 1;
-  top: -5em;
 }
 .scene-world-trace-1 {
   position: relative;
@@ -416,15 +418,11 @@ input[type=checkbox] {
   width: 5em;
   z-index: 1;
 }
-
-
 .scene-text-reparte-1 {
   position: relative;
-  top: -8em;
 }
 .scene-text-reparte-2 {
   position: relative;
-  top: -20em;
 }
 .scene-text-reparte-3 {
   position: relative;
@@ -598,7 +596,6 @@ input[type=checkbox] {
   position: relative;
   top: 13em;
 }
-
 .scene-windmill {
   position: relative;
 }
