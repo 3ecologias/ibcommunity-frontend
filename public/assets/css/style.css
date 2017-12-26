@@ -345,14 +345,13 @@ input[type=checkbox] {
   width: 10em;
 }
 .scene-city img {
-  position: relative;
-  top: -17em;
+  position: absolute;
+  top: -5em;
 }
 .scene-background-purple {
-  height: 100%;
-  position: relative;
-  top: -15em;
-  height: 0em;
+  position: absolute;
+  top: -20em;
+  width: 100%;
 }
 .scene-background-blue {
   height: 100%;
@@ -372,11 +371,10 @@ input[type=checkbox] {
   height: 0em;
 }
 .scene-background-rose {
-  height: 100%;
-  position: relative;
-  top: -13em;
+  position: absolute;
+  top: -18em;
   height: 0em;
-  margin-bottom: -10em;
+  width: 100%;
 }
 .scene-entrepreneur {
   display: inline;
@@ -386,9 +384,12 @@ input[type=checkbox] {
   width: 8em;
 }
 .scene-genetic {
-  position: relative;
+  position: absolute;
   width: 13em;
+  top: -24em;
+  height: 0px;
   z-index: 2;
+  background: #f5020200 !important;
 }
 #genetic{
   background: #f5e3f5;
@@ -398,23 +399,20 @@ input[type=checkbox] {
   z-index: 1;
 }
 .scene-world-trace-1 {
-  position: relative;
-  top: -14em;
-  right: -9em;
+  position: absolute;
+  top: 0px;
   width: 13em;
   z-index: 1;
 }
 .scene-world-trace-2 {
-  position: relative;
-  top: -20em;
-  right: -8.5em;
+  position: absolute;
+  top: 0px;
   width: 4em;
   z-index: 1;
 }
 .scene-world-trace-3 {
-  position: relative;
-  top: -26em;
-  right: -3.5em;
+  position: absolute;
+  top: 0px;
   width: 5em;
   z-index: 1;
 }
@@ -423,6 +421,7 @@ input[type=checkbox] {
 }
 .scene-text-reparte-2 {
   position: relative;
+  padding-bottom: 20em;
 }
 .scene-text-reparte-3 {
   position: relative;
@@ -519,6 +518,8 @@ input[type=checkbox] {
 .avatar-people {
   position: relative;
   top: -5.3em;
+  display: flex;
+  justify-content: center;
 }
 
 .avatar-people img {
@@ -529,22 +530,10 @@ input[type=checkbox] {
 }
 
 .scene-eolic {
-  position: relative;
-  top: 0em;
-  left: 10em;
-  width: 20em;
-  transform: rotate(-10deg);
-  -moz-transform: rotate(-10deg);
-  -webkit-transform: rotate(-10deg);
-    /* Firefox */
-  -moz-transition: all 1s ease;
-
-  /* WebKit */
-  -webkit-transition: all 1s ease;
-  /* Opera */
-  -o-transition: all 1s ease;
-  /* Standard */
-  transition: all 1s ease;
+  position: absolute;
+  top: -16em;
+  right: 0em;
+  width: 18em;
 }
 
 .scene-cloud img {
@@ -562,8 +551,8 @@ input[type=checkbox] {
 }
 .scene-ground-top {
   position: relative;
-  top: -17em;
-  left: -2em;
+  top: -8em;
+  left: 0em;
   width: 30em;
 }
 
@@ -594,7 +583,7 @@ input[type=checkbox] {
 .scene-itens img.scene-ground-solar {
   width: 10em;
   position: relative;
-  top: 13em;
+  top: 11em;
 }
 .scene-windmill {
   position: relative;

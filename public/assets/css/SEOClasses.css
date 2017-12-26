@@ -75,6 +75,7 @@
 .mlr-10 {margin-left: 10px; margin-right: 10px;}
 .mlr-30 {margin-left: 30px; margin-right: 30px;}
 
+.mt-6-em{margin-top: 6em;}
 .mt-20-em{margin-top: 20em;}
 
 /* ============================ Padding ====================================== */
@@ -146,6 +147,9 @@
 .plr-50 {padding-left: 50px; padding-right: 50px;}
 .plr-70 {padding-left: 70px; padding-right: 70px;}
 
+
+.pb-8-em{padding-bottom: 8em;}
+
 /* =================================== POSITIONS ==================================== */
 
 .t-0{top: 0px !important;}
@@ -159,6 +163,7 @@
 /* ================================== DISPLAYS ====================================== */
 
 .d-block{ display: block; }
+.d-none{ display: none; }
 
 /* ================================== FONT-SIZE ===================================== */
 
