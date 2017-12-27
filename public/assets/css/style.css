@@ -361,7 +361,9 @@ input[type=checkbox] {
 }
 .scene-background-darkblue {
   height: 100%;
-  position: relative;
+  position: absolute;
+  top: -6em;
+  width: 100%;
   height: 0em;
 }
 .scene-background-violet {
@@ -386,7 +388,7 @@ input[type=checkbox] {
 .scene-genetic {
   position: absolute;
   width: 13em;
-  top: -24em;
+  top: -18em;
   height: 0px;
   z-index: 2;
   background: #f5020200 !important;
@@ -418,14 +420,17 @@ input[type=checkbox] {
 }
 .scene-text-reparte-1 {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 .scene-text-reparte-2 {
+  display:flex;
   position: relative;
   padding-bottom: 20em;
 }
 .scene-text-reparte-3 {
   position: relative;
-  top: -20em;
+  top: 0em;
   z-index: 2;
 }
 .scene-text-reparte-4 {
@@ -453,9 +458,12 @@ input[type=checkbox] {
 .scene-text-reparte-7 img, .scene-text-reparte-8 img, .scene-text-reparte-9 img, .scene-text-reparte-10 img, .scene-text-reparte-11 img, .scene-text-reparte-12 img, .scene-text-reparte-13 img, .scene-text-reparte-14 img, .scene-text-reparte-15 img {
   width: 3em;
 }
+.scene-text-reparte-12{
+  padding-bottom: 5em;
+}
 .scene-ibcommunity-states {
   position: relative;
-  top: -12em;
+  top: 8.5em;
   z-index: 2;
 }
 .scene-ibcommunity-states img {
@@ -466,7 +474,7 @@ input[type=checkbox] {
 }
 .scene-ibcommunity-communities {
   position: relative;
-  top: -14.7em;
+  top: 6em;
   z-index: 1;
 }
 .scene-ibcommunity-communities img {
@@ -474,11 +482,14 @@ input[type=checkbox] {
 }
 .scene-ibcommunity-families {
   position: relative;
-  top: -19.7em;
+  top: 0em;
   z-index: 0;
 }
 .scene-ibcommunity-families img {
   width: 18em;
+}
+.inner-ibcommunity-sytem{
+  bottom: 8em;
 }
 /* END SCROLL STYLE */
 
@@ -528,14 +539,19 @@ input[type=checkbox] {
 .avatar-people img.avatar-big {
   width: 10em;
 }
-
+.last-avatar-people{
+  padding-bottom: 8em;
+}
 .scene-eolic {
   position: absolute;
   top: -16em;
   right: 0em;
   width: 18em;
 }
-
+.scene-cloud{
+  display: flex;
+  justify-content: center;
+}
 .scene-cloud img {
   position: relative;
   top: -10em;
@@ -615,12 +631,25 @@ input[type=checkbox] {
 .scene-how-it-works {
   position: relative;
   top: -4em;
+  text-align: center;
 }
-
+.scene-how-it-works img{
+  width: 50%;
+}
+.scene-invest{
+  padding-bottom: 4em;
+}
 .scene-investment {
   position: relative;
 }
-
 .scene-investment img {
   width: 19em;
+}
+.investment-topics{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+.scene-sign-in{
+  margin: 5em auto 0em auto;
 }

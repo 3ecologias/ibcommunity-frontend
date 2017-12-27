@@ -1,3 +1,60 @@
+@media only screen and (min-width: 720px){
+    .scene-background-darkblue{
+        top: -11em;
+    }
+}
+@media only screen and (min-width: 960px){
+    .scene-background-blue{
+        top: -18em;
+    }
+    .scene-eolic{
+        top: -22em;
+    }
+    .scene-background-violet{
+        top: -19em;
+    }
+    .scene-text-reparte-12{
+        padding-bottom:10em;
+    }
+    .scene-background-darkblue{
+        top: -13em;
+    }
+}
+@media only screen and (min-width: 1072px){
+    .scene-text-reparte-2{
+        padding-bottom: 30em;
+    }
+}
+@media only screen and (min-width: 1200px){
+    .scene-text-reparte-12{
+        padding-bottom: 20em;
+    }
+    .scene-background-purple{
+        top: -27em;
+    }
+    .scene-text-reparte-2{
+        padding-bottom: 50em;
+    }
+    .scene-background-darkblue{
+        top: -20em;
+    }
+    .last-avatar-people{
+        padding-bottom:20em;
+    }
+    .scene-eolic{
+        top: -37em;
+    }
+    .scene-background-violet{
+        top: -34em;
+    }
+    .inner-ibcommunity-sytem{
+        padding-bottom: 10em;
+    }
+    .scene-background-blue{
+        top: -28em;
+    }
+}
+
 @media only screen and (max-width: 340px) {
     .pt-80-340{
         padding-top: 80px;

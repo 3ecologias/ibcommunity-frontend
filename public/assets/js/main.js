@@ -61,7 +61,7 @@ $(document).ready(function(){
   }
 
   sr.reveal(".s01, .s02, .s03", topLight)
-  sr.reveal(".scene-background-purple", background)
+  sr.reveal(".scene-genetic", background)
   sr.reveal(".scene-city", topLight)
   sr.reveal(".scene-entrepreneur", topLightSlow)
   sr.reveal(".scene-text-reparte-1", topLight)

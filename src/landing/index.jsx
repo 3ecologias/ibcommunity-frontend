@@ -80,7 +80,7 @@ export default class Landing extends Component {
                     <span class="title txt-white text-center">ReparteBR localiza projetos de alto impacto socioambiental </span>
                   </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 mt-6-em">
+                <div class="col-xs-12 col-sm-6 col-xl-6 mt-6-em">
                   <div class="scene-world img-scene">
                     <img src="assets/img/infographic-svg/world.svg" alt=""/>
                   </div>
@@ -111,12 +111,10 @@ export default class Landing extends Component {
               <div class="scene-background-purple">
                   <img src="assets/img/infographic-svg/bg-part-5.svg"/>
               </div>
-              <div class="col-xs-12 col-sm-6 scene-genetic text-center" id="genetic">
-                <div class="img-scene">
-                  <img src="assets/img/infographic-svg/genetic.svg"/>
-                </div>
+              <div class="scene-genetic img-scene" id="genetic">
+                <img src="assets/img/infographic-svg/genetic.svg"/>
               </div>
-              <div class="col-xs-12 col-sm-6 text-center">
+              <div class="col-xs-12 col-sm-12 text-center inner-ibcommunity-sytem">
                 <div class="scene-text-reparte-3 img-scene">
                   <span class="title text-white text-center">Está conectado ao IBCommunity, um banco de projetos e comunidades do Instituto Beraca com informações sobre a sociobiodiversidade brasileira.</span>
                 </div>
@@ -169,7 +167,7 @@ export default class Landing extends Component {
                   <div class="scene-text-reparte-4 text-center">
                     <span class="title txt-white text-center">quilombolas e agricultores assentados.</span>
                   </div>
-                  <div class="col-xs-3 avatar-people pb-8-em">
+                  <div class="col-xs-3 avatar-people last-avatar-people">
                     <img class="img-responsive" src="assets/img/infographic-svg/people10.svg"/>
                     <img class="img-responsive avatar-big" src="assets/img/infographic-svg/people11.svg"/>
                     <img class="img-responsive" src="assets/img/infographic-svg/people12.svg"/>
@@ -210,17 +208,8 @@ export default class Landing extends Component {
                 <div class="col-xs-3 scene-windmill">
                   <img src="assets/img/infographic-svg/windmill-base.svg"/>
                 </div>
-                <div class="scene-ground-plants d-none">
-                  <img src="assets/img/infographic-svg/green-ground-plants.svg"/>
-                </div>
                 <div class="scene-ground-top">
                   <img className="img-fluid" src="assets/img/infographic-svg/drawing.svg"/>
-                </div>
-                <div class="scene-ground-middle d-none">
-                  <img src="assets/img/infographic-svg/green-ground2.svg"/>
-                </div>
-                <div class="scene-ground-base d-none">
-                  <img src="assets/img/infographic-svg/green-ground1.svg"/>
                 </div>
               </div>
             </div>
@@ -236,43 +225,57 @@ export default class Landing extends Component {
           </div>
           <div class="container">
             <div class="row">
-              <div class="col-xs-12 col-sm-6">
+              <div class="col-xs-12 col-sm-12">
                 <div class="scene-text-reparte-6 text-center">
                   <span class="title-big text-center">Como funciona?</span>
                 </div>
+              </div>
+              <div class="col-xs-12 col-sm-12">
                 <div class="scene-how-it-works">
                   <img src="assets/img/infographic-svg/how-it-works.svg"/>
                 </div>
+              </div>
+              <div class="col-xs-12 col-sm-6">
                 <div class="scene-text-reparte-7 text-center mt-4">
                   <div class="text-center">
                     <img src="assets/img/infographic-svg/topic-blue.svg" alt=""/>
                   </div>
                   <span class="subtitle"> Auxilia no Conhecimento Prévio Fundamentado (PIC) e no Termo de Acordo Mútuo (MAT).</span>
                 </div>
+              </div>
+              <div class="col-xs-12 col-sm-6">
                 <div class="scene-text-reparte-8 text-center mt-4">
                   <div class="text-center">
                     <img src="assets/img/infographic-svg/topic-yellow.svg" alt=""/>
                   </div>
                   <span class="subtitle"> Localiza projetos em comunidades com Conhecimento Tradicional Associado (CTA).</span>
                 </div>
+              </div>
+              <div class="col-xs-12 col-sm-6">
                 <div class="scene-text-reparte-9 text-center mt-4">
                   <div class="text-center">
                     <img src="assets/img/infographic-svg/topic-orange.svg" alt=""/>
                   </div>
                   <span class="subtitle"> Organiza o escopo do projeto e o seu plano de ação.</span>
                 </div>
+              </div>
+              <div class="col-xs-12 col-sm-6">
                 <div class="scene-text-reparte-10 text-center mt-4">
                   <div class="text-center">
                     <img src="assets/img/infographic-svg/topic-gray.svg" alt=""/>
                   </div>
                   <span class="subtitle"> Executa o plano de ação e participa do projeto na comunidade.</span>
                 </div>
+              </div>
+              <div class="col-xs-12 col-sm-6">
                 <div class="scene-text-reparte-11 text-center mt-4">
                   <div class="text-center">
                     <img src="assets/img/infographic-svg/topic-carmine.svg" alt=""/>
                   </div>
                   <span class="subtitle"> Monitora os projetos na comunidade através de relatórios analíticos.</span>
                 </div>
+              </div>
+              <div class="col-xs-12 col-sm-6">
                 <div class="scene-text-reparte-12 text-center mt-4">
                   <div class="text-center">
                     <img src="assets/img/infographic-svg/topic-light-blue.svg" alt=""/>
@@ -280,25 +283,27 @@ export default class Landing extends Component {
                   <span class="subtitle"> Avalia a execução do projeto e realiza apresentação de resultados</span>
                 </div>
               </div>
+              </div>
             </div>
           </div>
-          <div class="scene-background-darkblue">
-            <img src="assets/img/infographic-svg/bg-part-6.svg"/>
-          </div>
-        </div>
 
         <div id="ibcommunity-invest" class="section bg-invest">
           <div class="main">
+            <div class="scene-background-darkblue">
+              <img src="assets/img/infographic-svg/bg-part-6.svg"/>
+            </div>
           </div>
           <div class="container">
             <div class="row">
-              <div class="col-xs-12 col-sm-6">
+              <div class="col-xs-12 col-sm-7 scene-invest">
                 <div class="scene-invest-title text-center">
                   <span class="title-big text-center text-white">Investimento</span>
                 </div>
                 <div class="scene-investment text-center mt-4">
                   <img src="assets/img/infographic-svg/investment.svg"/>
                 </div>
+              </div>
+              <div class="col-xs-12 col-sm-5 investment-topics">
                 <div class="scene-text-reparte-13 text-center mt-4">
                   <div class="text-center">
                     <img src="assets/img/infographic-svg/topic-dark-orange.svg" alt=""/>
@@ -317,10 +322,10 @@ export default class Landing extends Component {
                   </div>
                   <span class="subtitle text-white"> Custos administrativos da repartição de benefícios.</span>
                 </div>
-                <div class="scene-sign-in text-center mt-80">
+              </div>
+                <div class="scene-sign-in text-center">
                   <button type="button" class="btn btn-outline-neutral btn-round disabled mr-3" data-toggle="tooltip" data-placement="bottom" title="Aguarde, em breve... :)">Cadastre-se!</button>
                 </div>
-              </div>
             </div>
           </div>
         </div>
