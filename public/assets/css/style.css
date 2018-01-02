@@ -389,6 +389,7 @@ input[type=checkbox] {
   position: absolute;
   width: 13em;
   top: -18em;
+  left: 0em;
   height: 0px;
   z-index: 2;
   background: #f5020200 !important;
@@ -444,12 +445,11 @@ input[type=checkbox] {
   position: relative;
   z-index: 2;
   top: -6em;
-  margin-bottom: 2em;
+  margin: 0 auto 3em auto;
 }
 .scene-text-reparte-6 {
   position: relative;
   z-index: 2;
-  top: -6em;
   margin-bottom: 2em;
 }
 .scene-text-reparte-7, .scene-text-reparte-8, .scene-text-reparte-9, .scene-text-reparte-10, .scene-text-reparte-11, .scene-text-reparte-12, .scene-text-reparte-13, .scene-text-reparte-14, .scene-text-reparte-15 {
@@ -567,9 +567,9 @@ input[type=checkbox] {
 }
 .scene-ground-top {
   position: relative;
-  top: -8em;
+  top: -5em;
   left: 0em;
-  width: 30em;
+  width: 100%;
 }
 
 .scene-ground-base {
@@ -593,13 +593,13 @@ input[type=checkbox] {
 }
 .scene-itens img.scene-ground-tree {
   width: 10em;
-  top: 8em;
+  top: 11em;
   transform: rotate(-16deg);
 }
 .scene-itens img.scene-ground-solar {
   width: 10em;
   position: relative;
-  top: 11em;
+  top: 13em;
 }
 .scene-windmill {
   position: relative;
@@ -607,7 +607,8 @@ input[type=checkbox] {
 .scene-windmill img {
   width: 6em;
   position: relative;
-  left: 18em;
+  left: 23em;
+  top: 1.8em;
 }
 .scene-windmill-an {
   position: relative;
@@ -616,8 +617,8 @@ input[type=checkbox] {
 .scene-windmill-an img {
   width: 6em;
   position: relative;
-  left: 22em;
-  top: 1em;
+  left: 26.3em;
+  top: 4em;
   z-index: 3;
   -webkit-animation:spin 4s linear infinite;
   -moz-animation:spin 4s linear infinite;
@@ -630,10 +631,10 @@ input[type=checkbox] {
 
 .scene-how-it-works {
   position: relative;
-  top: -4em;
   text-align: center;
 }
 .scene-how-it-works img{
+  margin-bottom: 6em;
   width: 50%;
 }
 .scene-invest{

@@ -1,17 +1,22 @@
-@media only screen and (min-width: 720px){
+/*======================================== MIN-WIDTH =============================================*/
+@media only screen and (min-width: 768px) {
+    #detail{
+        padding-top: 25em !important;
+    }
+    .search-btn{
+        padding-top: 40px !important;
+        margin: 0 !important;
+    }
     .scene-background-darkblue{
         top: -11em;
     }
 }
-@media only screen and (min-width: 960px){
+@media only screen and (min-width: 992px){
     .scene-background-blue{
         top: -18em;
     }
     .scene-eolic{
         top: -22em;
-    }
-    .scene-background-violet{
-        top: -19em;
     }
     .scene-text-reparte-12{
         padding-bottom:10em;
@@ -21,19 +26,17 @@
     }
 }
 @media only screen and (min-width: 1072px){
-    .scene-text-reparte-2{
-        padding-bottom: 30em;
-    }
+
 }
 @media only screen and (min-width: 1200px){
+    #detail{
+        padding-top: 35em !important;
+    }
     .scene-text-reparte-12{
         padding-bottom: 20em;
     }
     .scene-background-purple{
         top: -27em;
-    }
-    .scene-text-reparte-2{
-        padding-bottom: 50em;
     }
     .scene-background-darkblue{
         top: -20em;
@@ -53,16 +56,104 @@
     .scene-background-blue{
         top: -28em;
     }
+    .scene-text-reparte-2{
+        padding-bottom: 30em;
+    }
 }
-
+@media only screen and (min-width: 1624px){
+    .scene-text-reparte-2{
+        padding-bottom: 50em;
+    }
+}
+/*======================================== MAX-WIDTH =============================================*/
+@media only screen and (max-width: 1200px){
+    .scene-background-violet{
+        top: -30em;
+    }
+    .last-avatar-people{
+        padding-bottom: 30em;
+    }
+    .scene-eolic{
+        top: -33em;
+    }
+}
+@media only screen and (max-width: 767px){
+    .scene-background-darkblue{
+        top: -10em;
+    }
+    .scene-text-reparte-6{
+        top:-2em;
+    }
+    .scene-background-violet{
+        top: -17em;
+    }
+    .scene-eolic{
+        top: -19em;
+    }
+    .last-avatar-people{
+        padding-bottom: 10em;
+    }
+    .scene-how-it-works img{
+        width: 70%;
+    }
+}
+@media only screen and (max-width: 576px){
+    .scene-ground-top{
+        width: 320px;
+        top: -6em;
+    }
+    .scene-cloud img{
+        margin-left: 1em;
+    }
+    .scene-windmill img{
+        width: 5em;
+        left: 18em;
+    }
+    .scene-windmill-an img{
+        width: 4em;
+        left: 21em;
+        top: 3em;
+    }
+    .scene-itens img.scene-ground-solar{
+        width: 8em;
+        top: 9em;
+    }
+    .scene-itens img.scene-ground-tree{
+        width: 9em;
+        top: 6.5em;
+    }
+    .scene-background-rose{
+        top: -16em;
+    }
+    .scene-how-it-works img{
+        width: 80%;
+    }
+    .last-avatar-people{
+        padding-bottom: 15em;
+    }
+}
+@media only screen and (max-width: 373px) {
+    .scene-ibcommunity-states{
+        top: 8em;
+    }
+    .scene-ibcommunity-communities img{
+        width: 10em;
+    }
+    .scene-ibcommunity-families{
+        top: 2.4em;
+        left: 1em;
+    }
+    .scene-ibcommunity-families img{
+        width: 12em;
+    }
+}
 @media only screen and (max-width: 340px) {
     .pt-80-340{
         padding-top: 80px;
     }
 }
-@media only screen and (min-width: 768px) {
-    .search-btn{
-        padding-top: 40px !important;
-        margin: 0 !important;
-    }
-}
+
+
+
+
+

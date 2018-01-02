@@ -16,7 +16,7 @@ $(document).ready(function(){
     origin   : "top",
     distance : "0em",
     duration : 1000,
-    delay    : 1000,
+    delay    : 800,
     scale    : 1,
   }
   var topLightRotate = {
@@ -24,14 +24,14 @@ $(document).ready(function(){
     distance : "0em",
     duration : 1000,
     delay    : 1500,
-    scale    : 2,
+    scale    : 0.5,
   }
   var ShowQuickly = {
     origin   : "top",
     distance : "0em",
-    duration : 100,
-    delay    : 500,
-    scale    : 2,
+    duration : 200,
+    delay    : 1000,
+    scale    : 0.5,
   }
   var topLightSlow = {
     origin   : "top",
