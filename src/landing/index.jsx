@@ -68,19 +68,19 @@ export default class Landing extends Component {
                 <img src="assets/img/infographic-svg/city.svg" alt=""/>
               </div>
               <div class="row justify-center">
-                <div class="col-xs-12 col-sm-12 mt-6-em text-center">
+                <div class="col-xs-12 col-sm-12 col-lg-6 mt-6-em text-center">
                   <div class="scene-entrepreneur img-scene">
                     <img src="assets/img/infographic-svg/entrepreneur3.svg" alt=""/>
                     <img src="assets/img/infographic-svg/entrepreneur4.svg" alt=""/>
                     <img src="assets/img/infographic-svg/entrepreneur2.svg" alt=""/>
                   </div>
                 </div>
-                <div class="col-xs-12 col-sm-8 mt-6-em text-center">
+                <div class="col-xs-12 col-sm-8 col-lg-6 mt-6-em text-center">
                   <div class="scene-text-reparte-1 img-scene">
                     <span class="title txt-white text-center">ReparteBR localiza projetos de alto impacto socioambiental </span>
                   </div>
                 </div>
-                <div class="col-xs-12 col-sm-8 col-xl-6 mt-6-em">
+                <div class="col-xs-12 col-sm-8 col-lg-6 col-xl-6 mt-6-em">
                   <div class="scene-world img-scene">
                     <img src="assets/img/infographic-svg/world.svg" alt=""/>
                   </div>
@@ -94,7 +94,7 @@ export default class Landing extends Component {
                     <img src="assets/img/infographic-svg/world-trace-3.svg" alt=""/>
                   </div>
                 </div>
-                <div class="col-xs-12 col-sm-8 mt-6-em scene-text-reparte-2 text-center">
+                <div class="col-xs-12 col-sm-8 col-lg-6 mt-6-em scene-text-reparte-2 text-center">
                   <div class="img-scene"/>
                     <span class="title txt-white text-center">através de planejamento participativo em comunidades com conhecimento tradicional associado. </span>
                   </div>
@@ -114,7 +114,7 @@ export default class Landing extends Component {
               <div class="scene-genetic img-scene" id="genetic">
                 <img src="assets/img/infographic-svg/genetic.svg"/>
               </div>
-              <div class="col-xs-12 col-sm-8 text-center inner-ibcommunity-sytem">
+              <div class="col-xs-12 col-sm-8 col-lg-10 text-center inner-ibcommunity-sytem">
                 <div class="scene-text-reparte-3 img-scene">
                   <span class="title text-white text-center">Está conectado ao IBCommunity, um banco de projetos e comunidades do Instituto Beraca com informações sobre a sociobiodiversidade brasileira.</span>
                 </div>
@@ -195,7 +195,7 @@ export default class Landing extends Component {
                   <img class="img-responsive" src="assets/img/infographic-svg/cloud1.svg"/>
                   <img class="img-responsive" src="assets/img/infographic-svg/cloud1.svg"/>
                 </div>
-                <div class="col-xs-12 col-sm-8 scene-text-reparte-5 text-center">
+                <div class="col-xs-12 col-sm-8 col-lg-6 scene-text-reparte-5 text-center">
                   <span class="title txt-white text-center">Possibilita a repartição de benefícios em áreas estratégicas</span>
                 </div>
                 <div class="col-xs-3 scene-itens" >
