@@ -24,6 +24,10 @@
     .scene-background-darkblue{
         top: -13em;
     }
+    .scene-world{
+        max-width: 600px;
+        margin: 0 auto;
+    }
 }
 @media only screen and (min-width: 1072px){
 
@@ -58,14 +62,10 @@
     }
     .scene-text-reparte-2{
         padding-bottom: 30em;
+        margin-top: 10em !important;
     }
     .scene-genetic{
         top: -24em;
-    }
-}
-@media only screen and (min-width: 1624px){
-    .scene-text-reparte-2{
-        padding-bottom: 50em;
     }
 }
 /*======================================== MAX-WIDTH =============================================*/

@@ -25,7 +25,7 @@ export default class Landing extends Component {
               <h1>Encontre comunidades para repartir benefícios</h1>
               <h3>Tenha acesso a projetos de alto impacto socioambiental</h3>
               <br />
-              <button type="button" class="btn btn-outline-neutral btn-round disabled mr-3" data-toggle="tooltip" data-placement="bottom" title="Aguarde, em breve... :)">Cadastre-se</button>
+              <a href="/register"><button type="button" class="btn btn-outline-neutral btn-round disabled mr-3" data-placement="bottom">Cadastre-se</button></a>
               <a class="btn btn-outline-danger btn-round smooth-scroll scroll-down-anim" href="#detail">Saiba mais</a>
             </div>
           </div>
@@ -96,7 +96,7 @@ export default class Landing extends Component {
                 </div>
                 <div class="col-xs-12 col-sm-8 col-lg-6 mt-6-em scene-text-reparte-2 text-center">
                   <div class="img-scene"/>
-                    <span class="title txt-white text-center">através de planejamento participativo em comunidades com conhecimento tradicional associado. </span>
+                    <span class="title txt-white text-center">Através de planejamento participativo em comunidades com conhecimento tradicional associado. </span>
                   </div>
                 </div>
               </div>
@@ -116,18 +116,18 @@ export default class Landing extends Component {
               </div>
               <div class="col-xs-12 col-sm-8 col-lg-10 text-center inner-ibcommunity-sytem">
                 <div class="scene-text-reparte-3 img-scene">
-                  <span class="title text-white text-center">Está conectado ao IBCommunity, um banco de projetos e comunidades do Instituto Beraca com informações sobre a sociobiodiversidade brasileira.</span>
+                  <span class="title text-center">Está conectado ao IBCommunity, um banco de projetos e comunidades do Instituto Beraca com informações sobre a sociobiodiversidade brasileira.</span>
                 </div>
                 <div class="scene-ibcommunity-states img-scene">
-                  <span class="subtitle txt-white"> 12 Estados </span>
+                  <span class="subtitle"> 12 Estados </span>
                   <img src="assets/img/infographic-svg/ib-community-states.svg"/>
                 </div>
                 <div class="scene-ibcommunity-communities img-scene">
-                  <span class="subtitle txt-white"> 105 Comunidades </span>
+                  <span class="subtitle"> 105 Comunidades </span>
                   <img src="assets/img/infographic-svg/ibcommunity-communities.svg"/>
                 </div>
                 <div class="scene-ibcommunity-families img-scene">
-                  <span class="subtitle txt-white"> 2500 Famílias </span>
+                  <span class="subtitle"> 2500 Famílias </span>
                   <img src="assets/img/infographic-svg/ibcommunity-families.svg"/>
                 </div>
               </div>
@@ -326,7 +326,7 @@ export default class Landing extends Component {
                 </div>
               </div>
                 <div class="scene-sign-in text-center">
-                  <button type="button" class="btn btn-outline-neutral btn-round disabled mr-3" data-toggle="tooltip" data-placement="bottom" title="Aguarde, em breve... :)">Cadastre-se!</button>
+                <a href="/register"><button type="button" class="btn btn-outline-neutral btn-round disabled mr-3" data-placement="bottom">Cadastre-se</button></a>
                 </div>
             </div>
           </div>
@@ -336,7 +336,7 @@ export default class Landing extends Component {
           <div class="container">
             <div class="row">
               <div class="col-md-8 ml-auto mr-auto">
-                <h2 class="text-center">Quer conhecer mais? <br/>Vamos conversar!</h2>
+                <h2 id="txt-gray" class="text-center">Quer conhecer mais? <br/>Vamos conversar!</h2>
                 <form class="contact-form">
                   <div class="row">
                     <div class="col-md-6">
@@ -380,7 +380,7 @@ export default class Landing extends Component {
                   <div class="row">
                     <div class="col-md-6 col-sm-6">
                       <div class="form-check">
-                        <label class="form-check-label">
+                        <label id="txt-gray" class="form-check-label">
                           <input class="form-check-input" type="checkbox" value=""/>
                           Possui PIC
                           <span class="form-check-sign"></span>
@@ -389,7 +389,7 @@ export default class Landing extends Component {
                     </div>
                     <div class="col-md-6 col-sm-6">
                       <div class="form-check">
-                        <label class="form-check-label">
+                        <label id="txt-gray" class="form-check-label">
                           <input class="form-check-input" type="checkbox" value="" checked/>
                           Possui MAT
                           <span class="form-check-sign"></span>

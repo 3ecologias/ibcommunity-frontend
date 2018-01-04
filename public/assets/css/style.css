@@ -178,6 +178,11 @@ input[type=checkbox] {
   font-size: 18px;
 }
 
+.btn-outline-neutral:hover, .btn-outline-neutral:focus{
+  color: white;
+  opacity: 1;
+}
+
 .result_text{
   color: white;
   text-align: center;
@@ -428,11 +433,18 @@ input[type=checkbox] {
   display:flex;
   position: relative;
   padding-bottom: 20em;
+  margin-top: 6em;
 }
 .scene-text-reparte-3 {
   position: relative;
   top: 0em;
   z-index: 2;
+}
+.scene-text-reparte-3 span {
+  color: #66615b;
+}
+#txt-gray{
+  color: #66615b;
 }
 .scene-text-reparte-4 {
   position: relative;
