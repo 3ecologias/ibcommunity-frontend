@@ -13,10 +13,12 @@ axios.interceptors.response.use(function(response){
 })
 
 var requests = {
-    register: function(fullName,login,email,phone,company,password){
+    register: function(fullName,email,phone,company,password){
+        console.log(company);
+
         var response = axios({
             method: "post",
-            url: ip_server + "/auth/users/create/",
+            url: ip_server + "/api/user/create/",
             data: {
                 full_name: fullName,
                 phone: phone,
