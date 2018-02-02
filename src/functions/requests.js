@@ -1,7 +1,8 @@
 import axios from "axios";
 
-var ip_server = "http://admin.repartebr.com"
+//var ip_server = "http://admin.repartebr.com"
 //var ip_server = "http://127.0.0.1:8000"
+var ip_server = "http://45.55.202.61:8000"
 
 axios.interceptors.response.use(function(response){
     return response;
@@ -12,18 +13,16 @@ axios.interceptors.response.use(function(response){
 })
 
 var requests = {
-    register: function(firstName,lastName,login,email,phone,cnpj,password){
+    register: function(fullName,login,email,phone,company,password){
         var response = axios({
             method: "post",
             url: ip_server + "/auth/users/create/",
             data: {
-                firstName: firstName,
-                lastName: lastName,
-                login: login,
-                email: email,
+                full_name: fullName,
                 phone: phone,
-                cnpj: cnpj,
-                password: password
+                email: email,
+                password: password,
+                company: company
             },
             headers: {
                 'Content-Type': 'application/json'
@@ -34,9 +33,9 @@ var requests = {
     login: function(login, senha){
         var token = axios({
             method: "post",
-            url: ip_server + "/auth/jwt/create/",
+            url: ip_server + "/api/auth/token/",
             data: {
-                username: login,
+                email: login,
                 password: senha
             },
             headers: {

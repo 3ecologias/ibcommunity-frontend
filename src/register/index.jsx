@@ -6,12 +6,13 @@ export default class Register extends Component {
   constructor(props){
     super(props);
     this.state = {
-        firstName: "",
-        lastName: "",
-        login: "",
+        fullName: "",
         email: "",
         phone: "",
+        businessName: "",
         cnpj: "",
+        sector: "",
+        type: "",
         password: "",
         passwordConfirm: "",
         checkBoxStatus: false,
@@ -20,20 +21,21 @@ export default class Register extends Component {
     this._register = this._register.bind(this);
   }
 
-  async _register(event,firstName,lastName,login,email,phone,cnpj,password,passwordConfirm,checkBoxStatus){
+  async _register(event,fullName,email,phone,businessName,cnpj,sector,type,password,passwordConfirm,checkBoxStatus){
     event.preventDefault();
-    if(!checkBoxStatus){
-        console.log("moabe");
-        this.setState({error_messages: {passwordConfirm: "É necessario concordar com os termos de uso"}})
-    }
-    else if(password && password === passwordConfirm && checkBoxStatus){
-        var res = await requests.register(firstName,lastName,login,email,phone,cnpj,password);
+    if(password && password === passwordConfirm && checkBoxStatus){
+        //montando o objeto company para enviar na requisição em seguida
+        var company = {name: businessName,company_reg: cnpj, sector: sector, type: type}
+        var res = await requests.register(fullName,email,phone,company,password);
         if(res.status === 201){
             this.props.history.push({pathname: "/waitconfirm"});
         }
         else if(res.status === 400){
             this.setState({error_messages: {passwordConfirm: "Usuario já existe"}});
         }
+    }
+    else if(!checkBoxStatus){
+        this.setState({error_messages: {passwordConfirm: "É necessario concordar com os termos de uso"}})
     }
     else{
         this.setState({error_messages: {passwordConfirm: "Repetiu a senha errado"}})
@@ -55,24 +57,14 @@ export default class Register extends Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-5 ml-auto mr-auto">
-                                <div className="card card-register ml-auto mr-auto pt-80-340">
+                                <div className="card card-register ml-auto mr-auto pt-80 pt-80-340">
                                     <h1>Nova Conta</h1>
-                                    <form className="register-form mt-5" onSubmit={(event) => {this._register(event,this.state.firstName,this.state.lastName,this.state.login,this.state.email,this.state.phone,this.state.cnpj,this.state.password,this.state.passwordConfirm,this.state.checkBoxStatus);}}>
+                                    <form className="register-form mt-5" onSubmit={(event) => {this._register(event,this.state.fullName,this.state.email,this.state.phone,this.state.businessName,this.state.cnpj,this.state.sector,this.state.type,this.state.password,this.state.passwordConfirm,this.state.checkBoxStatus);}}>
                                         <div className="input-group">
                                             <span className="input-group-addon"><i className="mr-1 fa fa-user-o"></i></span>
-                                            <input type="text" className="form-control pull-right" placeholder="Primeiro Nome" onChange={(e)=>{this.setState({firstName: e.target.value})}} required/>
+                                            <input type="text" className="form-control pull-right" placeholder="Nome Completo" onChange={(e)=>{this.setState({fullName: e.target.value})}} required/>
                                         </div>
-                                            <small className="text-danger ml-2 mt-1">{this.state.error_messages.firstName}</small>
-                                        <div className="input-group">
-                                            <span className="input-group-addon"><i className="mr-1 fa fa-user-o"></i></span>
-                                            <input type="text" className="form-control pull-right" placeholder="Sobrenome" onChange={(e)=>{this.setState({lastName: e.target.value})}} required/>
-                                        </div>
-                                            <small className="text-danger ml-2 mt-1">{this.state.error_messages.lastName}</small>
-                                        <div className="input-group">
-                                            <span className="input-group-addon"><i className="mr-1 fa fa-address-card-o"></i></span>
-                                            <input type="text" className="form-control pull-right" placeholder="Login" onChange={(e)=>{this.setState({login: e.target.value})}} required/>
-                                        </div>
-                                            <small className="text-danger ml-2 mt-1">{this.state.error_messages.login}</small>
+                                            <small className="text-danger ml-2 mt-1">{this.state.error_messages.fullName}</small>
                                         <div className="input-group">
                                             <span className="input-group-addon"><i className="mr-1 fa fa-envelope-o"></i></span>
                                             <input type="email" className="form-control pull-right" placeholder="Email" onChange={(e)=>{this.setState({email: e.target.value})}} required/>
@@ -85,9 +77,24 @@ export default class Register extends Component {
                                             <small className="text-danger ml-2 mt-1">{this.state.error_messages.phone}</small>
                                         <div className="input-group">
                                             <span className="input-group-addon"><i className="mr-1 fa fa-building-o"></i></span>
+                                            <input type="text" className="form-control pull-right" placeholder="Nome da empresa" onChange={(e)=>{this.setState({businessName: e.target.value})}} required/>
+                                        </div>
+                                            <small className="text-danger ml-2 mt-1">{this.state.error_messages.businessName}</small>
+                                        <div className="input-group">
+                                            <span className="input-group-addon"><i className="mr-1 fa fa-building-o"></i></span>
                                             <input type="text" className="form-control pull-right" placeholder="CNPJ" onChange={(e)=>{this.setState({cnpj: e.target.value})}} required/>
                                         </div>
                                             <small className="text-danger ml-2 mt-1">{this.state.error_messages.cnpj}</small>
+                                        <div className="input-group">
+                                            <span className="input-group-addon"><i className="mr-1 fa fa-building-o"></i></span>
+                                            <input type="text" className="form-control pull-right" placeholder="Setor" onChange={(e)=>{this.setState({sector: e.target.value})}} required/>
+                                        </div>
+                                            <small className="text-danger ml-2 mt-1">{this.state.error_messages.sector}</small>
+                                        <div className="input-group">
+                                            <span className="input-group-addon"><i className="mr-1 fa fa-building-o"></i></span>
+                                            <input type="text" className="form-control pull-right" placeholder="Tipo" onChange={(e)=>{this.setState({type: e.target.value})}} required/>
+                                        </div>
+                                            <small className="text-danger ml-2 mt-1">{this.state.error_messages.type}</small>
                                         <div className="input-group">
                                             <span className="input-group-addon"><i className="mr-1 fa fa-lock"></i></span>
                                             <input type="password" className="form-control pull-right" placeholder="Senha" onChange={(e)=>{this.setState({password: e.target.value})}} required/>
