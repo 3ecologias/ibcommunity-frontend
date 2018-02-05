@@ -6,16 +6,16 @@ export default class Register extends Component {
   constructor(props){
     super(props);
     this.state = {
-        fullName: "",
-        email: "",
-        phone: "",
-        businessName: "",
-        cnpj: "",
-        sector: "",
-        type: "",
-        password: "",
-        passwordConfirm: "",
-        checkBoxStatus: false,
+        fullName: "Moabe Renato",
+        email: "sonic@hotmail.co",
+        phone: "2132156468",
+        businessName: "Moabe Corp",
+        cnpj: "123456789",
+        sector: "ajkjshdjkw",
+        type: "aklsjdlw",
+        password: "moabe124",
+        passwordConfirm: "moabe124",
+        checkBoxStatus: true,
         error_messages: {}
     }
     this._register = this._register.bind(this);
@@ -27,11 +27,12 @@ export default class Register extends Component {
         //montando o objeto company para enviar na requisição em seguida
         var company = {name: businessName,company_reg: cnpj, sector: sector, type: type}
         var res = await requests.register(fullName,email,phone,company,password);
-        if(res.status === 201){
-            this.props.history.push({pathname: "/waitconfirm"});
-        }
-        else if(res.status === 400){
+        console.log(typeof(res));
+        if(typeof(res) === "undefined"){
             this.setState({error_messages: {passwordConfirm: "Usuario já existe"}});
+        }
+        else if(res.status === 201){
+            this.props.history.push({pathname: "/waitconfirm"});
         }
     }
     else if(!checkBoxStatus){
@@ -62,47 +63,47 @@ export default class Register extends Component {
                                     <form className="register-form mt-5" onSubmit={(event) => {this._register(event,this.state.fullName,this.state.email,this.state.phone,this.state.businessName,this.state.cnpj,this.state.sector,this.state.type,this.state.password,this.state.passwordConfirm,this.state.checkBoxStatus);}}>
                                         <div className="input-group">
                                             <span className="input-group-addon"><i className="mr-1 fa fa-user-o"></i></span>
-                                            <input type="text" className="form-control pull-right" placeholder="Nome Completo" onChange={(e)=>{this.setState({fullName: e.target.value})}} required/>
+                                            <input type="text" className="form-control pull-right" placeholder="Nome Completo" onChange={(e)=>{this.setState({fullName: e.target.value})}} />
                                         </div>
                                             <small className="text-danger ml-2 mt-1">{this.state.error_messages.fullName}</small>
                                         <div className="input-group">
                                             <span className="input-group-addon"><i className="mr-1 fa fa-envelope-o"></i></span>
-                                            <input type="email" className="form-control pull-right" placeholder="Email" onChange={(e)=>{this.setState({email: e.target.value})}} required/>
+                                            <input type="email" className="form-control pull-right" placeholder="Email" onChange={(e)=>{this.setState({email: e.target.value})}} />
                                         </div>
                                             <small className="text-danger ml-2 mt-1">{this.state.error_messages.email}</small>
                                         <div className="input-group">
                                             <span className="input-group-addon"><i className="mr-1 fa fa-phone"></i></span>
-                                            <input type="text" className="form-control pull-right" placeholder="Telefone" onChange={(e)=>{this.setState({phone: e.target.value})}} required/>
+                                            <input type="text" className="form-control pull-right" placeholder="Telefone" onChange={(e)=>{this.setState({phone: e.target.value})}} />
                                         </div>
                                             <small className="text-danger ml-2 mt-1">{this.state.error_messages.phone}</small>
                                         <div className="input-group">
                                             <span className="input-group-addon"><i className="mr-1 fa fa-building-o"></i></span>
-                                            <input type="text" className="form-control pull-right" placeholder="Nome da empresa" onChange={(e)=>{this.setState({businessName: e.target.value})}} required/>
+                                            <input type="text" className="form-control pull-right" placeholder="Nome da empresa" onChange={(e)=>{this.setState({businessName: e.target.value})}} />
                                         </div>
                                             <small className="text-danger ml-2 mt-1">{this.state.error_messages.businessName}</small>
                                         <div className="input-group">
                                             <span className="input-group-addon"><i className="mr-1 fa fa-building-o"></i></span>
-                                            <input type="text" className="form-control pull-right" placeholder="CNPJ" onChange={(e)=>{this.setState({cnpj: e.target.value})}} required/>
+                                            <input type="text" className="form-control pull-right" placeholder="CNPJ" onChange={(e)=>{this.setState({cnpj: e.target.value})}} />
                                         </div>
                                             <small className="text-danger ml-2 mt-1">{this.state.error_messages.cnpj}</small>
                                         <div className="input-group">
                                             <span className="input-group-addon"><i className="mr-1 fa fa-building-o"></i></span>
-                                            <input type="text" className="form-control pull-right" placeholder="Setor" onChange={(e)=>{this.setState({sector: e.target.value})}} required/>
+                                            <input type="text" className="form-control pull-right" placeholder="Setor" onChange={(e)=>{this.setState({sector: e.target.value})}} />
                                         </div>
                                             <small className="text-danger ml-2 mt-1">{this.state.error_messages.sector}</small>
                                         <div className="input-group">
                                             <span className="input-group-addon"><i className="mr-1 fa fa-building-o"></i></span>
-                                            <input type="text" className="form-control pull-right" placeholder="Tipo" onChange={(e)=>{this.setState({type: e.target.value})}} required/>
+                                            <input type="text" className="form-control pull-right" placeholder="Tipo" onChange={(e)=>{this.setState({type: e.target.value})}} />
                                         </div>
                                             <small className="text-danger ml-2 mt-1">{this.state.error_messages.type}</small>
                                         <div className="input-group">
                                             <span className="input-group-addon"><i className="mr-1 fa fa-lock"></i></span>
-                                            <input type="password" className="form-control pull-right" placeholder="Senha" onChange={(e)=>{this.setState({password: e.target.value})}} required/>
+                                            <input type="password" className="form-control pull-right" placeholder="Senha" onChange={(e)=>{this.setState({password: e.target.value})}} />
                                         </div>
                                             <small className="text-danger ml-2 mt-1">{this.state.error_messages.password}</small>
                                         <div className="input-group">
                                             <span className="input-group-addon"><i className="mr-1 fa fa-lock"></i></span>
-                                            <input type="password" className="form-control pull-right" placeholder="Repetir senha" onChange={(e)=>{this.setState({passwordConfirm: e.target.value})}} required/>
+                                            <input type="password" className="form-control pull-right" placeholder="Repetir senha" onChange={(e)=>{this.setState({passwordConfirm: e.target.value})}} />
                                         </div>
                                             <small className="text-danger ml-2 mt-1">{this.state.error_messages.passwordConfirm}</small>
                                         <button className="btn btn-danger btn-block btn-round mt-10">Criar</button>

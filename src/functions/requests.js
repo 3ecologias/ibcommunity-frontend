@@ -14,8 +14,6 @@ axios.interceptors.response.use(function(response){
 
 var requests = {
     register: function(fullName,email,phone,company,password){
-        console.log(company);
-
         var response = axios({
             method: "post",
             url: ip_server + "/api/user/create/",
@@ -29,7 +27,7 @@ var requests = {
             headers: {
                 'Content-Type': 'application/json'
             },
-        }).then(function(res, data){return res;}).catch((err)=> {console.log(err); return err.response;});
+        }).then(function(res){console.log(res);return res;}).catch((err)=> {console.log(err); return err.response;});
         return response;
     },
     login: function(login, senha){
