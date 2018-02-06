@@ -24,7 +24,7 @@ export default class Header extends Component {
                             <a href="/productsearch" className="nav-link"><i className="nc-icon nc-layout-11"></i>Repartir</a>
                         </li>
                         <li className="nav-item">
-                            <a href="/productsearch" target="" className="nav-link"><i className="nc-icon nc-ruler-pencil"></i>Projetos</a>
+                            <a href="/projects" target="" className="nav-link"><i className="nc-icon nc-ruler-pencil"></i>Projetos</a>
                         </li>
                         {/*<li className="nav-item">
                             <a className="nav-link" href="#" target=""><i className="nc-icon nc-shop"></i>Comunidades</a>

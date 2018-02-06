@@ -24,7 +24,6 @@ export default class Login extends Component {
     var moneyRegex = new RegExp(/^[0-9]([0-9]*\.*)+(,)*([0-9]*)+/,"g");
     if(moneyRegex.test(this.state.value)){
     var max = parseFloat(this.state.value);
-    console.log(max);
     this.filteredProjectsList = this.projectsList.filter((project) => {
       if (parseFloat(project.project_totals) <= max) {
         return project;
@@ -40,6 +39,8 @@ export default class Login extends Component {
       this.state.token = token;
       this.productName = this.props.location.state.product.common_name;
       var product_id = this.props.location.state.product.id;
+      //essa requisição projectList, ela pega todos os projetos relativos ao produto pesquisado
+      //retorna a lista destes projetos
       var projects_list = await requests.projectList(this.state.token, product_id);
       this.projectsList = projects_list.data;
   }

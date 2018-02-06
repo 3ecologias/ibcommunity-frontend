@@ -10,6 +10,7 @@ import waitConfirm from "./register/waitConfirm";
 import Profile from "./profile";
 import ProductSearch from "./search/productSearch";
 import ValueSearch from "./search/valueSearch";
+import EveryProject from './projects/allProjects'
 import Resultbymoney from "./result/result_by_money";
 import ProjectPage from "./projectPage/projectPage";
 import ConfirmedInterest from "./projectPage/confirmedInterest";
@@ -50,6 +51,7 @@ ReactDOM.render(
         <Route exact path= "/valuesearch" component={ValueSearch} />
         <Route exact path= "/result" component={Resultbymoney} />
         <Route exact path= "/community" component={ProjectPage} />
+        <Route exact path= "/projects" component={EveryProject} />
         <Route exact path= "/confirmedInterest" component={ConfirmedInterest} />
         <Route component={Page404} />
     </Switch>

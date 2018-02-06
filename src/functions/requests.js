@@ -86,6 +86,17 @@ var requests = {
         }).catch(err => console.log(err));
         return response
     },
+    allProjects: async function(token){
+        var response = await axios({
+            method: "GET",
+            url: ip_server + "/project/list/",
+            headers: {
+                'Authorization': ' JWT '+ token,
+                'Content-Type': 'application/json',
+            },
+        }).catch(err => console.log(err));
+        return response
+    },
     projectRequestSupport: async function(token, project_id){
         var response = await axios({
             method: "POST",
