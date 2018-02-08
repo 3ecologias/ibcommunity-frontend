@@ -65,7 +65,7 @@ export default class Resultbymoney extends Component {
             <div className="filter"></div>
 				<div className="container ph-30 pt-70 z-1">
                     <div className="row fab_row">
-                        <a onClick={() => {this.props.history.push({pathname: "/productsearch"})}} href="">
+                        <a onClick={() => {this.props.history.push({pathname: "/productsearch"})}} >
                         <div className="fab_div">
                             <p className="fab_text">X</p>
                         </div>

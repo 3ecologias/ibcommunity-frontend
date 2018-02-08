@@ -313,6 +313,7 @@ input[type=checkbox] {
 }
 .fab_row{
   justify-content: flex-end;
+  cursor: pointer;
 }
 .fab_div{
   display: flex;
