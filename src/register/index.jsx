@@ -6,16 +6,16 @@ export default class Register extends Component {
   constructor(props){
     super(props);
     this.state = {
-        fullName: "Moabe Renato",
-        email: "sonic@hotmail.co",
-        phone: "2132156468",
-        businessName: "Moabe Corp",
-        cnpj: "123456789",
-        sector: "ajkjshdjkw",
-        type: "aklsjdlw",
-        password: "moabe124",
-        passwordConfirm: "moabe124",
-        checkBoxStatus: true,
+        fullName: "",
+        email: "",
+        phone: "",
+        businessName: "",
+        cnpj: "",
+        sector: "",
+        type: "",
+        password: "",
+        passwordConfirm: "",
+        checkBoxStatus: false,
         error_messages: {}
     }
     this._register = this._register.bind(this);
