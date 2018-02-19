@@ -97,14 +97,55 @@ var requests = {
         }).catch(err => console.log(err));
         return response
     },
-    projectRequestSupport: async function(token, project_id){
+    userInfos: async function(token){
+        var response = await axios({
+            method: "GET",
+            //adicionar url das informações do user
+            url: ip_server + "/project/list/",
+            headers: {
+                'Authorization': ' JWT '+ token,
+                'Content-Type': 'application/json',
+            },
+        }).catch(err => console.log(err));
+        return response
+    },
+    projectRequestSupport: async function(token,user_id, project_id){
         var response = await axios({
             method: "POST",
-            url: ip_server + "/project/detail/" + project_id+'/',
+            url: ip_server + "/api/project/support/create/",
             headers: {
                 'Authorization': ' JWT ' + token,
                 'Content-Type': 'application/json',
             },
+            data: {
+                user_id: user_id,
+                project_id: project_id
+            },
+        }).catch(err => console.log(err));
+        return response
+    },
+    supportedProjectsList: async function(token,user_id){
+        var response = await axios({
+            method: "GET",
+            url: ip_server + "/api/project/support/list/",
+            headers: {
+                'Authorization': ' JWT ' + token,
+                'Content-Type': 'application/json',
+            },
+            data: {
+                user_id: user_id
+            },
+        }).catch(err => console.log(err));
+        return response
+    },
+    supportedProjectDetail: async function(token,project_id){
+        var response = await axios({
+            method: "GET",
+            url: ip_server + "/api/project/support/detail/" + project_id,
+            headers: {
+                'Authorization': ' JWT ' + token,
+                'Content-Type': 'application/json',
+            }
         }).catch(err => console.log(err));
         return response
     },
