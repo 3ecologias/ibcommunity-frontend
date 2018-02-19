@@ -1,9 +1,17 @@
+/* Esse arquivo é onde fica todas as requisições da aplicação do front,
+   Os nomes de cada função é bem sugestivo ao que ela faz */
+
 import axios from "axios";
 
+
+/* Essa variavel é de nome imutavel, se quiser mudar terá que mudar em todos os lugares que ela aparece
+   é a URL inicial da requisição */
 //var ip_server = "http://admin.repartebr.com"
 //var ip_server = "http://127.0.0.1:8000"
 var ip_server = "http://45.55.202.61:8000"
 
+
+//se der algum erro na requisição trabalha com o token
 axios.interceptors.response.use(function(response){
     return response;
 }, function(error){
@@ -13,6 +21,7 @@ axios.interceptors.response.use(function(response){
 })
 
 var requests = {
+    //função de registro do usuario
     register: function(fullName,email,phone,company,password){
         var response = axios({
             method: "post",
@@ -30,6 +39,7 @@ var requests = {
         }).then(function(res){console.log(res);return res;}).catch((err)=> {console.log(err); return err.response;});
         return response;
     },
+    //login do usuario, retorna o token
     login: function(login, senha){
         var token = axios({
             method: "post",
@@ -44,6 +54,7 @@ var requests = {
         }).then(function(res, data) { token = res; return token }).catch((err) => console.log(err));
         return token
     },
+    //Pega lista de produtos para usar nas sugestões da pesquisa
     searchProductList: async function(token){
         var response = await axios({
             method: "GET",
@@ -59,6 +70,7 @@ var requests = {
 
         return response
     },
+    //Pega os detalhes do produto
     searchProduct: async function(token,id){
         var response = await axios({
             method: "GET",
@@ -72,6 +84,7 @@ var requests = {
         }).catch(err => console.log(err));
         return response
     },
+    //Lista dos projetos
     projectList: async function(token, product_id){
         var response = await axios({
             method: "GET",
@@ -86,6 +99,7 @@ var requests = {
         }).catch(err => console.log(err));
         return response
     },
+    //Todos os projetos do banco
     allProjects: async function(token){
         var response = await axios({
             method: "GET",
@@ -97,6 +111,7 @@ var requests = {
         }).catch(err => console.log(err));
         return response
     },
+    //Informações do usuario
     userInfos: async function(token){
         var response = await axios({
             method: "GET",
@@ -109,6 +124,7 @@ var requests = {
         }).catch(err => console.log(err));
         return response
     },
+    //Solicitar a repartição de beneficios
     projectRequestSupport: async function(token,user_id, project_id){
         var response = await axios({
             method: "POST",
@@ -124,6 +140,7 @@ var requests = {
         }).catch(err => console.log(err));
         return response
     },
+    //Lista dos projetos repartidos pelo usuario
     supportedProjectsList: async function(token,user_id){
         var response = await axios({
             method: "GET",
@@ -138,6 +155,7 @@ var requests = {
         }).catch(err => console.log(err));
         return response
     },
+    //Detalhe de um projeto repartido pelo usuario
     supportedProjectDetail: async function(token,project_id){
         var response = await axios({
             method: "GET",
@@ -149,6 +167,7 @@ var requests = {
         }).catch(err => console.log(err));
         return response
     },
+    //Detalhes do produto
     productDetail: async function(token, product_id){
         var response = await axios({
             method: "GET",
