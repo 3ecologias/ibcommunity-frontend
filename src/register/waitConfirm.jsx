@@ -31,7 +31,7 @@ export default class waitConfirm extends Component{
                                         Em caso de duvidas enviar um email para: <p className="font-weight-normal ft-size-18">contato@institutoberaca.org</p>
                                     </h4>
                                     <div className="col-5 col-sm-4 col-md-3 ml-auto mr-auto">
-                                        <button className="btn btn-danger btn-block btn-round mt-20" onClick={(event) => {event.preventDefault();this.props.history.push({pathname: "/"})}}>Ok</button>
+                                        <button className="btn btn-danger btn-block btn-round mt-20" onClick={(event) => {event.preventDefault();this.props.history.push({pathname: "/login"})}}>Ok</button>
                                     </div>
                                 </div>
                             </div>

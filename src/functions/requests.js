@@ -1,7 +1,8 @@
 import axios from "axios";
 
-var ip_server = "http://admin.repartebr.com"
+//var ip_server = "http://admin.repartebr.com"
 //var ip_server = "http://127.0.0.1:8000"
+var ip_server = "http://45.55.202.61:8000"
 
 axios.interceptors.response.use(function(response){
     return response;
@@ -12,27 +13,29 @@ axios.interceptors.response.use(function(response){
 })
 
 var requests = {
-    register: function(nome, email, senha){
+    register: function(fullName,email,phone,company,password){
         var response = axios({
             method: "post",
-            url: ip_server + "/auth/users/create/",
+            url: ip_server + "/api/user/create/",
             data: {
-                username: nome,
+                full_name: fullName,
+                phone: phone,
                 email: email,
-                password: senha,
+                password: password,
+                company: company
             },
             headers: {
                 'Content-Type': 'application/json'
             },
-        }).then(function(res, data){return res;}).catch((err)=> {console.log(err); return err.response;});
+        }).then(function(res){console.log(res);return res;}).catch((err)=> {console.log(err); return err.response;});
         return response;
     },
     login: function(login, senha){
         var token = axios({
             method: "post",
-            url: ip_server + "/auth/jwt/create/",
+            url: ip_server + "/api/auth/token/",
             data: {
-                username: login,
+                email: login,
                 password: senha
             },
             headers: {
@@ -76,6 +79,17 @@ var requests = {
             params: {
                 product_id: product_id
             },
+            headers: {
+                'Authorization': ' JWT '+ token,
+                'Content-Type': 'application/json',
+            },
+        }).catch(err => console.log(err));
+        return response
+    },
+    allProjects: async function(token){
+        var response = await axios({
+            method: "GET",
+            url: ip_server + "/project/list/",
             headers: {
                 'Authorization': ' JWT '+ token,
                 'Content-Type': 'application/json',

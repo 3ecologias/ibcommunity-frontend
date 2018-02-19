@@ -56,7 +56,7 @@ export default class ProjectPage extends Component {
           <div className="filter"></div>
             <div className="container mt-70 z-1">
               <div className="row fab_row">
-                <a onClick={() => {this.props.history.goBack()}} href="">
+                <a onClick={() => {this.props.history.goBack()}}>
                   <div className="fab_div">
                     <p className="fab_text">X</p>
                   </div>
