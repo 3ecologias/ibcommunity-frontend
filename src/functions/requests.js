@@ -1,5 +1,6 @@
 /* Esse arquivo é onde fica todas as requisições da aplicação do front,
-   Os nomes de cada função é bem sugestivo ao que ela faz */
+   Os nomes de cada função é bem sugestivo ao que ela faz
+   Em caso de duvidas consultar a documentação do axios, usado para fazer as requisições */
 
 import axios from "axios";
 

@@ -15,6 +15,7 @@ export default class Login extends Component {
     this._login = this._login.bind(this);
   }
 
+  //Antes da tela de login montar, se tiver token no disco redireciona para a tela de busca
   componentWillMount(){
       var token = localStorage.getItem('tokenib');
       if(extraFunctions.checklogin(token)){
@@ -23,6 +24,7 @@ export default class Login extends Component {
       this.setState({token: token});
   }
 
+  //função que realiza o login do usuario
   async _login(event, login, password){
     event.preventDefault();
     try{
