@@ -27,11 +27,11 @@ var requests = {
             headers: {
                 'Content-Type': 'application/json'
             },
-        }).then(function(res){console.log(res);return res;}).catch((err)=> {console.log(err); return err.response;});
+        }).then(function(res){return res;}).catch((err)=> {console.log(err); return err.response;});
         return response;
     },
     login: function(login, senha){
-        var token = axios({
+        var response = axios({
             method: "post",
             url: ip_server + "/api/auth/token/",
             data: {
@@ -41,8 +41,8 @@ var requests = {
             headers: {
                 'Content-Type': 'application/json'
             },
-        }).then(function(res, data) { token = res; return token }).catch((err) => console.log(err));
-        return token
+        }).then(function(res, data) {return res; }).catch((err) => console.log(err));
+        return response
     },
     searchProductList: async function(token){
         var response = await axios({
