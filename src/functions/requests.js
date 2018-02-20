@@ -64,11 +64,10 @@ var requests = {
                 names: "true",
             },
             headers: {
-                'Authorization': ' JWT '+ token,
+                'Authorization': 'JWT '+ token,
                 'Content-Type': 'application/json',
             },
         }).catch(err => console.log(err.response));
-
         return response
     },
     //Pega os detalhes do produto

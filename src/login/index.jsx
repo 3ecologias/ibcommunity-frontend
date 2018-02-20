@@ -18,8 +18,11 @@ export default class Login extends Component {
   //Antes da tela de login montar, se tiver token no disco redireciona para a tela de busca
   componentWillMount(){
       var token = localStorage.getItem('tokenib');
+      console.log("Cebruuuuuuuuuutiu");
+      console.log(token);
       if(extraFunctions.checklogin(token)){
         this.props.history.push({pathname: "/productsearch"});
+        console.log("Cebruuuuuuuuuutiu");
       }
       this.setState({token: token});
   }
@@ -33,7 +36,6 @@ export default class Login extends Component {
             localStorage.setItem('tokenib', response.data.token);
             localStorage.setItem('useremail', response.data.user.email);
             localStorage.setItem('userid', response.data.user.id);
-            console.log(response.data.user.id);
             this.props.history.push({pathname: "/productsearch" , state:{name: "logado"}})
         }
         else{throw new Error("");}
