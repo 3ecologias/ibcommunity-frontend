@@ -29,8 +29,11 @@ export default class Login extends Component {
     event.preventDefault();
     try{
         if(login || password){
-            var token = await requests.login(login, password);
-            localStorage.setItem('tokenib', token.data.token);
+            var response = await requests.login(login, password);
+            localStorage.setItem('tokenib', response.data.token);
+            localStorage.setItem('useremail', response.data.user.email);
+            localStorage.setItem('userid', response.data.user.id);
+            console.log(response.data.user.id);
             this.props.history.push({pathname: "/productsearch" , state:{name: "logado"}})
         }
         else{throw new Error("");}
