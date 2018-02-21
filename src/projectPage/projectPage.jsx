@@ -42,7 +42,8 @@ export default class ProjectPage extends Component {
 
   async submitHandle(event){
     event.preventDefault();
-    var res = requests.projectRequestSupport(this.state.token, this.props.location.state.project.id);
+    var user_id = localStorage.getItem('userid');
+    var res = requests.projectRequestSupport(this.state.token,user_id, this.props.location.state.project.id);
     this.props.history.push({pathname: "/confirmedInterest"});
   }
 

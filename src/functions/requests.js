@@ -57,16 +57,17 @@ var requests = {
     },
     //Pega lista de produtos para usar nas sugestões da pesquisa
     searchProductList: async function(token){
+        console.log("JWT " + token);
         var response = await axios({
             method: "GET",
-            url: ip_server + "/product/list/",
-            params: {
+            url: ip_server + "/api/product/list/",
+            /*params: {
                 names: "true",
             },
             headers: {
                 'Authorization': 'JWT '+ token,
                 'Content-Type': 'application/json',
-            },
+            },*/
         }).catch(err => console.log(err.response));
         return response
     },
@@ -74,13 +75,13 @@ var requests = {
     searchProduct: async function(token,id){
         var response = await axios({
             method: "GET",
-            url: ip_server + "/product/detail/" + id + "/",
-            params: {
+            url: ip_server + "/api/product/detail/" + id + "/",
+            /*params: {
             },
             headers: {
-                'Authorization': ' JWT '+ token,
+                'Authorization': 'JWT '+ token,
                 'Content-Type': 'application/json',
-            },
+            },*/
         }).catch(err => console.log(err));
         return response
     },
@@ -88,14 +89,14 @@ var requests = {
     projectList: async function(token, product_id){
         var response = await axios({
             method: "GET",
-            url: ip_server + "/project/list/",
+            url: ip_server + "/api/project/list/",
             params: {
                 product_id: product_id
             },
-            headers: {
+            /*headers: {
                 'Authorization': ' JWT '+ token,
                 'Content-Type': 'application/json',
-            },
+            },*/
         }).catch(err => console.log(err));
         return response
     },
@@ -129,13 +130,13 @@ var requests = {
         var response = await axios({
             method: "POST",
             url: ip_server + "/api/project/support/create/",
-            headers: {
+            /*headers: {
                 'Authorization': ' JWT ' + token,
                 'Content-Type': 'application/json',
-            },
+            },*/
             data: {
-                user_id: user_id,
-                project_id: project_id
+                client: user_id,
+                project: project_id
             },
         }).catch(err => console.log(err));
         return response
