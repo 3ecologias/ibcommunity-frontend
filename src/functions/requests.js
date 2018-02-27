@@ -7,9 +7,9 @@ import axios from "axios";
 
 /* Essa variavel é de nome imutavel, se quiser mudar terá que mudar em todos os lugares que ela aparece
    é a URL inicial da requisição */
-//var ip_server = "http://admin.repartebr.com"
+var ip_server = "http://admin.repartebr.com"
 //var ip_server = "http://127.0.0.1:8000"
-var ip_server = "http://45.55.202.61:8000"
+//var ip_server = "http://45.55.202.61:8000"
 
 
 //se der algum erro na requisição trabalha com o token
@@ -127,6 +127,8 @@ var requests = {
     },
     //Solicitar a repartição de beneficios
     projectRequestSupport: async function(token,user_id, project_id){
+        console.log("vai descenu ", user_id);
+        console.log("vai subinu ", Number(user_id));
         var response = await axios({
             method: "POST",
             url: ip_server + "/api/project/support/create/",
@@ -135,7 +137,7 @@ var requests = {
                 'Content-Type': 'application/json',
             },*/
             data: {
-                client: user_id,
+                client: Number(user_id),
                 project: project_id
             },
         }).catch(err => console.log(err));

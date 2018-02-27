@@ -35,7 +35,8 @@ export default class Login extends Component {
             var response = await requests.login(login, password);
             localStorage.setItem('tokenib', response.data.token);
             localStorage.setItem('useremail', response.data.user.email);
-            localStorage.setItem('userid', response.data.user.id_client);
+            localStorage.setItem('userid', response.data.user.id);
+            console.log("Cebruuuuuuuuuutiu ", response.data.user.id);
             this.props.history.push({pathname: "/productsearch" , state:{name: "logado"}})
         }
         else{throw new Error("");}
