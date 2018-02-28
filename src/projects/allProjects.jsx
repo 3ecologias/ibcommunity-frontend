@@ -47,7 +47,7 @@ export default class Resultbymoney extends Component {
           var content = (
           <div className="col-md-12">
             <h2 className="title_text mb-10">Todos os projetos disponiveis</h2>
-            <h5 className="mt-10">Para filtrar melhor os projetos faça uma busca na tela inicial</h5>
+            <h5 className="mt-10">Para filtrar melhor os projetos faça uma busca na <a href="/login">Tela Inicial</a></h5>
           </div>
           )
       }

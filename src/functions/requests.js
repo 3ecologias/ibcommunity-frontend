@@ -103,11 +103,11 @@ var requests = {
     allProjects: async function(token){
         var response = await axios({
             method: "GET",
-            url: ip_server + "/project/list/",
-            headers: {
+            url: ip_server + "/api/project/list/",
+            /*headers: {
                 'Authorization': ' JWT '+ token,
                 'Content-Type': 'application/json',
-            },
+            },*/
         }).catch(err => console.log(err));
         return response
     },
