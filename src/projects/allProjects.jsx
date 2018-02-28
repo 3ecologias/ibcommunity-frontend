@@ -23,7 +23,6 @@ export default class Resultbymoney extends Component {
   }
 
   renderProjects(){
-      console.log(this.state.projectsList)
     var renderedProjectList = this.state.projectsList.map((element) => {
         return (
         <div className="row">
