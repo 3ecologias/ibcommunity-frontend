@@ -12,7 +12,7 @@ export default class Header extends Component {
   _logout(event){
       event.preventDefault();
       localStorage.removeItem("tokenib");
-      this.props.history.push({pathname: "/login"});
+      this.props.history.push({pathname: "/"});
   }
 
   render() {
@@ -42,7 +42,7 @@ export default class Header extends Component {
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a href="/login" onClick={(event) => {this._logout(event)}} target="" className="nav-link"><i className="icon ion-log-out t-0"></i>Sair</a>
+                            <a href="/" onClick={(event) => {this._logout(event)}} target="" className="nav-link"><i className="icon ion-log-out t-0"></i>Sair</a>
                         </li>
                     </ul>
                 </div>

@@ -1,3 +1,5 @@
+/*Arquivos mais importante do projeto, é onde todas as rotas são criadas
+  Seguindo o padrão apresentado abaixo*/
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter , Switch , Route } from 'react-router-dom'
@@ -23,19 +25,13 @@ class App extends Component {
     }
   }
 
+
+  /* Este pedaço de codigo era pra importar o mapbox
   componentDidMount(){
     let script = document.createElement("script");
     script.src = "./assets/js/mapbox.js"
     document.body.appendChild(script);
-  }
-
-  render() {
-    return (
-      <div>
-        <h1 onClick={() => {this._teste()}}>moabe</h1>
-      </div>
-    );
-  }
+  }*/
 }
 
 
@@ -45,7 +41,7 @@ ReactDOM.render(
         <Route exact path= "/" component={Landing} />
         <Route exact path= "/login" component={Login} />
         <Route exact path= "/register" component={Register} />
-        <Route exact path= "/waitconfirm" component={waitConfirm} />
+        {/*<Route exact path= "/waitconfirm" component={waitConfirm} />*/}
         <Route exact path= "/profile" component={Profile} />
         <Route exact path= "/productsearch" component={ProductSearch} />
         <Route exact path= "/valuesearch" component={ValueSearch} />

@@ -667,3 +667,9 @@ input[type=checkbox] {
 .scene-sign-in{
   margin: 5em auto 0em auto;
 }
+
+@media screen and (max-width: 991px){
+  .navbar-collapse .navbar-nav > .nav-item > .nav-link{
+    color:white !important;
+  }
+}

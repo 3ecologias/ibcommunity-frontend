@@ -3,6 +3,7 @@ import Header from "../mainComponents/Header.jsx";
 import florestas from "./landingAssets/florestas.png";
 import devlocal from "./landingAssets/devlocal.jpg";
 import resultados from "./landingAssets/resultados.jpg";
+import extraFunctions from "../functions/extraFunctions";
 
 export default class Landing extends Component {
   constructor(props){
@@ -19,10 +20,15 @@ export default class Landing extends Component {
     this.setState({chkbox: !this.state.chkbox});
   }
 
+  componentWillMount(){
+    var token = localStorage.getItem("tokenib");
+    this.setState({token: token});
+  }
+
   render() {
     return (
       <div>
-        <Header logado={false}/>
+        <Header logado={extraFunctions.checklogin(this.state.token)} history={this.props.history}/>
         <div className="page-header sm-video-reparte" data-parallax="true">
           <div className="filter"></div>
           <div className="container">

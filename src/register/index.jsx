@@ -27,7 +27,6 @@ export default class Register extends Component {
         //montando o objeto company para enviar na requisição em seguida
         var company = {name: businessName,company_reg: cnpj, sector: sector, type: type}
         var res = await requests.register(fullName,email,phone,company,password);
-        console.log(typeof(res));
         if(typeof(res) === "undefined"){
             this.setState({error_messages: {passwordConfirm: "Usuario já existe"}});
         }

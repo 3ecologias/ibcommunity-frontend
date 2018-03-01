@@ -57,7 +57,6 @@ var requests = {
     },
     //Pega lista de produtos para usar nas sugestões da pesquisa
     searchProductList: async function(token){
-        console.log("JWT " + token);
         var response = await axios({
             method: "GET",
             url: ip_server + "/api/product/list/",
@@ -104,11 +103,11 @@ var requests = {
     allProjects: async function(token){
         var response = await axios({
             method: "GET",
-            url: ip_server + "/project/list/",
-            headers: {
+            url: ip_server + "/api/project/list/",
+            /*headers: {
                 'Authorization': ' JWT '+ token,
                 'Content-Type': 'application/json',
-            },
+            },*/
         }).catch(err => console.log(err));
         return response
     },
@@ -127,8 +126,6 @@ var requests = {
     },
     //Solicitar a repartição de beneficios
     projectRequestSupport: async function(token,user_id, project_id){
-        console.log("vai descenu ", user_id);
-        console.log("vai subinu ", Number(user_id));
         var response = await axios({
             method: "POST",
             url: ip_server + "/api/project/support/create/",
