@@ -55,7 +55,7 @@ export default class Resultbymoney extends Component {
        var content = (
         <div className="col-md-12">
             <h2 className="mt-10">Nossa base de dados não contem nenhum projeto cadastrado</h2>
-            <button className="btn btn-danger btn-block btn-round mt-10" onClick={() => {this.props.history.push({pathname: "/login"})}}>Voltar</button>
+            <button className="btn btn-danger btn-block btn-round btn-interest mt-10" onClick={() => {this.props.history.push({pathname: "/login"})}}>Voltar</button>
         </div>)
       }
     return (

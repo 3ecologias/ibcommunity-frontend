@@ -51,9 +51,9 @@ export default class Resultbymoney extends Component {
       else{
        var content = (
         <div className="col-md-12">
-            <h3 className="mt-10">Nenhum projeto relacionado a <strong>{this.props.location.state.productName}</strong> existe abaixo de <strong>US$ {this.props.location.state.valor}</strong></h3>
+            <h3 className="mt-10">Nenhum projeto relacionado ao produto <strong>{this.props.location.state.productName}</strong> existe abaixo de <strong>US$ {this.props.location.state.valor}</strong></h3>
             <h5 className="mt-10">Por favor tente valores maiores para obter resultados.</h5>
-            <button className="btn btn-danger btn-block btn-round mt-10" onClick={() => {this.props.history.push({pathname: "/productsearch"})}}>Voltar</button>
+            <button className="btn btn-danger btn-block btn-round btn-interest mt-300" onClick={() => {this.props.history.push({pathname: "/productsearch"})}}>Voltar</button>
         </div>)
       }
     return (
