@@ -105,15 +105,16 @@ export default class Register extends Component {
                                             <input type="password" className="form-control pull-right" placeholder="Repetir senha" onChange={(e)=>{this.setState({passwordConfirm: e.target.value})}} />
                                         </div>
                                             <small className="text-danger ml-2 mt-1">{this.state.error_messages.passwordConfirm}</small>
+                                        <div className="terms_div">
+                                            <div className="checkboxFive mt-0">
+                                                <input type="checkbox" name="" id="checkboxFiveInput" onClick={() => this._checkBoxHandler()}/>
+                                                <label htmlFor="checkboxFiveInput"></label>
+                                            </div>
+                                            <a href="#" className="btn btn-link btn-neutral terms-text mt-0">Concordo com os termos de uso!</a>
+                                        </div>
                                         <button className="btn btn-danger btn-block btn-round mt-10">Criar</button>
                                     </form>
-                                    <div className="terms_div">
-                                        <div className="checkboxFive">
-                                            <input type="checkbox" name="" id="checkboxFiveInput" onClick={() => this._checkBoxHandler()}/>
-                                            <label htmlFor="checkboxFiveInput"></label>
-                                        </div>
-                                        <a href="#" className="btn btn-link btn-neutral terms-text">Concordo com os termos de uso!</a>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
