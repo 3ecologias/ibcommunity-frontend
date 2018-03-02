@@ -31,7 +31,7 @@ export default class Register extends Component {
             this.setState({error_messages: {passwordConfirm: "Usuario já existe"}});
         }
         else if(res.status === 201){
-            this.props.history.push({pathname: "/"});
+            this.props.history.push({pathname: "/productsearch"});
         }
     }
     else if(!checkBoxStatus){
