@@ -9,7 +9,8 @@ export default class ProjectPage extends Component {
     super(props);
     this.state = {
         project: "",
-        token: ""
+        token: "",
+        imagem: {}
     }
   }
 
@@ -32,7 +33,7 @@ export default class ProjectPage extends Component {
     var active = "carousel-item active"
     var imagesTags = images.map((imagem) => {
       var imageTag = (<div className={active}>
-                        <a href={imagem.image} target="_blank"><img className="d-block img-fluid" src={imagem.image} alt="First slide"/></a>
+                        <a onClick={() => {this.setState({imagem: {imageLink: imagem.image, imageName: imagem.name}});}} data-toggle="modal" data-target="#exampleModal" href="#"><img className="d-block img-fluid" src={imagem.image} alt="First slide"/></a>
                       </div>);
       active = "carousel-item";
       return imageTag;
@@ -165,6 +166,21 @@ export default class ProjectPage extends Component {
             </div>
 			    </div>
 		    </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">{this.state.imagem.imageName}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src={this.state.imagem.imageLink} class="img-fluid" alt=""/>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
