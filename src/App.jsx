@@ -42,7 +42,7 @@ ReactDOM.render(
         <Route exact path= "/login" component={Login} />
         <Route exact path= "/register" component={Register} />
         {/*<Route exact path= "/waitconfirm" component={waitConfirm} />*/}
-        <Route exact path= "/profile" component={Profile} />
+        {/*<Route exact path= "/profile" component={Profile} />*/}
         <Route exact path= "/productsearch" component={ProductSearch} />
         <Route exact path= "/valuesearch" component={ValueSearch} />
         <Route exact path= "/result" component={Resultbymoney} />
