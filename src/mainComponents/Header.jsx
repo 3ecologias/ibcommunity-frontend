@@ -13,6 +13,7 @@ export default class Header extends Component {
       event.preventDefault();
       localStorage.removeItem("tokenib");
       this.props.history.push({pathname: "/"});
+      window.location.reload();
   }
 
   render() {
