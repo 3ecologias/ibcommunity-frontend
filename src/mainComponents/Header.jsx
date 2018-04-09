@@ -71,7 +71,7 @@ export default class Header extends Component {
                                 <span className="navbar-toggler-bar"></span>
                                 <span className="navbar-toggler-bar"></span>
                             </button>
-                            <a className="navbar-brand" href="/"> <img className="App-logo" src="http://institutoberaca.org/static/images/logo-beraca.svg" alt=""/> </a>
+                            <a className="navbar-brand" href="http://institutoberaca.org/"> <img className="App-logo" src="http://institutoberaca.org/static/images/logo-beraca.svg" alt=""/> </a>
                         </div>
                         {list}
                     </div>
