@@ -11,8 +11,8 @@ export default class Register extends Component {
         phone: "",
         businessName: "",
         cnpj: "",
-        sector: "",
-        type: "",
+        // sector: "",
+        // type: "",
         password: "",
         passwordConfirm: "",
         checkBoxStatus: false,
@@ -21,11 +21,13 @@ export default class Register extends Component {
     this._register = this._register.bind(this);
   }
 
-  async _register(event,fullName,email,phone,businessName,cnpj,sector,type,password,passwordConfirm,checkBoxStatus){
+  // async _register(event,fullName,email,phone,businessName,cnpj,sector,type,password,passwordConfirm,checkBoxStatus){
+  async _register(event,fullName,email,phone,businessName,cnpj,password,passwordConfirm,checkBoxStatus){
     event.preventDefault();
     if(password && password === passwordConfirm && checkBoxStatus){
         //montando o objeto company para enviar na requisição em seguida
-        var company = {name: businessName,company_reg: cnpj, sector: sector, type: type}
+        // var company = {name: businessName,company_reg: cnpj, sector: sector, type: type}
+        var company = {name: businessName,company_reg: cnpj}
         var res = await requests.register(fullName,email,phone,company,password);
         if(typeof(res) === "undefined"){
             this.setState({error_messages: {passwordConfirm: "Usuario já existe"}});
@@ -35,10 +37,10 @@ export default class Register extends Component {
         }
     }
     else if(!checkBoxStatus){
-        this.setState({error_messages: {passwordConfirm: "É necessario concordar com os termos de uso"}})
+        this.setState({error_messages: {passwordConfirm: "É necessario concordar com os termos de uso."}})
     }
     else{
-        this.setState({error_messages: {passwordConfirm: "Repetiu a senha errado"}})
+        this.setState({error_messages: {passwordConfirm: "Por favor, corriga a senha"}})
     }
   }
 
@@ -58,7 +60,7 @@ export default class Register extends Component {
                         <div className="row">
                             <div className="col-lg-5 ml-auto mr-auto">
                                 <div className="card card-register ml-auto mr-auto pt-80 pt-80-340">
-                                    <h1>Nova Conta</h1>
+                                    <h1>Solicite um cadastro</h1>
                                     <form className="register-form mt-5" onSubmit={(event) => {this._register(event,this.state.fullName,this.state.email,this.state.phone,this.state.businessName,this.state.cnpj,this.state.sector,this.state.type,this.state.password,this.state.passwordConfirm,this.state.checkBoxStatus);}}>
                                         <div className="input-group">
                                             <span className="input-group-addon"><i className="mr-1 fa fa-user-o"></i></span>
@@ -85,7 +87,7 @@ export default class Register extends Component {
                                             <input type="text" className="form-control pull-right" placeholder="CNPJ" onChange={(e)=>{this.setState({cnpj: e.target.value})}} />
                                         </div>
                                             <small className="text-danger ml-2 mt-1">{this.state.error_messages.cnpj}</small>
-                                        <div className="input-group">
+                                        {/*<div className="input-group">
                                             <span className="input-group-addon"><i className="mr-1 fa fa-building-o"></i></span>
                                             <input type="text" className="form-control pull-right" placeholder="Setor" onChange={(e)=>{this.setState({sector: e.target.value})}} />
                                         </div>
@@ -94,7 +96,7 @@ export default class Register extends Component {
                                             <span className="input-group-addon"><i className="mr-1 fa fa-building-o"></i></span>
                                             <input type="text" className="form-control pull-right" placeholder="Tipo" onChange={(e)=>{this.setState({type: e.target.value})}} />
                                         </div>
-                                            <small className="text-danger ml-2 mt-1">{this.state.error_messages.type}</small>
+                                            <small className="text-danger ml-2 mt-1">{this.state.error_messages.type}</small>*/}
                                         <div className="input-group">
                                             <span className="input-group-addon"><i className="mr-1 fa fa-lock"></i></span>
                                             <input type="password" className="form-control pull-right" placeholder="Senha" onChange={(e)=>{this.setState({password: e.target.value})}} />
@@ -125,5 +127,3 @@ export default class Register extends Component {
     );
   }
 }
-
-

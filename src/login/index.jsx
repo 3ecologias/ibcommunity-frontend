@@ -19,7 +19,7 @@ export default class Login extends Component {
   componentWillMount(){
       var token = localStorage.getItem('tokenib');
       if(extraFunctions.checklogin(token)){
-        this.props.history.push({pathname: "/productsearch"});
+        this.props.history.push({pathname: "/projects"});
       }
       this.setState({token: token});
   }
@@ -33,7 +33,7 @@ export default class Login extends Component {
             localStorage.setItem('tokenib', response.data.token);
             localStorage.setItem('useremail', response.data.user.email);
             localStorage.setItem('userid', response.data.user.id_client);
-            this.props.history.push({pathname: "/productsearch" , state:{name: "logado"}})
+            this.props.history.push({pathname: "/projects" , state:{name: "logado"}})
         }
         else{throw new Error("");}
     }catch(err){this.setState({message: {class: "d-block text-danger ml-2", data:"Email ou senha inválido"}})}
@@ -63,8 +63,8 @@ export default class Login extends Component {
                             <small className={this.state.message.class}>{this.state.message.data}</small>
                             <button className="btn btn-danger btn-block btn-round">Login</button>
                             </form>
-                            <div className="forgot"> 
-                                <a href="/register" className="btn btn-link btn-neutral p-0">Não tem uma conta? Cadastre-se</a>
+                            <div className="forgot">
+                                <a href="/register" className="btn btn-link btn-neutral p-0">Deseja se cadastrar? Entre em contato!</a>
                             </div>
                         </div>
                     </div>
@@ -76,5 +76,3 @@ export default class Login extends Component {
     );
   }
 }
-
-

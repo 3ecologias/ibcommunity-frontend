@@ -25,7 +25,6 @@ class App extends Component {
     }
   }
 
-
   /* Este pedaço de codigo era pra importar o mapbox
   componentDidMount(){
     let script = document.createElement("script");
@@ -38,7 +37,7 @@ class App extends Component {
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-        <Route exact path= "/" component={Landing} />
+        <Route exact path= "/" component={Login} />
         <Route exact path= "/login" component={Login} />
         <Route exact path= "/register" component={Register} />
         {/*<Route exact path= "/waitconfirm" component={waitConfirm} />*/}

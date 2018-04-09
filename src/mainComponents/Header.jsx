@@ -21,9 +21,9 @@ export default class Header extends Component {
       if(this.props.logado){
         list =  <div className="collapse navbar-collapse" id="navbarToggler">
                     <ul className="navbar-nav ml-auto">
-                        <li className="nav-item">
+                        {/*<li className="nav-item">
                             <a href="/productsearch" className="nav-link"><i className="nc-icon nc-layout-11"></i>Repartir</a>
-                        </li>
+                        </li>*/}
                         <li className="nav-item">
                             <a href="/projects" target="" className="nav-link"><i className="nc-icon nc-ruler-pencil"></i>Projetos</a>
                         </li>
@@ -36,12 +36,12 @@ export default class Header extends Component {
                                 <p className="d-lg-none">Meu Perfil</p>
                             </a>
                         </li>*/}
-                        <li className="nav-item">
+                        {/*<li className="nav-item">
                             <a className="nav-link" rel="tooltip" title="Perfil" data-placement="bottom" href="http://www.institutoberaca.org" target="_blank" rel="noopener noreferrer">
                                 <i className="nc-icon nc-alert-circle-i"></i>
                                 <p className="d-lg-none">Saiba Mais</p>
                             </a>
-                        </li>
+                        </li>*/}
                         <li className="nav-item">
                             <a href="/" onClick={(event) => {this._logout(event)}} target="" className="nav-link"><i className="icon ion-log-out t-0"></i>Sair</a>
                         </li>
@@ -51,12 +51,12 @@ export default class Header extends Component {
       else{
         list =  <div className="collapse navbar-collapse" id="navbarToggler">
                     <ul className="navbar-nav ml-auto">
-					<li className="nav-item">
+					          {/*<li className="nav-item">
                         <a href="/login" className="nav-link"><i className="nc-icon nc-touch-id"></i>Login</a>
-                    </li>
-                    <li className="nav-item">
-                        <a href="/register" target="" className="nav-link"><i className="nc-icon nc-trophy"></i>Criar conta</a>
-                    </li>
+                    </li>*/}
+                    {/*<li className="nav-item">
+                        <a href="/register" target="" className="nav-link"><i className="nc-icon nc-trophy"></i>Entre em contato</a>
+                    </li>*/}
                     </ul>
                 </div>
       }
@@ -71,10 +71,9 @@ export default class Header extends Component {
                                 <span className="navbar-toggler-bar"></span>
                                 <span className="navbar-toggler-bar"></span>
                             </button>
-                            <a className="navbar-brand" href="/"><i className="icon nc-icon nc-air-baloon"></i> ReparteBR</a>
+                            <a className="navbar-brand" href="/"> <img className="App-logo" src="http://institutoberaca.org/static/images/logo-beraca.svg" alt=""/> </a>
                         </div>
                         {list}
-
                     </div>
                 </nav>
             </div>
@@ -82,5 +81,3 @@ export default class Header extends Component {
     );
   }
 }
-
-

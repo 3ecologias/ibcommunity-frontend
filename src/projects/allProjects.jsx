@@ -22,6 +22,15 @@ export default class Resultbymoney extends Component {
     this.setState({projectsList: projects_list.data});
   }
 
+  //Passando todas as categorias, ele vai concatenar numa string e retornar
+  categoriesRender(categories){
+    var categoriesString = ""
+    categories.forEach(function(category) {
+      categoriesString = categoriesString + " " + category.name;
+    });
+    return categoriesString;
+  }
+
   renderProjects(){
     var renderedProjectList = this.state.projectsList.map((element) => {
         return (
@@ -30,7 +39,7 @@ export default class Resultbymoney extends Component {
                 <div className="outer_product pt-20">
                     <div className="product_div">
                         <Link className="product_name" to={{pathname: "/community" , state: {project: element}}} >{element.name}</Link>
-                        <p className="product_value">US$ {element.project_totals} - {element.community.name}</p>
+                        <p className="product_value">R$ {element.project_totals} - {this.categoriesRender(element.category)}</p>
                     </div>
                     <div className="plus_div">
                     <Link className="product_name" to={{pathname: "/community" , state: {project: element}}} ><i className="fa fa-plus" aria-hidden="true"></i></Link>
@@ -47,7 +56,7 @@ export default class Resultbymoney extends Component {
           var content = (
           <div className="col-md-12">
             <h2 className="title_text mb-10">Todos os projetos disponiveis</h2>
-            <h5 className="mt-10">Para filtrar melhor os projetos faça uma busca na <a href="/login">Tela Inicial</a></h5>
+            <h5 className="mt-10">Acesse a nossa base de projetos para repartir benefícios</h5>
           </div>
           )
       }
@@ -67,7 +76,7 @@ export default class Resultbymoney extends Component {
             <div className="filter"></div>
 				<div className="container ph-30 pt-70 z-1">
                     <div className="row fab_row">
-                        <a onClick={() => {this.props.history.push({pathname: "/productsearch"})}} href="">
+                        <a onClick={() => {this.props.history.push({pathname: "/projects"})}} href="">
                         <div className="fab_div">
                             <p className="fab_text">X</p>
                         </div>
@@ -76,7 +85,7 @@ export default class Resultbymoney extends Component {
 					<div className="row">
                         {content}
 					</div>
-                    {this.renderProjects()}			
+                    {this.renderProjects()}
 				</div>
 			</div>
 		</div>
@@ -84,5 +93,3 @@ export default class Resultbymoney extends Component {
     );
   }
 }
-
-

@@ -10,17 +10,17 @@ var products = [];
 const getSuggestions = value => {
   const inputValue = value.trim().toLowerCase();
   const inputLength = inputValue.length;
-  
+
   return inputLength === 0 ? [] : products.filter(product =>
 	  product.common_name.toLowerCase().slice(0, inputLength) === inputValue || product.scientific_name.toLowerCase().slice(0, inputLength) === inputValue
 	);
   };
-  
+
   // When suggestion is clicked, Autosuggest needs to populate the input
   // based on the clicked suggestion. Teach Autosuggest how to calculate the
   // input value for every given suggestion.
   const getSuggestionValue = suggestion => suggestion.common_name+", "+suggestion.scientific_name;
-  
+
   // Use your imagination to render suggestions.
   const renderSuggestion = suggestion => (
 	<div>
@@ -92,7 +92,8 @@ export default class Search extends Component {
 		const inputProps = {
 			placeholder: 'Digite o produto',
 			value,
-			onChange: this.onChange
+			onChange: this.onChange,
+      autoFocus: true
 		};
         return (
             <div>
