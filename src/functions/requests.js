@@ -112,15 +112,15 @@ var requests = {
         return response
     },
     //Informações do usuario
-    userInfos: async function(token){
+    userInfos: async function(token,id){
         var response = await axios({
             method: "GET",
             //adicionar url das informações do user
-            url: ip_server + "/project/list/",
-            headers: {
-                'Authorization': ' JWT '+ token,
-                'Content-Type': 'application/json',
-            },
+            url: ip_server + "/api/client/detail/" + id + "/",
+            // headers: {
+            //     'Authorization': ' JWT '+ token,
+            //     'Content-Type': 'application/json',
+            // },
         }).catch(err => console.log(err));
         return response
     },
