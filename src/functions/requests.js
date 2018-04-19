@@ -7,7 +7,7 @@ import axios from "axios";
 
 /* Essa variavel é de nome imutavel, se quiser mudar terá que mudar em todos os lugares que ela aparece
    é a URL inicial da requisição */
-var ip_server = "http://projetos.institutoberaca.org"
+var ip_server = "http://admin.institutoberaca.org"
 //var ip_server = "http://127.0.0.1:8000"
 //var ip_server = "http://45.55.202.61:8000"
 
