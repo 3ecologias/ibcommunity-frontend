@@ -79,7 +79,7 @@ export default class ProjectUser extends Component {
             <div className="filter"></div>
 				<div className="container ph-30 pt-70 z-1">
                     <div className="row fab_row">
-                        <a onClick={() => {this.props.history.push({pathname: "/projectsusers"})}} href="">
+                        <a onClick={() => {this.props.history.push({pathname: "/projects"})}} href="">
                         <div className="fab_div">
                             <p className="fab_text">X</p>
                         </div>
