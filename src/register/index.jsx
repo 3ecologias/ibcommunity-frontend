@@ -40,7 +40,7 @@ export default class Register extends Component {
         this.setState({error_messages: {passwordConfirm: "É necessario concordar com os termos de uso."}})
     }
     else{
-        this.setState({error_messages: {passwordConfirm: "Por favor, corriga a senha"}})
+        this.setState({error_messages: {passwordConfirm: "A senha não confere"}})
     }
   }
 
@@ -114,7 +114,7 @@ export default class Register extends Component {
                                             </div>
                                             <a href="#" className="btn btn-link btn-neutral terms-text mt-0">Concordo com os termos de uso!</a>
                                         </div>
-                                        <button className="btn btn-danger btn-block btn-round mt-10">Criar</button>
+                                        <button className="btn btn-danger btn-block btn-round mt-10">Solicitar</button>
                                     </form>
 
                                 </div>
