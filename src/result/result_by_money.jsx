@@ -26,7 +26,7 @@ export default class Resultbymoney extends Component {
                 <div className="outer_product pt-20">
                     <div className="product_div">
                         <Link className="product_name" to={{pathname: "/community" , state: {project: element}}} >{element.name}</Link>
-                        <p className="product_value">US$ {element.project_totals} - {element.community.name}</p>
+                        <p className="product_value">R$ {element.project_totals} - {element.community.name}</p>
                     </div>
                     <div className="plus_div">
                     <Link className="product_name" to={{pathname: "/community" , state: {project: element}}} ><i className="fa fa-plus" aria-hidden="true"></i></Link>
@@ -44,14 +44,14 @@ export default class Resultbymoney extends Component {
           <div className="col-md-12">
             <h2 className="title_text mb-10">{this.props.location.state.productName}</h2>
             <small className="value_text pt-10">Exibindo resultados menor ou igual a </small>
-            <h5 className="main_value mb-0">US$ {this.props.location.state.valor}</h5>
+            <h5 className="main_value mb-0">R$ {this.props.location.state.valor}</h5>
           </div>
           )
       }
       else{
        var content = (
         <div className="col-md-12">
-            <h3 className="mt-10">Nenhum projeto relacionado ao produto <strong>{this.props.location.state.productName}</strong> existe abaixo de <strong>US$ {this.props.location.state.valor}</strong></h3>
+            <h3 className="mt-10">Nenhum projeto relacionado ao produto <strong>{this.props.location.state.productName}</strong> existe abaixo de <strong>R$ {this.props.location.state.valor}</strong></h3>
             <h5 className="mt-10">Por favor tente valores maiores para obter resultados.</h5>
             <button className="btn btn-danger btn-block btn-round btn-interest mt-300" onClick={() => {this.props.history.push({pathname: "/productsearch"})}}>Voltar</button>
         </div>)
@@ -74,7 +74,7 @@ export default class Resultbymoney extends Component {
 					<div className="row">
                         {content}
 					</div>
-                    {this.renderProjects()}			
+                    {this.renderProjects()}
 				</div>
 			</div>
 		</div>
@@ -82,5 +82,3 @@ export default class Resultbymoney extends Component {
     );
   }
 }
-
-

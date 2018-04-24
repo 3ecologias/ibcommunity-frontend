@@ -18,7 +18,7 @@ export default class ProjectUser extends Component {
     var id = localStorage.getItem("userid");
     this.state.token = token;
     this.state.id = id;
-    //fazer requisição para pegar a lista de projetos
+    //fazer requisição para pegar a lista de projetos por usuario
     //setar no state this.state.projectsList a lista retornada
     var projects_list = await requests.userInfos(token,id);
     this.setState({projectsList: projects_list.data.projects});

@@ -90,7 +90,7 @@ export default class Search extends Component {
 		const { value, suggestions } = this.state;
 		// Autosuggest will pass through all these props to the input.
 		const inputProps = {
-			placeholder: 'Digite o produto',
+			placeholder: 'Cupuaçu, Muru muru, nome científico',
 			value,
 			onChange: this.onChange,
       autoFocus: true

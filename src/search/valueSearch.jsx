@@ -36,13 +36,22 @@ export default class Login extends Component {
 
   async componentWillMount(){
       var token = localStorage.getItem("tokenib");
+      var id = localStorage.getItem("userid");
       this.state.token = token;
+      this.state.id = id;
       this.productName = this.props.location.state.product.common_name;
       var product_id = this.props.location.state.product.id;
+      // console.log(product_id);
+
       //essa requisição projectList, ela pega todos os projetos relativos ao produto pesquisado
       //retorna a lista destes projetos
-      var projects_list = await requests.projectList(this.state.token, product_id);
-      this.projectsList = projects_list.data;
+      // var projects_list = await requests.projectList(this.state.token, product_id);
+      // this.projectsList = projects_list.data;
+      // console.log(projects_list.data);
+      var projects_list = await requests.userInfos(token,id);
+      // this.setState({projectsList: projects_list.data.projects});
+      this.projectsList = projects_list.data.projects;
+      console.log(projects_list.data.projects);
   }
 
   render() {
@@ -61,10 +70,10 @@ export default class Login extends Component {
                     <form className="register-form">
                       <div className="input-group mt-3 mb-2">
                         <span className="input-group-addon"><i className="mr-1 fa fa-search"></i></span>
-                        <input type="number" placeholder="US$ 810.000,00" className="form-control pull-right" onChange={(event) => {this.setState({value: event.target.value})}} required/>
+                        <input type="number" placeholder="R$ 50.000,00" className="form-control pull-right" onChange={(event) => {this.setState({value: event.target.value})}} required/>
                       </div>
                       <small className={this.state.message.class}>{this.state.message.data}</small>
-                      <small className="ml-2">Digite apenas numeros*</small>
+                      <small className="ml-2">* Digite apenas numeros</small>
                       <div className="col-6 col-sm-6 col-md-6 ml-auto mr-auto z-1">
                         <div className="ard card-plain card-search p-0 ml-auto mr-auto search-btn">
                           <button onClick={(event) => {this.submitHandle(event)}} className="btn btn-danger btn-block btn-round">Buscar</button>
@@ -81,5 +90,3 @@ export default class Login extends Component {
     );
   }
 }
-
-

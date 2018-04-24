@@ -19,7 +19,7 @@ export default class Login extends Component {
   componentWillMount(){
       var token = localStorage.getItem('tokenib');
       if(extraFunctions.checklogin(token)){
-        this.props.history.push({pathname: "/projects"});
+        this.props.history.push({pathname: "/productsearch"});
       }
       this.setState({token: token});
   }
@@ -33,7 +33,7 @@ export default class Login extends Component {
             localStorage.setItem('tokenib', response.data.token);
             localStorage.setItem('useremail', response.data.user.email);
             localStorage.setItem('userid', response.data.user.id_client);
-            this.props.history.push({pathname: "/projects" , state:{name: "logado"}})
+            this.props.history.push({pathname: "/productsearch" , state:{name: "logado"}})
         }
         else{throw new Error("");}
     }catch(err){this.setState({message: {class: "d-block text-danger ml-2", data:"Email ou senha inválido"}})}
