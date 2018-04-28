@@ -5,7 +5,7 @@
 	<link rel="icon" type="image/png" href="assets/img/favicon.ico">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<title>ReparteBR {beta}</title>
+	<title>Instituto Beraca - Apoie um projeto</title>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 	<meta name="viewport" content="width=device-width" />
@@ -19,12 +19,6 @@
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
 	<link href="assets/css/nucleo-icons.css" rel="stylesheet" />
 
-	<!-- Mapbox -->
-	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.41.0/mapbox-gl.js'></script>
-	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.41.0/mapbox-gl.css' rel='stylesheet' />
-
-	<style>#map { position:relative; top: inherit; width: 100%; height: 60vh;}</style>
-
 </head>
 <body>
 	<!-- Navbar -->
@@ -36,32 +30,22 @@
 					<span class="navbar-toggler-bar"></span>
 					<span class="navbar-toggler-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#"><i class="icon nc-icon nc-air-baloon"></i> IBCommunity</a>
+				<a class="navbar-brand" href="#"><i class="icon nc-icon nc-air-baloon"></i>Apoie um projeto - Instituto beraca</a>
 			</div>
 			<div class="collapse navbar-collapse" id="navbarToggler">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item">
-						<a href="#" class="nav-link"><i class="nc-icon nc-layout-11"></i>Repartir</a>
+						<a class="nav-link" rel="tooltip" title="Instituto Beraca" data-placement="bottom" href="http://www.institutoberaca.org/apoieumprojeto" target="_blank">
+							<i class="nc-icon nc-alert-circle-i"></i>
+							<p class="d-lg-none">Saiba Mais</p>
+						</a>
 					</li>
 					<li class="nav-item">
-						<a href="#" target="" class="nav-link"><i class="nc-icon nc-ruler-pencil"></i>Projetos</a>
+						<a class="nav-link" rel="tooltip" title="Perfil" data-placement="bottom" href="http://www.institutoberaca.org" target="_blank">
+							<i class="nc-icon nc-simple-remove"></i>
+							<p class="d-lg-none">Sair</p>
+						</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#" target="">
-							<i class="nc-icon nc-shop"></i>Comunidades</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" rel="tooltip" title="Perfil" data-placement="bottom" href="#" target="">
-								<i class="nc-icon nc-badge"></i>
-								<p class="d-lg-none">Meu Perfil</p>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" rel="tooltip" title="Perfil" data-placement="bottom" href="http://www.institutoberaca.org" target="_blank">
-								<i class="nc-icon nc-alert-circle-i"></i>
-								<p class="d-lg-none">Saiba Mais</p>
-							</a>
-						</li>
 					</ul>
 				</div>
 			</div>
@@ -81,20 +65,8 @@
 								<h4 style="color:white;text-align:center;">Projetos</h4>
 							</div>
 						</div>
-					</div>
-					<div class="row">
-						<div id='map'></div>
-						<script>
-						mapboxgl.accessToken = 'pk.eyJ1IjoiM2Vjb2xvZ2lhcyIsImEiOiJjajBpajduNjcwMGc4MndwcW9pY2ljYmt4In0.Hqi-m8UXDmVl7Otod2o_HA';
-						var map = new mapboxgl.Map({
-							container: 'map',
-							style: 'mapbox://styles/3ecologias/cj9q4e3b55wzt2rt6cmiwi3wk',
-							zoom: 5,
-							center: [-62.401866, -3.912172]
-						});
-						map.addControl(new mapboxgl.NavigationControl());
-						</script>
-					</div>
+
+
 				</div>
 				<!-- End-Container-fluid -->
 			</div>
