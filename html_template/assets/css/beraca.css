@@ -1,0 +1,16 @@
+.dropdown, .btn, .typography-line {
+	z-index: 2;
+}
+
+.dropdown, .btn-go {margin: 0.2em;}
+
+.beraca-container {
+	margin-top: -50vh;
+}
+.beraca-container .typography-line {
+	padding-left: 0px;
+
+}
+.justify-content {
+	justify-content: center;
+}
