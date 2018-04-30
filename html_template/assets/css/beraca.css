@@ -18,6 +18,10 @@
 	justify-content: center;
 }
 
+.page-header {
+	max-height: none;
+}
+
 .product_name{
   font-weight: 500;
   font-size: 1.6em;
