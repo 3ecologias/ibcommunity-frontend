@@ -4,26 +4,23 @@
 
 .dropdown, .btn-go {margin: 0.2em;}
 
-.beraca-container {
-	margin-top: -20vh;
+.beraca-intro-container {
+margin-top: -55vh;
 }
 .container-page {
 	margin-top: 70vh;
 }
-.beraca-container .typography-line {
+.beraca-container .typography-line, .beraca-intro-container .typography-line {
 	padding-left: 0px;
-
 }
+
 .justify-content {
 	justify-content: center;
 }
 
 .page-header {
 	max-height: none;
-  background: #ffe259;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to top, #ffa751, #ffe259);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to top, #ffa751, #ffe259); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background: #f1eae0a8;
 }
 
 .product_name{
@@ -31,6 +28,7 @@ background: linear-gradient(to top, #ffa751, #ffe259); /* W3C, IE 10+/ Edge, Fir
   font-size: 1.6em;
   line-height: 1.5em;
   margin-bottom: 5px;
+  text-align: left;
 }
 
 .plus_div a{
@@ -59,6 +57,7 @@ background: linear-gradient(to top, #ffa751, #ffe259); /* W3C, IE 10+/ Edge, Fir
 .desciption_text {
     font-size: 1.2em;
     font-weight: 400;
+    text-shadow: white 0px 0px 10px;
 }
 
 .heavy {
@@ -71,4 +70,16 @@ h4, .h4 {
 
 .section, .navbar {
     background-color: #f8f9fa;
+}
+
+.title-grey {
+    color: #403d39!important;
+}
+
+body{
+  background: url('../img/beraca_agua_boa_buriti_OUNLbad.jpg') no-repeat 100% fixed / cover;
+}
+
+.btn-link {
+  text-shadow: white 0px 0px 10px;
 }
